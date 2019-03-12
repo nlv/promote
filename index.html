@@ -2,13 +2,73 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <title>Тест</title>
+<!-- <body data-spy="scroll" data-target="#collapsibleNavbar" data-target=".navbar" data-offset="100"> -->
+<body data-spy="scroll" data-target="navbar" data-target=".navbar" data-offset="50">
+
+    <section id="start-page" class="container-fluid page">
+
+        <nav id="navbar" class="navbar fixed-top navbar-expand-md navbar-toggleable navbar-light container">
+
+            <a href="#start-page" class="navbar-brand">
+                <img src="img/logo.png" alt="" width="247" height="91">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div id="collapsibleNavbar" class="collapse navbar-collapse justify-content-right">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item"><a href="#p1" class="nav-link">Проекты</a></li>
+                    <li class="nav-item"><a href="#p2" class="nav-link">Услуги и цены</a></li>
+                    <li class="nav-item"><a href="#p3" class="nav-link">О студии</a></li>
+                    <li class="nav-item"><a href="#p4" class="nav-link">Контакты</a></li>
+                </ul> 
+            </div>
+
+            <span class="navbar-text pull-right" id="start-phone">
+                +7 (000) 000-00-00
+            </span>            
+        </nav>
+
+    </section>
+
+    <section id="p1" class="page">
+        <header>
+            <h>Привет1</h>
+        </header>
+    </section>
+
+    <section id="p2" class="page">
+        <header>
+            <h>Привет2</h>
+        </header>
+    </section>
+
+    <section id="p3" class="page">
+        <header>
+            <h>Привет3</h>
+        </header>
+    </section>
+
+    <section id="p4" class="page">
+        <header>
+            <h>Привет4</h>
+        </header>
+    </section>
     
-    <p>Это тест</p>
 </body>
 </html>

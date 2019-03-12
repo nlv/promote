@@ -1,0 +1,31 @@
+
+@import url(../fonts/Raleway-Regular.ttf);
+@import url(../fonts/Raleway-Italic.ttf);
+@import url(../fonts/Raleway-Bold.ttf);
+@import url(../fonts/Raleway-BoldItalic.ttf);
+body
+{
+  position    : relative;
+  font-family : "Raleway", serif;
+}
+
+#navbar
+{
+  border : inherit inherit inherit;
+}
+
+#start-page
+{
+  background-size  : cover;
+  background-image : url("../img/start_page_cover.jpg");
+}
+
+.page
+{
+  height      : 100vh;
+  width       : 100vw;
+  padding-top : 105px;
+}
+
+
+/* Generated with Clay, http://fvisser.nl/clay */
