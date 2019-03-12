@@ -15,9 +15,9 @@ navbarHeight = (px 105)
 mainStylesheet :: Bool -> Css
 mainStylesheet debug = do
     importUrl "../fonts/Raleway-Regular.ttf"
-    importUrl "../fonts/Raleway-Italic.ttf"
+    importUrl "../fonts/Raleway-Regular-Italic.ttf"
     importUrl "../fonts/Raleway-Bold.ttf"
-    importUrl "../fonts/Raleway-BoldItalic.ttf"
+    importUrl "../fonts/Raleway-Bold-Italic.ttf"
 
     -- Для корректной прокрутки разделов (из доки bootstrap scroll-spy) 
     body ? do
