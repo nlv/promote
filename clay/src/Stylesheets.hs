@@ -6,7 +6,9 @@ module Stylesheets
 
 import Clay
 
-fontName = "Raleway"
+-- fontName = "Raleway"
+fontName = "Amatic SC"
+
 secondaryFontName = serif
 
 -- FIXME: дожна коррелировать с высотой навигационной панели 
@@ -18,6 +20,8 @@ mainStylesheet debug = do
     importUrl "../fonts/Raleway-Regular-Italic.ttf"
     importUrl "../fonts/Raleway-Bold.ttf"
     importUrl "../fonts/Raleway-Bold-Italic.ttf"
+
+    importUrl "https://fonts.googleapis.com/css?family=Amatic+SC:400,700&subset=cyrillic"
 
     -- Для корректной прокрутки разделов (из доки bootstrap scroll-spy) 
     body ? do

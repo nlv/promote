@@ -1,12 +1,13 @@
 
 @import url(../fonts/Raleway-Regular.ttf);
-@import url(../fonts/Raleway-Italic.ttf);
+@import url(../fonts/Raleway-Regular-Italic.ttf);
 @import url(../fonts/Raleway-Bold.ttf);
-@import url(../fonts/Raleway-BoldItalic.ttf);
+@import url(../fonts/Raleway-Bold-Italic.ttf);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700&subset=cyrillic);
 body
 {
   position    : relative;
-  font-family : "Raleway", serif;
+  font-family : "Amatic SC", serif;
 }
 
 #navbar
