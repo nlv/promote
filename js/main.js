@@ -50,7 +50,7 @@ $(document).ready(function(){
             .end().filter("[href='#"+id+"']").parent().addClass("active");
 
             if(history.pushState) {
-                history.pushState(null, null, '#id');
+                history.pushState(null, null, '#'+id);
             }
             else {
                 location.hash = id;
