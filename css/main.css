@@ -8,6 +8,7 @@ body
 
 #start-page
 {
+  border           : inherit inherit inherit;
   background-size  : cover;
   background-image : url("../img/start_page_cover.jpg");
   padding-top      : 0;
@@ -18,8 +19,41 @@ body
 
 #start-page header
 {
-  font-size : 4em;
-  color     : #ffffff;
+  width : 55%;
+  color : #ffffff;
+}
+
+#start-page header h1
+{
+  border         : inherit inherit inherit;
+  text-align     : center;
+  font-size      : 3em;
+  padding-bottom : 20px;
+}
+
+#start-page header h2
+{
+  border  : inherit inherit inherit;
+  display : flex;
+}
+
+#start-page header h2 ul
+{
+  border          : inherit inherit inherit;
+  margin-left     : auto;
+  margin-right    : auto;
+  display         : flex;
+  width           : 100%;
+  justify-content : center;
+  font-size       : 1.8em;
+}
+
+#start-page header h2 ul li
+{
+  padding-left  : 20px;
+  padding-right : 20px;
+  display       : inline-block;
+  color         : #d3d3d3;
 }
 
 #navbar
