@@ -10,29 +10,46 @@ $(document).ready(function(){
         $('#navbar li:first').addClass('active');
     });
 
-
-
     $("#navbar a, #logo").on('click', function(event){
 
         let offset = $('body').data('offset')
-        console.log(offset);
-        // Prevent default anchor click behavior
         event.preventDefault();
 
-        // Store hash (#)
         var hash = this.hash;
-        console.log('hash: ');
-        console.log(hash);
 
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area (the speed of the animation)
         $('html, body').animate({
             scrollTop: $(hash).offset().top
         }, 800, function(){
-
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
             window.location.hash = hash;
         });
     });
+
+    var lastId,
+    topMenu = $("#navbar"),
+    // topMenuHeight = topMenu.outerHeight()+15,
+    topMenuHeight = topMenu.outerHeight(),
+    menuItems = topMenu.find("a"),
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+ 
+    $(window).scroll(function(){
+    var fromTop = $(this).scrollTop()+topMenuHeight;
+    var cur = scrollItems.map(function(){
+        if ($(this).offset().top < fromTop)
+        return this;
+    });
+    cur = cur[cur.length-1];
+    var id = cur && cur.length ? cur[0].id : "";
+    
+    if (lastId !== id) {
+        lastId = id;
+        menuItems
+            .parent().removeClass("active")
+            .end().filter("[href='#"+id+"']").parent().addClass("active");
+        // window.location.hash = id; // НЕ ПЛАВНО - СКАЧОК
+    }                   
+    });
+
 });
