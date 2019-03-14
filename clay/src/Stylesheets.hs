@@ -5,7 +5,7 @@ module Stylesheets
     ) where
 
 import Clay
-import Prelude hiding (rem)
+import Prelude hiding (rem, (**))
 
 rootFontSize = px 12
 rootFontName = "Raleway"
@@ -22,6 +22,7 @@ navbarColor = rgb 251 166 40
 
 mainStylesheet :: Bool -> Css
 mainStylesheet debug = do
+    let debugBorder = if debug then border solid (px 1) blue else border inherit inherit inherit
     importUrl "../fonts/raleway/raleway.css"
 
     -- Для корректной прокрутки разделов (из доки bootstrap scroll-spy) 
@@ -30,6 +31,7 @@ mainStylesheet debug = do
         fontFamily [rootFontName] [secondaryFontName]
 
     "#start-page" ? do
+        debugBorder
         backgroundSize cover
         backgroundImage $ url "../img/start_page_cover.jpg"
 
@@ -40,11 +42,46 @@ mainStylesheet debug = do
         alignItems center
 
         header ? do
-            fontSize $ em 4
+            width (pct 55)
+
             color white
 
+            h1 ? do
+                debugBorder
+
+                textAlign center
+                lineHeight (em 2)
+                fontSize $ em 3
+
+            h2 ? do
+                debugBorder
+
+                display flex
+
+            h2 ** ul ? do
+                debugBorder
+
+                marginLeft auto
+                marginRight auto
+
+                display flex
+                width $ pct 100
+                justifyContent center
+
+                fontSize $ em 1.8
+
+                li ? do
+                    paddingLeft $ px 20
+                    paddingRight $ px 20
+
+                    display inlineBlock
+
+                    color lightgray
+
+
+
     "#navbar" ? do 
-        if debug then border solid (px 1) blue else border inherit inherit inherit
+        debugBorder
 
         display flex
         alignItems center
