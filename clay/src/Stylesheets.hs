@@ -33,14 +33,15 @@ mainStylesheet debug = do
         backgroundSize cover
         backgroundImage $ url "../img/start_page_cover.jpg"
 
-    "#start-page" # before ? do
-        content $ stringContent ""
-        position absolute
-        top nil
-        left nil
-        right nil
-        bottom nil
-        backgroundColor $ rgba 0 0 0 0.6
+        paddingTop nil
+
+        display flex
+        justifyContent center
+        alignItems center
+
+        header ? do
+            fontSize $ em 4
+            color white
 
     "#navbar" ? do 
         if debug then border solid (px 1) blue else border inherit inherit inherit
@@ -60,7 +61,6 @@ mainStylesheet debug = do
 
         color navbarColor
         fontWeight $ weight 600
-        backgroundColor $  rgba 0 0 0 0.05
 
         fontSize $ em 1.1
         textTransform uppercase
@@ -75,8 +75,6 @@ mainStylesheet debug = do
             li ? do
                 borderColor navbarColor
                 borderBottomWidth $ px 1
-                -- sym borderRadius $ px 15
-                -- borderStyle solid
 
                 paddingBottom $ px 8
                 paddingTop $ px 8
@@ -87,7 +85,6 @@ mainStylesheet debug = do
                 borderStyle solid
                 color red
 
-
             a ? do
                 textDecoration none
                 color navbarColor
@@ -96,23 +93,11 @@ mainStylesheet debug = do
         fontSize $ rem 1.2
 
 
-    -- "#navbar" ? do 
-    --     /* FIXME: или через container-fluid */
-    --     /* margin-right: 0; */
-    -- }
-
-    -- "#start-page" ? do
-
-    -- -- /* FIXME: убирать на малых экранах как navbar-toggler */
-    -- -- #start-phone {
-    -- --     /* margin-right: 50px; */
-    -- -- }
-
     ".navbar-toggler" ? do
         display none
 
+
     ".page" ? do
         height $ vh 100
-        -- width $ vw 100
 
         paddingTop (navbarHeight @+@ (px 5))

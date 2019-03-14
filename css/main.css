@@ -10,37 +10,35 @@ body
 {
   background-size  : cover;
   background-image : url("../img/start_page_cover.jpg");
+  padding-top      : 0;
+  display          : flex;
+  justify-content  : center;
+  align-items      : center;
 }
 
-#start-page::before
+#start-page header
 {
-  content          : "";
-  position         : absolute;
-  top              : 0;
-  left             : 0;
-  right            : 0;
-  bottom           : 0;
-  background-color : rgba(0,0,0,0.6);
+  font-size : 4em;
+  color     : #ffffff;
 }
 
 #navbar
 {
-  border           : inherit inherit inherit;
-  display          : flex;
-  align-items      : center;
-  justify-content  : space-between;
-  min-height       : 95px;
-  position         : fixed;
-  top              : 0;
-  right            : 0;
-  left             : 0;
-  padding-left     : 10%;
-  padding-right    : 10%;
-  color            : #fba628;
-  font-weight      : 600;
-  background-color : rgba(0,0,0,5.0e-2);
-  font-size        : 1.1em;
-  text-transform   : uppercase;
+  border          : inherit inherit inherit;
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+  min-height      : 95px;
+  position        : fixed;
+  top             : 0;
+  right           : 0;
+  left            : 0;
+  padding-left    : 10%;
+  padding-right   : 10%;
+  color           : #fba628;
+  font-weight     : 600;
+  font-size       : 1.1em;
+  text-transform  : uppercase;
 }
 
 #navbar ul
