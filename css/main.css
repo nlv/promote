@@ -1,18 +1,9 @@
 
-@import url(../fonts/Raleway-Regular.ttf);
-@import url(../fonts/Raleway-Regular-Italic.ttf);
-@import url(../fonts/Raleway-Bold.ttf);
-@import url(../fonts/Raleway-Bold-Italic.ttf);
-@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700&subset=cyrillic);
+@import url(../fonts/raleway/raleway.css);
 body
 {
-  position    : relative;
-  font-family : "Amatic SC", serif;
-}
-
-#navbar
-{
-  border : inherit inherit inherit;
+  font-size   : 12px;
+  font-family : "Raleway", sans-serif;
 }
 
 #start-page
@@ -21,11 +12,85 @@ body
   background-image : url("../img/start_page_cover.jpg");
 }
 
+#start-page::before
+{
+  content          : "";
+  position         : absolute;
+  top              : 0;
+  left             : 0;
+  right            : 0;
+  bottom           : 0;
+  background-color : rgba(0,0,0,0.6);
+}
+
+#navbar
+{
+  border           : inherit inherit inherit;
+  display          : flex;
+  align-items      : center;
+  justify-content  : space-between;
+  min-height       : 95px;
+  position         : fixed;
+  top              : 0;
+  right            : 0;
+  left             : 0;
+  padding-left     : 10%;
+  padding-right    : 10%;
+  color            : #fba628;
+  font-weight      : 600;
+  background-color : rgba(0,0,0,5.0e-2);
+  font-size        : 1.1em;
+  text-transform   : uppercase;
+}
+
+#navbar ul
+{
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+  width           : 40%;
+}
+
+#navbar ul li
+{
+  border-color        : #fba628;
+  border-bottom-width : 1px;
+  padding-bottom      : 8px;
+  padding-top         : 8px;
+}
+
+#navbar ul li.active
+{
+  border-color        : #fba628;
+  border-bottom-width : 1px;
+  border-style        : solid;
+  color               : #ff0000;
+}
+
+#navbar ul a
+{
+  text-decoration : none;
+  color           : #fba628;
+}
+
+#navbar-phone
+{
+  font-size : 1.19999rem;
+}
+
+.navbar-toggler
+{
+  display : none;
+}
+
 .page
 {
   height      : 100vh;
-  width       : 100vw;
-  padding-top : 105px;
+  padding-top : -webkit-calc(95px + 5px);
+  padding-top : -moz-calc(95px + 5px);
+  padding-top : -ms-calc(95px + 5px);
+  padding-top : -o-calc(95px + 5px);
+  padding-top : calc(95px + 5px);
 }
 
 
