@@ -48,6 +48,15 @@ $(document).ready(function(){
         menuItems
             .parent().removeClass("active")
             .end().filter("[href='#"+id+"']").parent().addClass("active");
+
+            if(history.pushState) {
+                history.pushState(null, null, id);
+            }
+            else {
+                location.hash = id;
+            }
+
+
         // window.location.hash = id; // НЕ ПЛАВНО - СКАЧОК
     }                   
     });
