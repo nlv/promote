@@ -50,8 +50,9 @@ mainStylesheet debug = do
                 debugBorder
 
                 textAlign center
-                lineHeight (em 2)
+                -- lineHeight (em 2)
                 fontSize $ em 3
+                paddingBottom $ px 20
 
             h2 ? do
                 debugBorder
