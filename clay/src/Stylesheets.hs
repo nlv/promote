@@ -48,18 +48,13 @@ mainStylesheet debug = do
         header ? do
             width (pct 55)
 
-            marginTop $ pct (-20)
-
-            -- backgroundColor black
-            -- opacity 0.6
+            -- marginTop $ pct (-20)
 
             h1 ? do
                 debugBorder
 
                 textAlign center
-                -- lineHeight (em 2)
                 fontSize $ em 3.1
-                -- fontWeight $ weight 600
                 paddingBottom $ px 10
 
                 color $ lightgoldenrodyellow
@@ -70,7 +65,10 @@ mainStylesheet debug = do
 
                 display flex
 
+                paddingBottom $ px 10
+
                 color $ setA 0.7 navbarColor
+
 
 
             h2 ** ul ? do
