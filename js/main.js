@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-    $('#navbar li').click (function () {
-        $('#navbar li').removeClass('active');
-        $(this).addClass('active');
-    });
+    // $('#navbar li').click (function () {
+    //     $('#navbar li').removeClass('active');
+    //     $(this).addClass('active');
+    // });
 
     $('#logo').click (function () {
         $('#navbar li').removeClass('active');

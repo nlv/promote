@@ -34,6 +34,10 @@ mainStylesheet debug = do
         debugBorder
         backgroundSize cover
         backgroundImage $ url "../img/start_page_cover.jpg"
+        backgroundAttachment attachFixed
+
+        -- backgroundColor black
+        -- opacity 0.995
 
         paddingTop nil
 
@@ -44,7 +48,10 @@ mainStylesheet debug = do
         header ? do
             width (pct 55)
 
-            color white
+            marginTop $ pct (-20)
+
+            -- backgroundColor black
+            -- opacity 0.6
 
             h1 ? do
                 debugBorder
@@ -52,12 +59,18 @@ mainStylesheet debug = do
                 textAlign center
                 -- lineHeight (em 2)
                 fontSize $ em 3
-                paddingBottom $ px 20
+                -- fontWeight $ weight 600
+                paddingBottom $ px 10
+
+                color $ setA 1.0 navbarColor
 
             h2 ? do
                 debugBorder
 
                 display flex
+
+                color $ setA 0.7 navbarColor
+
 
             h2 ** ul ? do
                 debugBorder
@@ -77,7 +90,7 @@ mainStylesheet debug = do
 
                     display inlineBlock
 
-                    color lightgray
+                    -- color lightgray
 
 
 
@@ -99,6 +112,8 @@ mainStylesheet debug = do
 
         color navbarColor
         fontWeight $ weight 600
+
+        backgroundColor $ rgba 0 0 0 0.8
 
         fontSize $ em 1.1
         textTransform uppercase
