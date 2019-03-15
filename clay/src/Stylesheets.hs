@@ -58,11 +58,12 @@ mainStylesheet debug = do
 
                 textAlign center
                 -- lineHeight (em 2)
-                fontSize $ em 3
+                fontSize $ em 3.1
                 -- fontWeight $ weight 600
                 paddingBottom $ px 10
 
-                color $ setA 1.0 navbarColor
+                color $ lightgoldenrodyellow
+                color $ lightgray
 
             h2 ? do
                 debugBorder
@@ -85,8 +86,8 @@ mainStylesheet debug = do
                 fontSize $ em 1.8
 
                 li ? do
-                    paddingLeft $ px 20
-                    paddingRight $ px 20
+                    paddingLeft $ px 15
+                    paddingRight $ px 15
 
                     display inlineBlock
 

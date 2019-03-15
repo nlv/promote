@@ -28,9 +28,10 @@ body
 {
   border         : inherit inherit inherit;
   text-align     : center;
-  font-size      : 3em;
+  font-size      : 3.1em;
   padding-bottom : 10px;
-  color          : #fba628;
+  color          : #fafad2;
+  color          : #d3d3d3;
 }
 
 #start-page header h2
@@ -53,8 +54,8 @@ body
 
 #start-page header h2 ul li
 {
-  padding-left  : 20px;
-  padding-right : 20px;
+  padding-left  : 15px;
+  padding-right : 15px;
   display       : inline-block;
 }
 
