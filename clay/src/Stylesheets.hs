@@ -5,6 +5,7 @@ module Stylesheets
     ) where
 
 import Clay
+import qualified Clay.Flexbox as Flexbox (flex)
 import Prelude hiding (rem, (**))
 
 rootFontSize = px 12
@@ -32,6 +33,9 @@ mainStylesheet debug = do
 
     "#start-page" ? do
         debugBorder
+
+        height $ vh 100
+
         backgroundSize cover
         backgroundImage $ url "../img/start_page_cover.jpg"
         backgroundAttachment attachFixed
@@ -150,6 +154,61 @@ mainStylesheet debug = do
 
 
     ".page" ? do
-        height $ vh 100
+        display flex
+        flexDirection column
 
+        width $ pct 70
+        height $ vh 100
+        marginLeft auto
+        marginRight auto
         paddingTop (navbarHeight @+@ (px 5))
+
+        -- justifyContent center
+
+        hgroup ? do
+            -- debugBorder
+
+            paddingTop $ px 20
+            paddingBottom $ px 20
+
+
+        h1 ? do
+            -- debugBorder
+
+            sym padding $ px 15
+
+            fontSize $ rem 2.2
+            -- fontWeight $ weight 600
+            textTransform uppercase
+
+
+            textAlign center
+
+        h2 ? do
+            -- debugBorder
+
+            sym padding $ px 15
+
+            fontSize $ rem 1.6
+            textTransform uppercase
+
+            color $ rgba 0 0 0 0.5
+
+            textAlign center
+
+    ".cards" ? do
+        display flex
+        justifyContent spaceBetween
+
+        paddingTop $ px 5
+        paddingBottom $ px 15
+
+    ".card" ? do 
+        width $ px 250
+        height $ px 350
+
+        display inlineBlock
+
+        borderColor navbarColor
+        borderWidth $ px 4
+        borderStyle solid

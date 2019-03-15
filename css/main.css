@@ -8,7 +8,8 @@ body
 
 #start-page
 {
-  border                : inherit inherit inherit;
+  border                : solid 1px #0000ff;
+  height                : 100vh;
   background-size       : cover;
   background-image      : url("../img/start_page_cover.jpg");
   background-attachment : fixed;
@@ -25,7 +26,7 @@ body
 
 #start-page header h1
 {
-  border         : inherit inherit inherit;
+  border         : solid 1px #0000ff;
   text-align     : center;
   font-size      : 3.1em;
   padding-bottom : 10px;
@@ -35,7 +36,7 @@ body
 
 #start-page header h2
 {
-  border         : inherit inherit inherit;
+  border         : solid 1px #0000ff;
   display        : flex;
   padding-bottom : 10px;
   color          : rgba(251,166,40,0.7);
@@ -43,7 +44,7 @@ body
 
 #start-page header h2 ul
 {
-  border          : inherit inherit inherit;
+  border          : solid 1px #0000ff;
   margin-left     : auto;
   margin-right    : auto;
   display         : flex;
@@ -61,7 +62,7 @@ body
 
 #navbar
 {
-  border           : inherit inherit inherit;
+  border           : solid 1px #0000ff;
   display          : flex;
   align-items      : center;
   justify-content  : space-between;
@@ -121,12 +122,58 @@ body
 
 .page
 {
-  height      : 100vh;
-  padding-top : -webkit-calc(95px + 5px);
-  padding-top : -moz-calc(95px + 5px);
-  padding-top : -ms-calc(95px + 5px);
-  padding-top : -o-calc(95px + 5px);
-  padding-top : calc(95px + 5px);
+  display        : flex;
+  flex-direction : column;
+  width          : 70%;
+  height         : 100vh;
+  margin-left    : auto;
+  margin-right   : auto;
+  padding-top    : -webkit-calc(95px + 5px);
+  padding-top    : -moz-calc(95px + 5px);
+  padding-top    : -ms-calc(95px + 5px);
+  padding-top    : -o-calc(95px + 5px);
+  padding-top    : calc(95px + 5px);
+}
+
+.page hgroup
+{
+  padding-top    : 20px;
+  padding-bottom : 20px;
+}
+
+.page h1
+{
+  padding        : 15px 15px 15px 15px;
+  font-size      : 2.2rem;
+  text-transform : uppercase;
+  text-align     : center;
+}
+
+.page h2
+{
+  padding        : 15px 15px 15px 15px;
+  font-size      : 1.6rem;
+  text-transform : uppercase;
+  color          : rgba(0,0,0,0.5);
+  text-align     : center;
+}
+
+.cards
+{
+  display         : flex;
+  justify-content : space-between;
+  padding-top     : 5px;
+  padding-bottom  : 15px;
+}
+
+.card
+{
+  width        : 250px;
+  height       : 350px;
+  display      : inline-block;
+  border-color : #fba628;
+  border-width : 4px;
+  border-style : solid;
 }
 
 
