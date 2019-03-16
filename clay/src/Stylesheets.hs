@@ -204,11 +204,40 @@ mainStylesheet debug = do
         paddingBottom $ px 15
 
     ".card" ? do 
-        width $ px 250
-        height $ px 350
+        width $ px 280
+        height $ px 400
 
-        display inlineBlock
+        display flex
+        flexDirection column
+        alignItems center
 
         borderColor navbarColor
         borderWidth $ px 4
         borderStyle solid
+
+        sym padding $ px 10
+
+        hgroup ? do
+
+            -- FIXME пересекается с правилом выше надо делать a > b
+            paddingTop $ px 0
+            paddingBottom $ px 0
+
+            figure ? do
+                textAlign center
+                img ? do
+                    width $ pct 70
+
+            h1 ? do
+                debugBorder
+                fontSize $ em 1.9
+                paddingTop $ px 5
+                textAlign center
+
+        p ? do
+            debugBorder
+            fontSize $ em 1.6
+            paddingTop $ px 5
+            paddingBottom $ px 5
+            textAlign center
+
