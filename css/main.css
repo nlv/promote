@@ -6,67 +6,54 @@ body
   font-family : "Raleway", sans-serif;
 }
 
+.page
+{
+  height : 100vh;
+}
+
+#p1
+{
+  border           : solid 1px inherit;
+  background-color : #ff0000;
+}
+
+#p2
+{
+  border           : solid 1px inherit;
+  background-color : #008000;
+}
+
+#p3
+{
+  border           : solid 1px inherit;
+  background-color : #0000ff;
+}
+
+#p4
+{
+  border           : solid 1px inherit;
+  background-color : #ffff00;
+}
+
 #start-page
 {
-  border                : inherit inherit inherit;
-  height                : 100vh;
+  border                : solid 1px #0000ff;
+  background-color      : inherit;
   background-size       : cover;
   background-image      : url("../img/start_page_cover.jpg");
   background-attachment : fixed;
-  padding-top           : 0;
   display               : flex;
   justify-content       : center;
   align-items           : center;
 }
 
-#start-page header
-{
-  width : 55%;
-}
-
-#start-page header h1
-{
-  border         : inherit inherit inherit;
-  text-align     : center;
-  font-size      : 3.1em;
-  padding-bottom : 10px;
-  color          : #fafad2;
-  color          : #d3d3d3;
-}
-
-#start-page header h2
-{
-  border         : inherit inherit inherit;
-  display        : flex;
-  padding-bottom : 10px;
-  color          : rgba(251,166,40,0.7);
-}
-
-#start-page header h2 ul
-{
-  border          : inherit inherit inherit;
-  margin-left     : auto;
-  margin-right    : auto;
-  display         : flex;
-  width           : 100%;
-  justify-content : center;
-  font-size       : 1.8em;
-}
-
-#start-page header h2 ul li
-{
-  padding-left  : 15px;
-  padding-right : 15px;
-  display       : inline-block;
-}
-
 #navbar
 {
-  border           : inherit inherit inherit;
+  border           : solid 1px #008000;
+  background-color : inherit;
   display          : flex;
   align-items      : center;
   justify-content  : space-between;
-  min-height       : 95px;
   position         : fixed;
   top              : 0;
   right            : 0;
@@ -80,7 +67,7 @@ body
   text-transform   : uppercase;
 }
 
-#navbar ul
+.navbar-nav
 {
   display         : flex;
   align-items     : center;
@@ -88,7 +75,7 @@ body
   width           : 40%;
 }
 
-#navbar ul li
+.navbar-nav li
 {
   border-color        : #fba628;
   border-bottom-width : 1px;
@@ -96,7 +83,7 @@ body
   padding-top         : 8px;
 }
 
-#navbar ul li.active
+.navbar-nav li.active
 {
   border-color        : #fba628;
   border-bottom-width : 1px;
@@ -104,113 +91,73 @@ body
   color               : #ff0000;
 }
 
-#navbar ul a
+.navbar-nav a
 {
   text-decoration : none;
   color           : #fba628;
 }
 
-#navbar-phone
+.navbar-phone
 {
   font-size : 1.19999rem;
 }
 
-.navbar-toggler
+.navbar-toggle
+{
+  display          : none;
+  border-style     : none;
+  color            : #fba628;
+  background-color : rgba(0,0,0,0.0);
+  font-size        : 1.8rem;
+}
+
+@media screen and (max-width: 1280px)
+{
+
+#navbar
+{
+  padding-left  : 10px;
+  padding-right : 10px;
+}
+
+.brand
+{
+  -webkit-transform : scale(0.69999,0.69999);
+  -moz-transform    : scale(0.69999,0.69999);
+  -ms-transform     : scale(0.69999,0.69999);
+  -o-transform      : scale(0.69999,0.69999);
+  transform         : scale(0.69999,0.69999);
+}
+
+}
+@media screen and (max-width: 835px)
+{
+
+.navbar-nav
+{
+  width : 80%;
+}
+
+.navbar-phone
 {
   display : none;
 }
 
-.page
+}
+@media screen and (max-width: 480px)
 {
-  display        : flex;
-  flex-direction : column;
-  width          : 70%;
-  height         : 100vh;
-  margin-left    : auto;
-  margin-right   : auto;
-  padding-top    : -webkit-calc(95px + 5px);
-  padding-top    : -moz-calc(95px + 5px);
-  padding-top    : -ms-calc(95px + 5px);
-  padding-top    : -o-calc(95px + 5px);
-  padding-top    : calc(95px + 5px);
+
+
+#navbar .navbar-nav
+{
+  display : none;
 }
 
-.page hgroup
+#navbar .navbar-toggle
 {
-  padding-top    : 20px;
-  padding-bottom : 20px;
+  display : inline-block;
 }
 
-.page h1
-{
-  padding        : 15px 15px 15px 15px;
-  font-size      : 2.2rem;
-  text-transform : uppercase;
-  text-align     : center;
 }
-
-.page h2
-{
-  padding        : 15px 15px 15px 15px;
-  font-size      : 1.6rem;
-  text-transform : uppercase;
-  color          : rgba(0,0,0,0.5);
-  text-align     : center;
-}
-
-.cards
-{
-  display         : flex;
-  justify-content : space-between;
-  padding-top     : 5px;
-  padding-bottom  : 15px;
-}
-
-.card
-{
-  width          : 280px;
-  height         : 400px;
-  display        : flex;
-  flex-direction : column;
-  align-items    : center;
-  border-color   : #fba628;
-  border-width   : 4px;
-  border-style   : solid;
-  padding        : 10px 10px 10px 10px;
-}
-
-.card hgroup
-{
-  padding-top    : 0px;
-  padding-bottom : 0px;
-}
-
-.card hgroup figure
-{
-  text-align : center;
-}
-
-.card hgroup figure img
-{
-  width : 70%;
-}
-
-.card hgroup h1
-{
-  border      : inherit inherit inherit;
-  font-size   : 1.89999em;
-  padding-top : 5px;
-  text-align  : center;
-}
-
-.card p
-{
-  border         : inherit inherit inherit;
-  font-size      : 1.6em;
-  padding-top    : 5px;
-  padding-bottom : 5px;
-  text-align     : center;
-}
-
 
 /* Generated with Clay, http://fvisser.nl/clay */

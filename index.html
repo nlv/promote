@@ -6,41 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
     <script src="js/main.js"></script>
     <title>Document</title>
 </head>
-<!-- <body data-spy="scroll" data-target="navbar" data-target=".navbar" data-offset="50"> -->
+
 <body data-offset="95">
+    <nav id="navbar">
 
-    <section id="start-page">
+        <div class="brand">
+            <a href="#start-page"><img src="img/logo.png"></a>
+        </div>
 
-        <nav id="navbar">
+        <button type="button" class="navbar-toggle">
+            <i class="fa fa-bars"></i>
+        </button>
+        
+        <ul class="navbar-nav">
+            <li class="active"><a href="#start-page">Начало</a></li>
+            <li><a href="#p1">Проекты</a></li>
+            <li><a href="#p2">Услуги и цены</a></li>
+            <li><a href="#p3">О студии</a></li>
+            <li><a href="#p4">Контакты</a></li>
+        </ul> 
 
-            <div id="logo">
-                <a href="#start-page"><img src="img/logo.png"></a>
-            </div>
-            
-            <button class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <span class="navbar-phone">
+            +7 (000) 000-00-00
+        </span>            
+    </nav>
 
+    <section id="start-page" class="page">
 
-            <ul>
-                <li class="active"><a href="#start-page">Начало</a></li>
-                <li><a href="#p1">Проекты</a></li>
-                <li><a href="#p2">Услуги и цены</a></li>
-                <li><a href="#p3">О студии</a></li>
-                <li><a href="#p4">Контакты</a></li>
-            </ul> 
-
-            <span id="navbar-phone">
-                +7 (000) 000-00-00
-            </span>            
-        </nav>
 
         <header>
             <hgroup>
@@ -52,27 +51,20 @@
                         <li>Комплексное продвижение</li>
                     </ul>
                 </h2>
-                <!-- <h2>
-                    <ul>
-                        <li>Более 240 успешных поектов</li>
-                        <li>Более 73 постоянных клиентов</li>
-                        <li>Первые клиненты - спустя 5 дней после заказа</li>
-                    </ul>
-                </h2> -->
             </hgroup>
         </header>
-
 
     </section>
 
     <section id="p1" class="page">
-        <header>
+        <!-- <header>
             <hgroup>
                 <h1>Наша главная цель &mdash; увеличить вашу прибыль</h1>
                 <h2>Почему стоит заказать у нас</h2>
             </hgroup>
-        </header>
+        </header> -->
 
+        <!--
        <div class="cards">
             <div class="card">
                 <hgroup>
@@ -95,26 +87,26 @@
             <div class="card"></div>
             <div class="card"></div>
             <div class="card"></div>
-        </div>
+        </div> -->
 
     </section>
 
     <section id="p2" class="page">
-        <header>
+        <!-- <header>
             <h>Привет2</h>
-        </header>
+        </header> -->
     </section>
 
     <section id="p3" class="page">
-        <header>
+        <!-- <header>
             <h>Привет3</h>
-        </header>
+        </header> -->
     </section>
 
     <section id="p4" class="page">
-        <header>
+        <!-- <header>
             <h>Привет4</h>
-        </header>
+        </header> -->
     </section>
     
 </body>
