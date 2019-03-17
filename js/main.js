@@ -5,12 +5,12 @@ $(document).ready(function(){
     //     $(this).addClass('active');
     // });
 
-    $('#logo').click (function () {
+    $('.brand').click (function () {
         $('#navbar li').removeClass('active');
         $('#navbar li:first').addClass('active');
     });
 
-    $("#navbar a, #logo").on('click', function(event){
+    $("#navbar a, .brand").on('click', function(event){
 
         let offset = $('body').data('offset')
         event.preventDefault();
@@ -55,10 +55,11 @@ $(document).ready(function(){
             else {
                 location.hash = id;
             }
-
-
-        // window.location.hash = id; // НЕ ПЛАВНО - СКАЧОК
     }                   
     });
+
+    $('.navbar-toggle').click(function() {
+        $('.navbar-nav').toggleClass('active');
+    })
 
 });

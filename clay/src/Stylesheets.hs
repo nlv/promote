@@ -199,11 +199,35 @@ mainStylesheet debug = do
             ".navbar-nav" ? do
                 display none
 
+            ".navbar-nav" # ".active" ? do
+                display block
+
+                position absolute
+                left $ px 0
+                top $ navbarHeight @-@ (px 1)
+                width $ pct 80
+                paddingTop $ px 10
+                paddingBottom $ px 10
+
+                backgroundColor $ rgba 0 0 0 0.8
+
+                li ? do
+                    width $ pct 100
+                    sym2 padding (px 20) (px 20)
+
+                    borderStyle none
+
+                    fontSize $ rem 1.2
+
+                
+
             -- ".navbar-phone" ? do
             --     display none
 
             ".navbar-toggle" ? do
                 display inlineBlock
+
+        
 
 
 

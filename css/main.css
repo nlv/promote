@@ -13,31 +13,31 @@ body
 
 #p1
 {
-  border           : solid 1px inherit;
-  background-color : #ff0000;
+  border           : inherit inherit inherit;
+  background-color : inherit;
 }
 
 #p2
 {
-  border           : solid 1px inherit;
-  background-color : #008000;
+  border           : inherit inherit inherit;
+  background-color : inherit;
 }
 
 #p3
 {
-  border           : solid 1px inherit;
-  background-color : #0000ff;
+  border           : inherit inherit inherit;
+  background-color : inherit;
 }
 
 #p4
 {
-  border           : solid 1px inherit;
-  background-color : #ffff00;
+  border           : inherit inherit inherit;
+  background-color : inherit;
 }
 
 #start-page
 {
-  border                : solid 1px #0000ff;
+  border                : inherit inherit inherit;
   background-color      : inherit;
   background-size       : cover;
   background-image      : url("../img/start_page_cover.jpg");
@@ -49,7 +49,7 @@ body
 
 #navbar
 {
-  border           : solid 1px #008000;
+  border           : inherit inherit inherit;
   background-color : inherit;
   display          : flex;
   align-items      : center;
@@ -151,6 +151,30 @@ body
 #navbar .navbar-nav
 {
   display : none;
+}
+
+#navbar .active.navbar-nav
+{
+  display          : block;
+  position         : absolute;
+  left             : 0px;
+  top              : -webkit-calc(95px - 1px);
+  top              : -moz-calc(95px - 1px);
+  top              : -ms-calc(95px - 1px);
+  top              : -o-calc(95px - 1px);
+  top              : calc(95px - 1px);
+  width            : 80%;
+  padding-top      : 10px;
+  padding-bottom   : 10px;
+  background-color : rgba(0,0,0,0.8);
+}
+
+#navbar .active.navbar-nav li
+{
+  width        : 100%;
+  padding      : 20px 20px 20px 20px;
+  border-style : none;
+  font-size    : 1.19999rem;
 }
 
 #navbar .navbar-toggle
