@@ -45,6 +45,51 @@ body
   display               : flex;
   justify-content       : center;
   align-items           : center;
+  padding-top           : 0;
+}
+
+#start-page header
+{
+  margin-top : -20%;
+}
+
+#start-page header h1
+{
+  border           : inherit inherit inherit;
+  background-color : inherit;
+  text-align       : center;
+  font-size        : 3.1em;
+  padding-bottom   : 10px;
+  color            : #fafad2;
+  color            : #d3d3d3;
+}
+
+#start-page header h2
+{
+  border           : inherit inherit inherit;
+  background-color : inherit;
+  display          : flex;
+  padding-bottom   : 10px;
+  color            : rgba(251,166,40,0.7);
+}
+
+#start-page header h2 ul
+{
+  border           : inherit inherit inherit;
+  background-color : inherit;
+  margin-left      : auto;
+  margin-right     : auto;
+  display          : flex;
+  width            : 100%;
+  justify-content  : center;
+  font-size        : 1.8em;
+}
+
+#start-page header h2 ul li
+{
+  padding-left  : 15px;
+  padding-right : 15px;
+  display       : inline-block;
 }
 
 #navbar
@@ -109,6 +154,7 @@ body
   color            : #fba628;
   background-color : rgba(0,0,0,0.0);
   font-size        : 1.8rem;
+  cursor           : pointer;
 }
 
 @media screen and (max-width: 1280px)
@@ -116,8 +162,8 @@ body
 
 #navbar
 {
-  padding-left  : 10px;
-  padding-right : 10px;
+  padding-left  : 20px;
+  padding-right : 20px;
 }
 
 .brand
@@ -141,6 +187,50 @@ body
 .navbar-phone
 {
   display : none;
+}
+
+#start-page
+{
+  display : block;
+}
+
+#start-page header
+{
+  display          : flex;
+  flex-direction   : column;
+  height           : 100%;
+  background-color : rgba(0,0,0,0.4);
+  margin-top       : 0;
+  padding-top      : -webkit-calc(95px + 60px);
+  padding-top      : -moz-calc(95px + 60px);
+  padding-top      : -ms-calc(95px + 60px);
+  padding-top      : -o-calc(95px + 60px);
+  padding-top      : calc(95px + 60px);
+}
+
+#start-page header h1
+{
+  font-size : 2.39999em;
+  color     : #fafad2;
+  color     : #d3d3d3;
+}
+
+#start-page header h2 ul
+{
+  border           : inherit inherit inherit;
+  background-color : inherit;
+  margin-left      : auto;
+  margin-right     : auto;
+  display          : flex;
+  flex-direction   : column;
+  width            : 100%;
+}
+
+#start-page header h2 ul li
+{
+  display    : inline-block;
+  text-align : center;
+  padding    : 20px 0 20px 0;
 }
 
 }

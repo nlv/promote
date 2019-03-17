@@ -57,54 +57,54 @@ mainStylesheet debug = do
         justifyContent center
         alignItems center
 
-    --     paddingTop nil
+        paddingTop nil
 
 
-    --     header ? do
-    --         width (pct 55)
+        header ? do
+            -- width (pct 70)
 
-    --         -- marginTop $ pct (-20)
+            marginTop $ pct (-20)
 
-    --         h1 ? do
-    --             debugBorder
+            h1 ? do
+                debugBorder gray
 
-    --             textAlign center
-    --             fontSize $ em 3.1
-    --             paddingBottom $ px 10
+                textAlign center
+                fontSize $ em 3.1
+                paddingBottom $ px 10
 
-    --             color $ lightgoldenrodyellow
-    --             color $ lightgray
+                color $ lightgoldenrodyellow
+                color $ lightgray
 
-    --         h2 ? do
-    --             debugBorder
+            h2 ? do
+                debugBorder blue
 
-    --             display flex
+                display flex
 
-    --             paddingBottom $ px 10
+                paddingBottom $ px 10
 
-    --             color $ setA 0.7 navbarColor
+                color $ setA 0.7 navbarColor
 
 
 
-    --         h2 ** ul ? do
-    --             debugBorder
+            h2 ** ul ? do
+                debugBorder green
 
-    --             marginLeft auto
-    --             marginRight auto
+                marginLeft auto
+                marginRight auto
 
-    --             display flex
-    --             width $ pct 100
-    --             justifyContent center
+                display flex
+                width $ pct 100
+                justifyContent center
 
-    --             fontSize $ em 1.8
+                fontSize $ em 1.8
 
-    --             li ? do
-    --                 paddingLeft $ px 15
-    --                 paddingRight $ px 15
+                li ? do
+                    paddingLeft $ px 15
+                    paddingRight $ px 15
 
-    --                 display inlineBlock
+                    display inlineBlock
 
-    --                 -- color lightgray
+                    -- color lightgray
 
 
 
@@ -167,11 +167,12 @@ mainStylesheet debug = do
         color navbarColor
         backgroundColor transparent
         fontSize $ rem 1.8
+        cursor pointer
 
     query Media.screen [Media.maxWidth $ px 1280] $ do
         "#navbar" ? do
-            paddingLeft $ px 10
-            paddingRight $ px 10
+            paddingLeft $ px 20
+            paddingRight $ px 20
 
         ".brand" ? do
             transform $ scale 0.7 0.7
@@ -183,12 +184,54 @@ mainStylesheet debug = do
         ".navbar-phone" ? do
             display none
 
-    -- query Media.screen [Media.maxWidth $ px 768] $ do
-    --     ".navbar-nav" ? do
-    --         width (pct 80)
+        "#start-page" ? do
+            display block
 
-    --     ".navbar-phone" ? do
-    --         display none
+
+            header ? do
+                display flex
+                flexDirection column
+                height $ pct 100
+
+                backgroundColor $ rgba 0 0 0 0.4
+
+
+                marginTop nil
+                paddingTop (navbarHeight @+@ (px 60))
+
+                h1 ? do
+                    fontSize $ em 2.4
+                    color $ lightgoldenrodyellow
+                    color $ lightgray
+
+                -- h2 ? do
+                    -- display flex
+
+                    -- paddingBottom $ px 10
+                    -- color $ setA 0.7 navbarColor
+
+
+
+                h2 ** ul ? do
+                    debugBorder green
+
+                    marginLeft auto
+                    marginRight auto
+
+                    display flex
+                    flexDirection column
+                    width $ pct 100
+                    -- justifyContent center
+
+                    -- fontSize $ em 1.8
+
+                    li ? do
+                        -- paddingLeft $ px 15
+                        -- paddingRight $ px 15
+
+                        display inlineBlock
+                        textAlign center
+                        sym2 padding (px 20) nil 
 
     query Media.screen [Media.maxWidth $ px 480] $ do
 

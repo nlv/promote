@@ -60,6 +60,10 @@ $(document).ready(function(){
 
     $('.navbar-toggle').click(function() {
         $('.navbar-nav').toggleClass('active');
-    })
+    });
+
+    $('.navbar-nav a').click(function() {
+        $('.navbar-nav').removeClass('active');
+    });
 
 });
