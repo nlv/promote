@@ -38,16 +38,14 @@ mainStylesheet debug = do
         fontSize rootFontSize 
         fontFamily [rootFontName] [secondaryFontName]
 
-    ".page" ? do
-        height $ vh 100
-
-    "#p1" ? debugBack red
     "#p2" ? debugBack green
     "#p3" ? debugBack blue
     "#p4" ? debugBack yellow
 
     "#start-page" ? do
         debugBorder blue 
+
+        height $ vh 100
 
         backgroundSize cover
         backgroundImage $ url "../img/start_page_cover.jpg"
@@ -61,7 +59,6 @@ mainStylesheet debug = do
 
 
         header ? do
-            -- width (pct 70)
 
             marginTop $ pct (-20)
 
@@ -84,8 +81,6 @@ mainStylesheet debug = do
 
                 color $ setA 0.7 navbarColor
 
-
-
             h2 ** ul ? do
                 debugBorder green
 
@@ -104,10 +99,6 @@ mainStylesheet debug = do
 
                     display inlineBlock
 
-                    -- color lightgray
-
-
-
     "#navbar" ? do 
         debugBorder green
 
@@ -115,8 +106,6 @@ mainStylesheet debug = do
         alignItems center
         justifyContent spaceBetween
 
-
-        -- minHeight navbarHeight
         position fixed
         top nil
         right nil
@@ -177,7 +166,8 @@ mainStylesheet debug = do
         ".brand" ? do
             transform $ scale 0.7 0.7
 
-    query Media.screen [Media.maxWidth $ px 835] $ do
+    -- query Media.screen [Media.maxWidth $ px 835] $ do
+    query Media.screen [Media.maxWidth $ px 900] $ do
         ".navbar-nav" ? do
             width (pct 80)
 
@@ -204,13 +194,6 @@ mainStylesheet debug = do
                     color $ lightgoldenrodyellow
                     color $ lightgray
 
-                -- h2 ? do
-                    -- display flex
-
-                    -- paddingBottom $ px 10
-                    -- color $ setA 0.7 navbarColor
-
-
 
                 h2 ** ul ? do
                     debugBorder green
@@ -221,23 +204,27 @@ mainStylesheet debug = do
                     display flex
                     flexDirection column
                     width $ pct 100
-                    -- justifyContent center
-
-                    -- fontSize $ em 1.8
 
                     li ? do
-                        -- paddingLeft $ px 15
-                        -- paddingRight $ px 15
 
                         display inlineBlock
                         textAlign center
                         sym2 padding (px 20) nil 
 
+        ".page" ? do
+
+            h1 ? do
+
+                fontSize $ rem 1.2
+                textTransform uppercase
+
+            h2 ? do
+
+                fontSize $ rem 1
+
     query Media.screen [Media.maxWidth $ px 480] $ do
 
         "#navbar" ? do
-            -- paddingLeft $ px 5
-            -- paddingRight $ px 5
 
             ".navbar-nav" ? do
                 display none
@@ -262,29 +249,64 @@ mainStylesheet debug = do
 
                     fontSize $ rem 1.2
 
-                
-
-            -- ".navbar-phone" ? do
-            --     display none
-
             ".navbar-toggle" ? do
                 display inlineBlock
+
+        ".page" ? do
+
+            h1 ? do
+                paddingLeft $ px 60
+                paddingRight $ px 60
+                paddingBottom nil
+
+                fontSize $ rem 1
+                lineHeight $ unitless 1.5
+
+            h2 ? do
+                fontSize $ rem 1
+
+    ".page" ? do
+        -- debugBack yellow
+
+        paddingTop (navbarHeight @+@ (px 5))
+        width $ pct 100
+        height $ vh 100
+
+        display flex
+        flexDirection column
+        alignItems center
+
+        h1 ? do
+            -- debugBorder
+
+            sym2 padding inherit (px 15)
+            paddingTop $ px 15
+
+            fontSize $ rem 2
+            textTransform uppercase
+
+            textAlign center
+
+        h2 ? do
+            -- debugBorder
+
+            sym padding $ px 15
+
+            fontSize $ rem 1.6
+            textTransform uppercase
+
+            color $ rgba 0 0 0 0.5
+
+            textAlign center
+
 
         
 
 
 
     -- ".page" ? do
-    --     display flex
-    --     flexDirection column
 
-    --     width $ pct 70
-    --     height $ vh 100
-    --     marginLeft auto
-    --     marginRight auto
-    --     paddingTop (navbarHeight @+@ (px 5))
 
-    --     -- justifyContent center
 
     --     hgroup ? do
     --         -- debugBorder
@@ -293,29 +315,6 @@ mainStylesheet debug = do
     --         paddingBottom $ px 20
 
 
-    --     h1 ? do
-    --         -- debugBorder
-
-    --         sym padding $ px 15
-
-    --         fontSize $ rem 2.2
-    --         -- fontWeight $ weight 600
-    --         textTransform uppercase
-
-
-    --         textAlign center
-
-    --     h2 ? do
-    --         -- debugBorder
-
-    --         sym padding $ px 15
-
-    --         fontSize $ rem 1.6
-    --         textTransform uppercase
-
-    --         color $ rgba 0 0 0 0.5
-
-    --         textAlign center
 
     -- ".cards" ? do
     --     display flex

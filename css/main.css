@@ -6,17 +6,6 @@ body
   font-family : "Raleway", sans-serif;
 }
 
-.page
-{
-  height : 100vh;
-}
-
-#p1
-{
-  border           : inherit inherit inherit;
-  background-color : inherit;
-}
-
 #p2
 {
   border           : inherit inherit inherit;
@@ -39,6 +28,7 @@ body
 {
   border                : inherit inherit inherit;
   background-color      : inherit;
+  height                : 100vh;
   background-size       : cover;
   background-image      : url("../img/start_page_cover.jpg");
   background-attachment : fixed;
@@ -157,6 +147,38 @@ body
   cursor           : pointer;
 }
 
+.page
+{
+  padding-top    : -webkit-calc(95px + 5px);
+  padding-top    : -moz-calc(95px + 5px);
+  padding-top    : -ms-calc(95px + 5px);
+  padding-top    : -o-calc(95px + 5px);
+  padding-top    : calc(95px + 5px);
+  width          : 100%;
+  height         : 100vh;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+}
+
+.page h1
+{
+  padding        : inherit 15px inherit 15px;
+  padding-top    : 15px;
+  font-size      : 2rem;
+  text-transform : uppercase;
+  text-align     : center;
+}
+
+.page h2
+{
+  padding        : 15px 15px 15px 15px;
+  font-size      : 1.6rem;
+  text-transform : uppercase;
+  color          : rgba(0,0,0,0.5);
+  text-align     : center;
+}
+
 @media screen and (max-width: 1280px)
 {
 
@@ -176,7 +198,7 @@ body
 }
 
 }
-@media screen and (max-width: 835px)
+@media screen and (max-width: 900px)
 {
 
 .navbar-nav
@@ -233,6 +255,18 @@ body
   padding    : 20px 0 20px 0;
 }
 
+
+.page h1
+{
+  font-size      : 1.19999rem;
+  text-transform : uppercase;
+}
+
+.page h2
+{
+  font-size : 1rem;
+}
+
 }
 @media screen and (max-width: 480px)
 {
@@ -270,6 +304,21 @@ body
 #navbar .navbar-toggle
 {
   display : inline-block;
+}
+
+
+.page h1
+{
+  padding-left   : 60px;
+  padding-right  : 60px;
+  padding-bottom : 0;
+  font-size      : 1rem;
+  line-height    : 1.5;
+}
+
+.page h2
+{
+  font-size : 1rem;
 }
 
 }
