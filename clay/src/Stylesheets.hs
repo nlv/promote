@@ -345,7 +345,6 @@ mainStylesheet debug = do
                     width $ pct 70
 
             h1 ? do
-                -- debugBorder
                 fontSize $ em 1.6
                 fontWeight bold
                 paddingTop $ px 15
@@ -356,11 +355,12 @@ mainStylesheet debug = do
             paddingTop $ px 15
 
         p ? do
-            -- debugBorder
             fontSize $ em 1.6
             paddingTop $ px 10
-            -- paddingBottom $ px 5
-            textAlign center
+            -- textAlign center
+            textAlign justify
+            textIndent $ indent $ px 20
+            lineHeight $ em 1.2
 
             
 

@@ -229,7 +229,9 @@ body
 {
   font-size   : 1.6em;
   padding-top : 10px;
-  text-align  : center;
+  text-align  : justify;
+  text-indent : 20px;
+  line-height : 1.19999em;
 }
 
 @media screen and (max-width: 1280px)
