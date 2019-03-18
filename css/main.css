@@ -26,8 +26,6 @@ body
 
 #start-page
 {
-  border                : inherit inherit inherit;
-  background-color      : inherit;
   height                : 100vh;
   background-size       : cover;
   background-image      : url("../img/start_page_cover.jpg");
@@ -45,34 +43,28 @@ body
 
 #start-page header h1
 {
-  border           : inherit inherit inherit;
-  background-color : inherit;
-  text-align       : center;
-  font-size        : 3.1em;
-  padding-bottom   : 10px;
-  color            : #fafad2;
-  color            : #d3d3d3;
+  text-align     : center;
+  font-size      : 3.1em;
+  padding-bottom : 10px;
+  color          : #fafad2;
+  color          : #d3d3d3;
 }
 
 #start-page header h2
 {
-  border           : inherit inherit inherit;
-  background-color : inherit;
-  display          : flex;
-  padding-bottom   : 10px;
-  color            : rgba(251,166,40,0.7);
+  display        : flex;
+  padding-bottom : 10px;
+  color          : rgba(251,166,40,0.7);
 }
 
 #start-page header h2 ul
 {
-  border           : inherit inherit inherit;
-  background-color : inherit;
-  margin-left      : auto;
-  margin-right     : auto;
-  display          : flex;
-  width            : 100%;
-  justify-content  : center;
-  font-size        : 1.8em;
+  margin-left     : auto;
+  margin-right    : auto;
+  display         : flex;
+  width           : 100%;
+  justify-content : center;
+  font-size       : 1.8em;
 }
 
 #start-page header h2 ul li
@@ -84,8 +76,6 @@ body
 
 #navbar
 {
-  border           : inherit inherit inherit;
-  background-color : inherit;
   display          : flex;
   align-items      : center;
   justify-content  : space-between;
@@ -179,6 +169,69 @@ body
   text-align     : center;
 }
 
+.cards
+{
+  display         : flex;
+  flex-wrap       : wrap;
+  justify-content : space-around;
+  width           : 100%;
+  max-width       : 1200px;
+  padding-top     : 5px;
+  padding-bottom  : 15px;
+}
+
+.card
+{
+  width          : 280px;
+  height         : 400px;
+  border-color   : #fba628;
+  border-width   : 4px;
+  border-style   : solid;
+  margin         : 5px 0 5px 0;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  padding        : 10px 10px 10px 10px;
+}
+
+.card hgroup
+{
+  padding-top    : 0px;
+  padding-bottom : 0px;
+}
+
+.card hgroup figure
+{
+  text-align : center;
+}
+
+.card hgroup figure img
+{
+  width : 70%;
+}
+
+.card hgroup h1
+{
+  font-size   : 1.6em;
+  font-weight : bold;
+  padding-top : 15px;
+  text-align  : center;
+}
+
+.card p:first-of-type
+{
+  border           : inherit inherit inherit;
+  background-color : inherit;
+  padding-top      : 15px;
+}
+
+.card p
+{
+  font-size   : 1.6em;
+  padding-top : 10px;
+  text-align  : center;
+}
+
 @media screen and (max-width: 1280px)
 {
 
@@ -239,13 +292,11 @@ body
 
 #start-page header h2 ul
 {
-  border           : inherit inherit inherit;
-  background-color : inherit;
-  margin-left      : auto;
-  margin-right     : auto;
-  display          : flex;
-  flex-direction   : column;
-  width            : 100%;
+  margin-left    : auto;
+  margin-right   : auto;
+  display        : flex;
+  flex-direction : column;
+  width          : 100%;
 }
 
 #start-page header h2 ul li
@@ -265,6 +316,13 @@ body
 .page h2
 {
   font-size : 1rem;
+}
+
+.cards
+{
+  display               : grid;
+  grid-template-columns : auto auto;
+  grid-template-rows    : auto auto;
 }
 
 }

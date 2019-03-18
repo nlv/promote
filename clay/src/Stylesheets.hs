@@ -5,7 +5,7 @@ module Stylesheets
     ) where
 
 import Clay
-import qualified Clay.Flexbox as Flexbox (flex)
+import qualified Clay.Flexbox as Flexbox (flex, wrap)
 import qualified Clay.Media as Media
 import Prelude hiding (rem, (**))
 
@@ -43,7 +43,7 @@ mainStylesheet debug = do
     "#p4" ? debugBack yellow
 
     "#start-page" ? do
-        debugBorder blue 
+        -- debugBorder blue 
 
         height $ vh 100
 
@@ -63,7 +63,7 @@ mainStylesheet debug = do
             marginTop $ pct (-20)
 
             h1 ? do
-                debugBorder gray
+                -- debugBorder gray
 
                 textAlign center
                 fontSize $ em 3.1
@@ -73,7 +73,7 @@ mainStylesheet debug = do
                 color $ lightgray
 
             h2 ? do
-                debugBorder blue
+                -- debugBorder blue
 
                 display flex
 
@@ -82,7 +82,7 @@ mainStylesheet debug = do
                 color $ setA 0.7 navbarColor
 
             h2 ** ul ? do
-                debugBorder green
+                -- debugBorder green
 
                 marginLeft auto
                 marginRight auto
@@ -100,7 +100,7 @@ mainStylesheet debug = do
                     display inlineBlock
 
     "#navbar" ? do 
-        debugBorder green
+        -- debugBorder green
 
         display flex
         alignItems center
@@ -196,7 +196,7 @@ mainStylesheet debug = do
 
 
                 h2 ** ul ? do
-                    debugBorder green
+                    -- debugBorder green
 
                     marginLeft auto
                     marginRight auto
@@ -221,6 +221,13 @@ mainStylesheet debug = do
             h2 ? do
 
                 fontSize $ rem 1
+
+        ".cards" ? do
+            display grid
+            "grid-template-columns" -: "auto auto"
+            "grid-template-rows" -: "auto auto"
+            -- flexWrap Flexbox.wrap
+            -- justifyContent spaceAround
 
     query Media.screen [Media.maxWidth $ px 480] $ do
 
@@ -299,65 +306,61 @@ mainStylesheet debug = do
 
             textAlign center
 
+    ".cards" ? do
+        display flex
+        flexWrap Flexbox.wrap
+        justifyContent spaceAround
 
-        
+        width $ pct 100
+        maxWidth $ px 1200
+        paddingTop $ px 5
+        paddingBottom $ px 15
+
+    ".card" ? do 
+        width $ px 280
+        height $ px 400
+
+        borderColor navbarColor
+        borderWidth $ px 4
+        borderStyle solid
+
+        sym2 margin (px 5) nil
+
+        display flex
+        flexDirection column
+        alignItems center
 
 
+        sym padding $ px 10
 
-    -- ".page" ? do
+        hgroup ? do
 
+            -- FIXME пересекается с правилом выше надо делать a > b
+            paddingTop $ px 0
+            paddingBottom $ px 0
 
+            figure ? do
+                textAlign center
+                img ? do
+                    width $ pct 70
 
-    --     hgroup ? do
-    --         -- debugBorder
+            h1 ? do
+                -- debugBorder
+                fontSize $ em 1.6
+                fontWeight bold
+                paddingTop $ px 15
+                textAlign center
 
-    --         paddingTop $ px 20
-    --         paddingBottom $ px 20
+        p # ":first-of-type" ? do
+            debugBorder green
+            paddingTop $ px 15
 
+        p ? do
+            -- debugBorder
+            fontSize $ em 1.6
+            paddingTop $ px 10
+            -- paddingBottom $ px 5
+            textAlign center
 
-
-    -- ".cards" ? do
-    --     display flex
-    --     justifyContent spaceBetween
-
-    --     paddingTop $ px 5
-    --     paddingBottom $ px 15
-
-    -- ".card" ? do 
-    --     width $ px 280
-    --     height $ px 400
-
-    --     display flex
-    --     flexDirection column
-    --     alignItems center
-
-    --     borderColor navbarColor
-    --     borderWidth $ px 4
-    --     borderStyle solid
-
-    --     sym padding $ px 10
-
-    --     hgroup ? do
-
-    --         -- FIXME пересекается с правилом выше надо делать a > b
-    --         paddingTop $ px 0
-    --         paddingBottom $ px 0
-
-    --         figure ? do
-    --             textAlign center
-    --             img ? do
-    --                 width $ pct 70
-
-    --         h1 ? do
-    --             debugBorder
-    --             fontSize $ em 1.9
-    --             paddingTop $ px 5
-    --             textAlign center
-
-    --     p ? do
-    --         debugBorder
-    --         fontSize $ em 1.6
-    --         paddingTop $ px 5
-    --         paddingBottom $ px 5
-    --         textAlign center
+            
 
