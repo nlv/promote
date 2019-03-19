@@ -272,6 +272,34 @@ mainStylesheet debug = do
             h2 ? do
                 fontSize $ rem 1
 
+        ".cards" ? do
+            display flex
+            flexDirection column
+            justifyContent spaceAround
+            alignItems center
+
+            width $ pct 100
+            maxWidth $ px 1200
+            paddingTop $ px 5
+            paddingBottom $ px 15
+
+        ".card" ? do 
+            width $ pct 90
+            maxWidth $ px 360
+            -- height $ px 400
+            height auto
+
+            borderColor navbarColor
+            borderWidth $ px 4
+            borderStyle solid
+
+            sym2 margin (px 10) (px 5) 
+
+            p ? do
+                paddingLeft $ px 10
+                paddingRight $ px 10
+
+
     ".page" ? do
         -- debugBack yellow
 

@@ -381,6 +381,35 @@ body
   font-size : 1rem;
 }
 
+.cards
+{
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-around;
+  align-items     : center;
+  width           : 100%;
+  max-width       : 1200px;
+  padding-top     : 5px;
+  padding-bottom  : 15px;
+}
+
+.card
+{
+  width        : 90%;
+  max-width    : 360px;
+  height       : auto;
+  border-color : #fba628;
+  border-width : 4px;
+  border-style : solid;
+  margin       : 10px 5px 10px 5px;
+}
+
+.card p
+{
+  padding-left  : 10px;
+  padding-right : 10px;
+}
+
 }
 
 /* Generated with Clay, http://fvisser.nl/clay */
