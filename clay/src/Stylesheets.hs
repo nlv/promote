@@ -305,7 +305,7 @@ mainStylesheet debug = do
 
         paddingTop (navbarHeight @+@ (px 5))
         width $ pct 100
-        height $ vh 100
+        -- height $ vh 100
 
         display flex
         flexDirection column
@@ -335,12 +335,15 @@ mainStylesheet debug = do
             textAlign center
 
     ".cards" ? do
-        display flex
-        flexWrap Flexbox.wrap
-        justifyContent spaceAround
+        display grid
+        -- flexWrap Flexbox.wrap
+        justifyContent center
+        "grid-template-columns" -: "auto auto"
+        "grid-column-gap" -: "20px"
+        "grid-row-gap" -: "20px"
 
         width $ pct 100
-        maxWidth $ px 1200
+        -- maxWidth $ px 1000
         paddingTop $ px 5
         paddingBottom $ px 15
 
