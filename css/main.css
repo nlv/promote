@@ -180,6 +180,18 @@ body
   padding-bottom        : 15px;
 }
 
+
+#p1 .cards
+{
+  grid-template-columns : auto auto auto auto;
+}
+
+
+#p2 .cards
+{
+  grid-template-columns : auto auto auto;
+}
+
 .card
 {
   width          : 280px;
@@ -327,6 +339,18 @@ body
   grid-template-rows    : auto auto;
 }
 
+
+#p1 .cards
+{
+  grid-template-columns : auto auto auto auto;
+}
+
+
+#p2 .cards
+{
+  grid-template-columns : auto auto auto;
+}
+
 }
 @media screen and (max-width: 480px)
 {
@@ -388,7 +412,6 @@ body
   justify-content : space-around;
   align-items     : center;
   width           : 100%;
-  max-width       : 1200px;
   padding-top     : 5px;
   padding-bottom  : 15px;
 }

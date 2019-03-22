@@ -229,6 +229,14 @@ mainStylesheet debug = do
             -- flexWrap Flexbox.wrap
             -- justifyContent spaceAround
 
+        "#p1" ?
+            ".cards" ? do
+                "grid-template-columns" -: "auto auto auto auto"
+
+        "#p2" ? 
+            ".cards" ? do
+                "grid-template-columns" -: "auto auto auto"
+
     query Media.screen [Media.maxWidth $ px 480] $ do
 
         "#navbar" ? do
@@ -273,13 +281,14 @@ mainStylesheet debug = do
                 fontSize $ rem 1
 
         ".cards" ? do
+
             display flex
             flexDirection column
             justifyContent spaceAround
             alignItems center
 
             width $ pct 100
-            maxWidth $ px 1200
+            -- maxWidth $ px 1400
             paddingTop $ px 5
             paddingBottom $ px 15
 
@@ -346,6 +355,14 @@ mainStylesheet debug = do
         -- maxWidth $ px 1000
         paddingTop $ px 5
         paddingBottom $ px 15
+
+    "#p1" ?
+        ".cards" ? do
+            "grid-template-columns" -: "auto auto auto auto"
+
+    "#p2" ? 
+        ".cards" ? do
+            "grid-template-columns" -: "auto auto auto"
 
     ".card" ? do 
         width $ px 280
