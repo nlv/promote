@@ -364,6 +364,50 @@ mainStylesheet debug = do
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto"
 
+    "#services" ? do
+        backgroundColor $ rgb 237 242 247
+        height $ px 1000
+
+        ".cards" ? do
+            "grid-template-columns" -: "auto auto auto"
+
+    ".social-card" ? do
+        -- width $ px 370
+        display flex
+        justifyContent spaceAround
+        alignItems center
+        height $ pct 100
+
+        backgroundColor white
+
+        sym borderRadius $ px 4
+        -- boxShadow [shadowWithBlur nil (px 2) (px 2), bsInset . bsColor (rgba 0 0 0 0.2) $ shadow (px 1) (px 1)]
+        -- boxShadow [shadowWithBlur (px 2) (px 2) nil, bsInset . bsColor red $ shadow (px 1) (px 1)]
+        boxShadow $ pure $ bsColor (rgba 0 0 0 0.2) $ shadowWithBlur nil (px 2) (px 2)
+        textAlign center
+
+        figure ? do
+            height $ px 70
+            width $ px 100
+            display flex
+            justifyContent center
+            alignItems center
+            borderRightWidth $ px 1
+            borderRightStyle solid
+            borderRightColor $ rgb 234 234 234
+
+            img ? do
+                height $ px 35
+                width auto
+                maxWidth $ px 40
+
+        ".social-name" ? do
+            textTransform uppercase
+            width $ px 270
+            sym2 padding (px 10) nil
+            textAlign center
+
+
     ".card" ? do 
         width $ px 280
         height $ px 400
@@ -409,6 +453,14 @@ mainStylesheet debug = do
             textAlign justify
             textIndent $ indent $ px 20
             lineHeight $ em 1.2
+
+    ".service-item" ? do
+        display flex
+        justifyContent spaceAround
+        height $ pct 100
+        
+        -- color 777777
+
 
             
 
