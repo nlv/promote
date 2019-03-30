@@ -369,7 +369,9 @@ mainStylesheet debug = do
         paddingTop $ px 5
         paddingBottom $ px 15
 
-    "#p1" ?
+    "#p1" ? do
+        backgroundColor $ rgb 237 242 247
+
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto auto"
 
