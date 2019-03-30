@@ -59,7 +59,8 @@ $(document).ready(function(){
     });
 
     $(window).scroll(function() {
-        let height = document.documentElement.clientHeight - 95;
+        // let height = document.documentElement.clientHeight - (95*3);
+        let height = (95 + 100);
         var scrollTop = $(window).scrollTop();
         if (scrollTop > height) {
           $("#navbar").removeClass("no-background");

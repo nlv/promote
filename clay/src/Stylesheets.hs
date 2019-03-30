@@ -18,7 +18,8 @@ secondaryFontName = sansSerif
 -- FIXME: дожна коррелировать с высотой навигационной панели 
 navbarHeight = px 95
 navbarHPadding = pct 10
-navbarColor = rgb 251 166 40
+-- navbarColor = rgb 251 166 40
+navbarColor = rgb 255 102 0
 
 mainStylesheet :: Bool -> Css
 mainStylesheet debug = do
@@ -47,9 +48,7 @@ mainStylesheet debug = do
 
         height $ vh 100
 
-        backgroundSize cover
-        backgroundImage $ url "../img/start_page_cover.jpg"
-        backgroundAttachment attachFixed
+        background $ rgba 0 0 0 0.1
 
         display flex
         justifyContent center
@@ -98,6 +97,14 @@ mainStylesheet debug = do
                     paddingRight $ px 15
 
                     display inlineBlock
+        "video" ? do
+            position absolute
+            left nil
+            top nil
+            width $ pct 100
+            maxHeight $ pct 100
+            zIndex (-1)
+            "object-fit" -: "cover"
 
     "#navbar" ? do 
         -- debugBorder green
@@ -119,10 +126,11 @@ mainStylesheet debug = do
 
         backgroundColor white -- $ rgba 255 255 255 0.8
 
-        fontSize $ em 1.1
+        fontSize $ em 1.2
+        -- fontWeight bold
         textTransform uppercase
 
-        transition "background-color" (sec 1) linear (sec 0)
+        transition "background-color" (sec 1.5) linear (sec 0)
 
         ".no-background" & do
             backgroundColor transparent
