@@ -58,6 +58,16 @@ $(document).ready(function(){
     }                   
     });
 
+    $(window).scroll(function() {
+        let height = document.documentElement.clientHeight - 95;
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop > height) {
+          $("#navbar").removeClass("no-background");
+        } else {
+          $("#navbar").addClass("no-background");
+        }
+    }); 
+
     $('.navbar-toggle').click(function() {
         $('.navbar-nav').toggleClass('active');
     });

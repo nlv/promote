@@ -117,10 +117,15 @@ mainStylesheet debug = do
         color navbarColor
         fontWeight $ weight 600
 
-        backgroundColor $ rgba 0 0 0 0.8
+        backgroundColor white -- $ rgba 255 255 255 0.8
 
         fontSize $ em 1.1
         textTransform uppercase
+
+        transition "background-color" (sec 1) linear (sec 0)
+
+        ".no-background" & do
+            backgroundColor transparent
 
     ".navbar-nav" ? do
         display flex

@@ -76,20 +76,30 @@ body
 
 #navbar
 {
-  display          : flex;
-  align-items      : center;
-  justify-content  : space-between;
-  position         : fixed;
-  top              : 0;
-  right            : 0;
-  left             : 0;
-  padding-left     : 10%;
-  padding-right    : 10%;
-  color            : #fba628;
-  font-weight      : 600;
-  background-color : rgba(0,0,0,0.8);
-  font-size        : 1.1em;
-  text-transform   : uppercase;
+  display            : flex;
+  align-items        : center;
+  justify-content    : space-between;
+  position           : fixed;
+  top                : 0;
+  right              : 0;
+  left               : 0;
+  padding-left       : 10%;
+  padding-right      : 10%;
+  color              : #fba628;
+  font-weight        : 600;
+  background-color   : #ffffff;
+  font-size          : 1.1em;
+  text-transform     : uppercase;
+  -webkit-transition : background-color 1.0s linear 0.0s;
+  -moz-transition    : background-color 1.0s linear 0.0s;
+  -ms-transition     : background-color 1.0s linear 0.0s;
+  -o-transition      : background-color 1.0s linear 0.0s;
+  transition         : background-color 1.0s linear 0.0s;
+}
+
+#navbar.no-background
+{
+  background-color : rgba(0,0,0,0.0);
 }
 
 .navbar-nav
