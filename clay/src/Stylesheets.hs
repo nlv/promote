@@ -124,7 +124,7 @@ mainStylesheet debug = do
         color navbarColor
         fontWeight $ weight 600
 
-        backgroundColor white -- $ rgba 255 255 255 0.8
+        backgroundColor $ rgba 255 255 255 0.8
 
         fontSize $ em 1.2
         -- fontWeight bold
