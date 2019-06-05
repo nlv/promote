@@ -65,7 +65,7 @@ mainStylesheet debug = do
                 -- debugBorder gray
 
                 textAlign center
-                fontSize $ em 3.1
+                fontSize $ em 4
                 paddingBottom $ px 10
 
                 color $ lightgoldenrodyellow
@@ -76,7 +76,7 @@ mainStylesheet debug = do
 
                 display flex
 
-                paddingBottom $ px 10
+                paddingBottom $ px 14
 
                 color $ setA 0.7 navbarColor
 
@@ -90,7 +90,7 @@ mainStylesheet debug = do
                 width $ pct 100
                 justifyContent center
 
-                fontSize $ em 1.8
+                fontSize $ em 2
 
                 li ? do
                     paddingLeft $ px 15
