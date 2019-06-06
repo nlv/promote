@@ -80,21 +80,32 @@ mainStylesheet debug = do
 
                 color $ setA 0.7 navbarColor
 
-            h2 ** ul ? do
-                -- debugBorder green
+                p ? do
+                    -- debugBorder green
 
-                marginLeft auto
-                marginRight auto
+                    marginLeft auto
+                    marginRight auto
+                    textAlign center
 
-                display flex
-                width $ pct 100
-                justifyContent center
+                    width $ pct 100
 
-                fontSize $ em 2
+                    fontSize $ em 2.5
 
-                li ? do
-                    paddingLeft $ px 15
-                    paddingRight $ px 15
+            -- h2 ** ul ? do
+            --     -- debugBorder green
+
+            --     marginLeft auto
+            --     marginRight auto
+
+            --     display flex
+            --     width $ pct 100
+            --     justifyContent center
+
+            --     fontSize $ em 2
+
+            --     li ? do
+            --         paddingLeft $ px 15
+            --         paddingRight $ px 15
 
                     display inlineBlock
         "video" ? do
@@ -207,22 +218,33 @@ mainStylesheet debug = do
                     color $ lightgoldenrodyellow
                     color $ lightgray
 
-
-                h2 ** ul ? do
+                p ? do
                     -- debugBorder green
 
                     marginLeft auto
                     marginRight auto
+                    textAlign center
 
-                    display flex
-                    flexDirection column
                     width $ pct 100
 
-                    li ? do
+                    fontSize $ em 2.5
 
-                        display inlineBlock
-                        textAlign center
-                        sym2 padding (px 20) nil 
+
+                -- h2 ** ul ? do
+                --     -- debugBorder green
+
+                --     marginLeft auto
+                --     marginRight auto
+
+                --     display flex
+                --     flexDirection column
+                --     width $ pct 100
+
+                --     li ? do
+
+                --         display inlineBlock
+                --         textAlign center
+                --         sym2 padding (px 20) nil 
 
         ".page" ? do
 

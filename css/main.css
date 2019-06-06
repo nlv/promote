@@ -55,21 +55,14 @@ body
   color          : rgba(255,102,0,0.7);
 }
 
-#start-page header h2 ul
+#start-page header h2 p
 {
-  margin-left     : auto;
-  margin-right    : auto;
-  display         : flex;
-  width           : 100%;
-  justify-content : center;
-  font-size       : 2em;
-}
-
-#start-page header h2 ul li
-{
-  padding-left  : 15px;
-  padding-right : 15px;
-  display       : inline-block;
+  margin-left  : auto;
+  margin-right : auto;
+  text-align   : center;
+  width        : 100%;
+  font-size    : 2.5em;
+  display      : inline-block;
 }
 
 #start-page video
@@ -388,20 +381,13 @@ body
   color     : #d3d3d3;
 }
 
-#start-page header h2 ul
+#start-page header p
 {
-  margin-left    : auto;
-  margin-right   : auto;
-  display        : flex;
-  flex-direction : column;
-  width          : 100%;
-}
-
-#start-page header h2 ul li
-{
-  display    : inline-block;
-  text-align : center;
-  padding    : 20px 0 20px 0;
+  margin-left  : auto;
+  margin-right : auto;
+  text-align   : center;
+  width        : 100%;
+  font-size    : 2.5em;
 }
 
 
