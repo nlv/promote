@@ -59,7 +59,8 @@ mainStylesheet debug = do
 
         header ? do
 
-            marginTop $ pct (-20)
+            -- marginTop $ pct (-10)
+            width (pct 70)
 
             h1 ? do
                 -- debugBorder gray
@@ -78,7 +79,8 @@ mainStylesheet debug = do
 
                 paddingBottom $ px 14
 
-                color $ setA 0.7 navbarColor
+                -- color $ setA 0.7 navbarColor
+                color navbarColor
 
                 p ? do
                     -- debugBorder green
@@ -182,6 +184,30 @@ mainStylesheet debug = do
         fontSize $ rem 1.8
         cursor pointer
 
+    ".page-start-button" ? do
+        display flex
+        width (pct 100)
+        justifyContent center
+        marginTop (em 2)
+
+        fontSize $ em 1.5
+
+        "a" ? do
+            width (pct 38)
+            sym padding (px 15)
+
+            backgroundColor $ rgba 255 102 0 0.7
+            sym borderRadius $ px 20
+
+            textAlign center
+            color white
+            textTransform uppercase
+            textDecoration none
+
+        "a" # ":hover" ? do
+                backgroundColor $ rgba 265 117 0 0.7
+
+
     query Media.screen [Media.maxWidth $ px 1280] $ do
         "#navbar" ? do
             paddingLeft $ px 20
@@ -206,6 +232,7 @@ mainStylesheet debug = do
                 display flex
                 flexDirection column
                 height $ pct 100
+                textAlign center
 
                 backgroundColor $ rgba 0 0 0 0.4
 
