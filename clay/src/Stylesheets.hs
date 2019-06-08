@@ -174,7 +174,7 @@ mainStylesheet debug = do
 
 
     ".navbar-phone" ? do
-        fontSize $ rem 1.2
+        fontSize $ rem 1.8
 
     ".navbar-toggle" ? do
         display none
@@ -194,6 +194,29 @@ mainStylesheet debug = do
 
         "a" ? do
             width (pct 38)
+            sym padding (px 15)
+
+            backgroundColor $ rgba 255 102 0 0.7
+            sym borderRadius $ px 20
+
+            textAlign center
+            color white
+            textTransform uppercase
+            textDecoration none
+
+        "a" # ":hover" ? do
+                backgroundColor $ rgba 265 117 0 0.7
+
+    ".callback-button" ? do
+        display flex
+        width (pct 100)
+        justifyContent center
+        alignItems center
+
+        fontSize $ em 2
+
+        "a" ? do
+            width (pct 60)
             sym padding (px 15)
 
             backgroundColor $ rgba 255 102 0 0.7
@@ -295,6 +318,10 @@ mainStylesheet debug = do
             ".cards" ? do
                 "grid-template-columns" -: "auto auto auto auto"
 
+        "#p1_1" ?
+            ".cards" ? do
+                "grid-template-columns" -: "auto auto auto auto"
+
         "#p2" ? 
             ".cards" ? do
                 "grid-template-columns" -: "auto auto auto"
@@ -371,10 +398,13 @@ mainStylesheet debug = do
                 paddingRight $ px 10
 
 
+
     ".page" ? do
         -- debugBack yellow
 
         paddingTop (navbarHeight @+@ (px 5))
+        paddingBottom (navbarHeight @+@ (px 5))
+
         width $ pct 100
         -- height $ vh 100
 
@@ -424,18 +454,20 @@ mainStylesheet debug = do
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto auto"
 
-    "#p2" ? 
+    "#p2" ? do
+        backgroundColor $ rgb 237 242 247
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto"
 
     "#services" ? do
-        backgroundColor $ rgb 237 242 247
+        -- backgroundColor $ rgb 237 242 247
         height $ px 1000
 
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto"
 
     ".social-card" ? do
+        backgroundColor $ rgb 237 242 247
         -- width $ px 370
         display flex
         justifyContent spaceAround
@@ -517,6 +549,57 @@ mainStylesheet debug = do
             textAlign justify
             textIndent $ indent $ px 20
             lineHeight $ em 1.2
+
+    ".card2" ? do 
+        width $ px 1180
+        height $ px 400
+
+        display flex
+        flexDirection column
+
+        borderColor navbarColor
+        borderWidth $ px 4
+        borderStyle solid
+
+        sym2 margin (px 5) nil
+
+        "div" <? do
+            -- borderStyle solid
+            -- borderColor green
+            -- borderWidth $ px 0.1 
+
+
+            display flex
+            flexDirection row
+            justifyContent center
+            alignItems center
+            height $ pct 100
+
+            paddingTop nil
+
+            "div" <? do
+                -- borderStyle solid
+                -- borderColor blue
+                -- borderWidth $ px 0.1 
+
+                display flex
+                flexDirection column
+
+                width $ pct 100
+                height $ pct 100
+                justifyContent center
+
+                ".text" ? do 
+                    padding (px 20) (px 50) nil (px 50)
+                    fontSize $ em 2.2
+                    lineHeight $ em 1.5
+                    fontWeight $ weight 500
+
+                ".phone" ? do
+                    fontSize $ em 1.6
+                    textAlign center
+                    fontSize $ em 4
+
 
     ".service-item" ? do
         display flex
