@@ -461,7 +461,14 @@ mainStylesheet debug = do
 
     "#services" ? do
         -- backgroundColor $ rgb 237 242 247
-        height $ px 1000
+        -- height $ px 1000
+
+        ".cards" ? do
+            "grid-template-columns" -: "auto auto auto"
+
+    "#sites" ? do
+        backgroundColor $ rgb 237 242 247
+        -- height $ px 1000
 
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto"
@@ -496,6 +503,11 @@ mainStylesheet debug = do
                 height $ px 35
                 width auto
                 maxWidth $ px 40
+
+            img # ".bigger" ? do
+                height $ px 50
+                maxWidth $ px 100
+
 
         ".social-name" ? do
             textTransform uppercase

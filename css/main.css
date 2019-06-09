@@ -269,12 +269,18 @@ body
   grid-template-columns : auto auto auto;
 }
 
-#services
-{
-  height : 1000px;
-}
 
 #services .cards
+{
+  grid-template-columns : auto auto auto;
+}
+
+#sites
+{
+  background-color : #edf2f7;
+}
+
+#sites .cards
 {
   grid-template-columns : auto auto auto;
 }
@@ -313,6 +319,12 @@ body
   height    : 35px;
   width     : auto;
   max-width : 40px;
+}
+
+.social-card figure img.bigger
+{
+  height    : 50px;
+  max-width : 100px;
 }
 
 .social-card .social-name
