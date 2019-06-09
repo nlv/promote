@@ -473,6 +473,13 @@ mainStylesheet debug = do
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto"
 
+    "#accounting" ? do
+        -- backgroundColor $ rgb 237 242 247
+        -- height $ px 1000
+
+        ".cards" ? do
+            "grid-template-columns" -: "auto auto auto"
+
     ".social-card" ? do
         backgroundColor $ rgb 237 242 247
         -- width $ px 370

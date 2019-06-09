@@ -285,6 +285,12 @@ body
   grid-template-columns : auto auto auto;
 }
 
+
+#accounting .cards
+{
+  grid-template-columns : auto auto auto;
+}
+
 .social-card
 {
   background-color   : #edf2f7;
