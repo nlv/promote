@@ -68,6 +68,7 @@ mainStylesheet debug = do
                 textAlign center
                 fontSize $ em 4
                 paddingBottom $ px 10
+                lineHeight $ em 1.5
 
                 color $ lightgoldenrodyellow
                 color $ lightgray
@@ -686,6 +687,65 @@ mainStylesheet debug = do
                     fontSize $ em 1.6
                     textAlign center
                     fontSize $ em 4
+
+    ".package-card" ? do 
+        width $ px 280
+        height $ px 600
+
+        borderColor navbarColor
+        borderWidth $ px 4
+        borderStyle solid
+
+        -- sym2 margin (px 5) nil
+
+        -- display flex
+        -- flexDirection column
+        -- alignItems center
+
+
+        -- sym padding $ px 10
+
+        h1 ? do
+            backgroundColor navbarColor
+            color white
+
+            sym2 padding (px 30) (px 20)
+
+            fontSize $ rem 1
+
+        ul ? do
+            sym2 padding nil $ px 20
+
+
+            li ? do
+                display block
+                fontSize $ rem 1
+                lineHeight $ em 1.5
+                borderBottomStyle solid
+                borderBottomColor gray
+                borderBottomWidth $ px 0.1
+
+                paddingTop $ em 1
+                paddingBottom $ em 1
+
+            li # lastChild ? do
+                borderBottomWidth nil 
+
+            
+
+
+
+        p # ":first-of-type" ? do
+            debugBorder green
+            paddingTop $ px 15
+
+        p ? do
+            fontSize $ em 1.6
+            paddingTop $ px 10
+            -- textAlign center
+            textAlign justify
+            textIndent $ indent $ px 20
+            lineHeight $ em 1.2
 
 
     ".service-item" ? do
