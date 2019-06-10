@@ -259,6 +259,11 @@ body
   grid-template-columns : auto auto auto auto;
 }
 
+#p1_1
+{
+  background-image : url("../img/callback-background.jpg");
+}
+
 #p2
 {
   background-color : #edf2f7;
@@ -289,6 +294,54 @@ body
 #accounting .cards
 {
   grid-template-columns : auto auto auto;
+}
+
+#footer
+{
+  padding        : 0 10% 0 10%;
+  display        : flex;
+  flex-direction : row;
+  height         : 100px;
+}
+
+#footer div:fist-child
+{
+  width : 20%;
+}
+
+#footer div:nth-child(2)
+{
+  flex            : 1 0 auto;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  font-size       : 1.1rem;
+}
+
+#footer div:nth-child(3)
+{
+  width           : 20%;
+  display         : flex;
+  padding         : 20px 20px 20px 20px;
+  justify-content : space-between;
+  justify-content : center;
+}
+
+#footer div:nth-child(3) figure
+{
+  height : 100%;
+}
+
+#footer div:nth-child(3) figure img
+{
+  height      : 60%;
+  margin-left : 20px;
+}
+
+#footer .social-links
+{
+  display        : flex;
+  flex-direction : row;
 }
 
 .social-card
@@ -401,9 +454,7 @@ body
   height         : 400px;
   display        : flex;
   flex-direction : column;
-  border-color   : #ff6600;
-  border-width   : 4px;
-  border-style   : solid;
+  border-color   : rgba(0,0,0,0.0);
   margin         : 5px 0 5px 0;
 }
 
@@ -541,6 +592,10 @@ body
   grid-template-columns : auto auto auto auto;
 }
 
+#p1_1
+{
+  background-image : url("../img/callback-background.jpg");
+}
 
 #p1_1 .cards
 {

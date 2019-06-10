@@ -318,9 +318,12 @@ mainStylesheet debug = do
             ".cards" ? do
                 "grid-template-columns" -: "auto auto auto auto"
 
-        "#p1_1" ?
+        "#p1_1" ? do
+            backgroundImage $ url "../img/callback-background.jpg"
+
             ".cards" ? do
                 "grid-template-columns" -: "auto auto auto auto"
+
 
         "#p2" ? 
             ".cards" ? do
@@ -454,6 +457,9 @@ mainStylesheet debug = do
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto auto"
 
+    "#p1_1" ? do
+        backgroundImage $ url "../img/callback-background.jpg"
+
     "#p2" ? do
         backgroundColor $ rgb 237 242 247
         ".cards" ? do
@@ -479,6 +485,68 @@ mainStylesheet debug = do
 
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto"
+
+    "#footer" ? do
+        -- borderStyle solid
+        -- borderColor green
+        -- borderWidth $ px 0.1
+
+        sym2 padding nil (pct 10)
+
+        display flex
+        flexDirection row
+
+        height $ px 100
+
+        -- "div" <? do
+            -- borderStyle solid
+            -- borderColor red
+            -- borderWidth $ px 0.1
+
+        "div" # ":fist-child" ? do
+            width $ pct 20
+
+        "div" # (nthChild "2") ? do
+            Flexbox.flex 1 0 auto
+            display flex
+            alignItems center
+            justifyContent center
+
+            fontSize $ rem 1.1
+
+        "div" # nthChild "3" ? do
+            width $ pct 20
+
+            display flex
+            sym padding $ px 20
+            justifyContent spaceBetween
+            justifyContent center
+
+
+            figure ? do
+                -- borderStyle solid
+                -- borderColor red
+                -- borderWidth $ px 0.1
+                height $ pct 100
+
+                img ? do
+                    height $ pct 60
+                    -- width $ pct 100
+                    marginLeft $ px 20
+
+            -- figure # firstChild ? do
+            --     borderStyle solid
+            --     borderColor red
+            --     borderWidth $ px 0.1
+
+
+
+
+        ".social-links" ? do
+            display flex
+            flexDirection row
+
+
 
     ".social-card" ? do
         backgroundColor $ rgb 237 242 247
@@ -576,9 +644,9 @@ mainStylesheet debug = do
         display flex
         flexDirection column
 
-        borderColor navbarColor
-        borderWidth $ px 4
-        borderStyle solid
+        borderColor transparent
+        -- borderWidth $ px 4
+        -- borderStyle solid
 
         sym2 margin (px 5) nil
 
@@ -624,8 +692,8 @@ mainStylesheet debug = do
         display flex
         justifyContent spaceAround
         height $ pct 100
-        
-        -- color 777777
+
+    
 
 
             
