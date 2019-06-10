@@ -319,7 +319,7 @@ mainStylesheet debug = do
             ".cards" ? do
                 "grid-template-columns" -: "auto auto auto auto"
 
-        "#p1_1" ? do
+        ".page-callback" ? do
             backgroundImage $ url "../img/callback-background.jpg"
 
             ".cards" ? do
@@ -458,7 +458,7 @@ mainStylesheet debug = do
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto auto"
 
-    "#p1_1" ? do
+    ".page-callback" ? do
         backgroundImage $ url "../img/callback-background.jpg"
 
     "#p2" ? do
@@ -469,6 +469,10 @@ mainStylesheet debug = do
     "#services" ? do
         -- backgroundColor $ rgb 237 242 247
         -- height $ px 1000
+
+        header ? do
+            h2 ? do
+                color navbarColor
 
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto"
@@ -492,20 +496,25 @@ mainStylesheet debug = do
         -- borderColor green
         -- borderWidth $ px 0.1
 
-        sym2 padding nil (pct 10)
+        paddingLeft (pct 10)
+        paddingRight (pct 10)
+        paddingTop (px 40)
+        paddingBottom (px 40)
 
         display flex
         flexDirection row
 
-        height $ px 100
+        height $ px 200
 
         -- "div" <? do
-            -- borderStyle solid
-            -- borderColor red
-            -- borderWidth $ px 0.1
+        --     borderStyle solid
+        --     borderColor red
+        --     borderWidth $ px 0.1
 
         "div" # ":fist-child" ? do
             width $ pct 20
+            alignItems center
+            justifyContent center
 
         "div" # (nthChild "2") ? do
             Flexbox.flex 1 0 auto
@@ -520,20 +529,25 @@ mainStylesheet debug = do
 
             display flex
             sym padding $ px 20
-            justifyContent spaceBetween
+            alignItems center
             justifyContent center
 
 
             figure ? do
                 -- borderStyle solid
-                -- borderColor red
+                -- borderColor black
                 -- borderWidth $ px 0.1
                 height $ pct 100
+                display flex
+                alignItems center
+                justifyContent center
+                marginRight $ px 20
+
 
                 img ? do
                     height $ pct 60
-                    -- width $ pct 100
-                    marginLeft $ px 20
+                    width $ px 60
+                    -- marginLeft $ px 40
 
             -- figure # firstChild ? do
             --     borderStyle solid
@@ -716,6 +730,7 @@ mainStylesheet debug = do
         ul ? do
             sym2 padding nil $ px 20
 
+            -- listStyleImage $ imageUrl "../img/shevron.jpg"
 
             li ? do
                 display block
