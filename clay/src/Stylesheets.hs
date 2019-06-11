@@ -704,20 +704,14 @@ mainStylesheet debug = do
 
     ".package-card" ? do 
         width $ px 280
-        height $ px 600
+        height $ px 680
+        position relative
+
+        alignItems center
 
         borderColor navbarColor
         borderWidth $ px 4
         borderStyle solid
-
-        -- sym2 margin (px 5) nil
-
-        -- display flex
-        -- flexDirection column
-        -- alignItems center
-
-
-        -- sym padding $ px 10
 
         h1 ? do
             backgroundColor navbarColor
@@ -746,21 +740,45 @@ mainStylesheet debug = do
             li # lastChild ? do
                 borderBottomWidth nil 
 
+        ".callback-simple"  ? do
+            -- borderStyle solid
+            -- borderColor blue
+            -- borderWidth $ px 0.1 
+
+            position absolute
+            bottom $ px 20
+            left $ px 0
+
+            width $ pct 100
+
+            a ? do
+                display block           
+                marginLeft (px 40)
+                marginRight (px 40)
+                paddingTop (rem 1)
+                paddingBottom (rem 1)
+
+                backgroundColor navbarColor
+                color white
+
+                textAlign center
+                fontSize $ rem 1
+                textDecoration none
+
+
+        -- p # ":first-of-type" ? do
+        --     debugBorder green
+        --     paddingTop $ px 15
+
+        -- p ? do
+        --     fontSize $ em 1.6
+        --     paddingTop $ px 10
+        --     -- textAlign center
+        --     textAlign justify
+        --     textIndent $ indent $ px 20
+        --     lineHeight $ em 1.2
+
             
-
-
-
-        p # ":first-of-type" ? do
-            debugBorder green
-            paddingTop $ px 15
-
-        p ? do
-            fontSize $ em 1.6
-            paddingTop $ px 10
-            -- textAlign center
-            textAlign justify
-            textIndent $ indent $ px 20
-            lineHeight $ em 1.2
 
 
     ".service-item" ? do

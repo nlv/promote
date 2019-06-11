@@ -511,7 +511,9 @@ body
 .package-card
 {
   width        : 280px;
-  height       : 600px;
+  height       : 680px;
+  position     : relative;
+  align-items  : center;
   border-color : #ff6600;
   border-width : 4px;
   border-style : solid;
@@ -547,20 +549,26 @@ body
   border-bottom-width : 0;
 }
 
-.package-card p:first-of-type
+.package-card .callback-simple
 {
-  border           : inherit inherit inherit;
-  background-color : inherit;
-  padding-top      : 15px;
+  position : absolute;
+  bottom   : 20px;
+  left     : 0px;
+  width    : 100%;
 }
 
-.package-card p
+.package-card .callback-simple a
 {
-  font-size   : 1.6em;
-  padding-top : 10px;
-  text-align  : justify;
-  text-indent : 20px;
-  line-height : 1.19999em;
+  display          : block;
+  margin-left      : 40px;
+  margin-right     : 40px;
+  padding-top      : 1rem;
+  padding-bottom   : 1rem;
+  background-color : #ff6600;
+  color            : #ffffff;
+  text-align       : center;
+  font-size        : 1rem;
+  text-decoration  : none;
 }
 
 .service-item
