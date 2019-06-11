@@ -279,7 +279,8 @@ body
 
 #services header h2
 {
-  color : #ff6600;
+  color     : #ff6600;
+  font-size : 2em;
 }
 
 #services .cards

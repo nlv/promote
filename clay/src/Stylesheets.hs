@@ -473,6 +473,7 @@ mainStylesheet debug = do
         header ? do
             h2 ? do
                 color navbarColor
+                fontSize $ em 2
 
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto"
