@@ -578,10 +578,16 @@ mainStylesheet debug = do
         backgroundColor white
 
         sym borderRadius $ px 4
-        -- boxShadow [shadowWithBlur nil (px 2) (px 2), bsInset . bsColor (rgba 0 0 0 0.2) $ shadow (px 1) (px 1)]
-        -- boxShadow [shadowWithBlur (px 2) (px 2) nil, bsInset . bsColor red $ shadow (px 1) (px 1)]
         boxShadow $ pure $ bsColor (rgba 0 0 0 0.2) $ shadowWithBlur nil (px 2) (px 2)
-        textAlign center
+
+        a ? do
+            display flex
+            justifyContent spaceAround
+            alignItems center
+            height $ pct 100
+
+            textAlign center
+            textDecoration none
 
         figure ? do
             height $ px 70
