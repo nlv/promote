@@ -1,16 +1,6 @@
 $(document).ready(function(){
 
-    // $('#navbar li').click (function () {
-    //     $('#navbar li').removeClass('active');
-    //     $(this).addClass('active');
-    // });
-
-    $('.brand').click (function () {
-        $('#navbar li').removeClass('active');
-        $('#navbar li:first').addClass('active');
-    });
-
-    $("#navbar a, .brand").on('click', function(event){
+    $(".navbar-nav a").on('click', function(event){
 
         let offset = $('body').data('offset')
         event.preventDefault();
