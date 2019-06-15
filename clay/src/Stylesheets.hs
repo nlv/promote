@@ -48,7 +48,7 @@ mainStylesheet debug = do
 
         height $ vh 100
 
-        background $ rgba 0 0 0 0.1
+        background $ rgba 0 0 0 0.3
 
         display flex
         justifyContent center
@@ -67,10 +67,11 @@ mainStylesheet debug = do
 
                 textAlign center
                 fontSize $ em 4
+                fontWeight $ weight 600
                 paddingBottom $ px 10
                 lineHeight $ em 1.5
 
-                color $ lightgoldenrodyellow
+                -- color $ lightgoldenrodyellow
                 color $ lightgray
 
             h2 ? do
@@ -82,6 +83,7 @@ mainStylesheet debug = do
 
                 -- color $ setA 0.7 navbarColor
                 color navbarColor
+                fontWeight $ weight 600
 
                 p ? do
                     -- debugBorder green
@@ -116,7 +118,8 @@ mainStylesheet debug = do
             left nil
             top nil
             width $ pct 100
-            maxHeight $ pct 100
+            -- maxHeight $ pct 100
+            minHeight $ pct 100
             zIndex (-1)
             "object-fit" -: "cover"
 
