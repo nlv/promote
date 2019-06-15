@@ -13,36 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/jquery-ui/jquery-ui.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/callback_popup.js"></script>
     <title>Document</title>
-
-    <script>
-        $( function() {
-            var collbackPopup;
-            callbackPopup =  $( "#callback-popup" ).dialog({
-                    autoOpen: false,
-                    resizable: false,
-                    height: "auto",
-                    width: 400,
-                    modal: true,
-                    buttons: {
-                    "Отправить заявку": function() {
-                        $( this ).dialog( "close" );
-                    },
-                    "Отмена": function() {
-                        $( this ).dialog( "close" );
-                    }
-                    }
-                });
-
-            // $('.callback-opener').on('click', function (event) {
-            $('.callback-opener').click(function (event) {
-                event.preventDefault();
-                callbackPopup.dialog('open')
-            })
-        });
-
-            
-        </script>
 </head>
 
 <body data-offset="95">

@@ -7,10 +7,13 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery-ui/jquery-ui.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/callback_popup.js"></script>
     <title>Document</title>
 </head>
 
@@ -54,22 +57,15 @@
                     <p>
                         Работаем без посредников - у нас дешевле!
                     </p>
-                    <!-- <ul>
-                        <li>smm продвижение</li>
-                        <li>вк</li>
-                        <li>инстаграм</li>
-                        <li>внедрение crm</li>
-                    </ul> -->
                 </h2>
                 <div class="page-start-button">
-                    <a target="_self" href="#">
+                    <a target="_self" href="#" class="callback-opener">
                         <span class="page-start-text">
                             Заказать обратный звонок
                         </span>
                     </a>
                 </div>
             </hgroup>
-            <!-- <button>Получить консультацию</button> -->
         </header>
 
     </section>
@@ -159,7 +155,7 @@
                 </div>
                 <div>
                     <div class="callback-button">
-                        <a target="_self" href="#">
+                        <a target="_self" href="#" class="callback-opener">
                             <span class="callback-text">
                                 Заказать обратный звонок
                             </span>
@@ -279,7 +275,7 @@
                 </ul>
 
                 <div class="callback-simple">
-                    <a target="_self" href="#">
+                    <a target="_self" href="#" class="callback-opener">
                         <span class="callback-text">
                             Заказать
                         </span>
@@ -298,7 +294,7 @@
                 </ul>
 
                 <div class="callback-simple">
-                    <a target="_self" href="#">
+                    <a target="_self" href="#" class="callback-opener">
                         <span class="callback-text">
                             Заказать
                         </span>
@@ -317,7 +313,7 @@
                 </ul>
 
                 <div class="callback-simple">
-                    <a target="_self" href="#">
+                    <a target="_self" href="#" class="callback-opener">
                         <span class="callback-text">
                             Заказать
                         </span>
@@ -348,7 +344,7 @@
                 </div>
                 <div>
                     <div class="callback-button">
-                        <a target="_self" href="#">
+                        <a target="_self" href="#" class="callback-opener">
                             <span class="callback-text">
                                 Заказать обратный звонок
                             </span>
@@ -372,6 +368,20 @@
             <figure><img src="img/instagram-logo.svg" alt=""></figure>
         </div>
     </section>
+
+    <div id="callback-popup" title="Укажите свой телефон">
+        <form>
+            <fieldset>
+                <label for="name">Имя</label>
+                <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+                <label for="phone">Телефон</label>
+                <input type="text" name="phone" id="phone" class="text ui-widget-content ui-corner-all">
+            
+                <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+    </div>
     
 </body>
 </html>
