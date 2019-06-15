@@ -7,11 +7,42 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery-ui/jquery-ui.min.js"></script>
     <script src="js/main.js"></script>
     <title>Document</title>
+
+    <script>
+        $( function() {
+            var collbackPopup;
+            callbackPopup =  $( "#callback-popup" ).dialog({
+                    autoOpen: false,
+                    resizable: false,
+                    height: "auto",
+                    width: 400,
+                    modal: true,
+                    buttons: {
+                    "Отправить заявку": function() {
+                        $( this ).dialog( "close" );
+                    },
+                    "Отмена": function() {
+                        $( this ).dialog( "close" );
+                    }
+                    }
+                });
+
+            // $('.callback-opener').on('click', function (event) {
+            $('.callback-opener').click(function (event) {
+                event.preventDefault();
+                callbackPopup.dialog('open')
+            })
+        });
+
+            
+        </script>
 </head>
 
 <body data-offset="95">
@@ -60,7 +91,7 @@
                     </ul> -->
                 </h2>
                 <div class="page-start-button">
-                    <a target="_self" href="#">
+                    <a target="_self" href="#" class="callback-opener">
                         <span class="page-start-text">
                             Заказать обратный звонок
                         </span>
@@ -92,7 +123,7 @@
                         Удобная система расчета
                     </h1>
                 </hgroup>
-                <p>
+                <p
                     Частичная&nbsp;оплата:
                     40/30/30 (в начале / в середине / в конце). 
                     Любой вид оплаты.
@@ -157,7 +188,7 @@
                 </div>
                 <div>
                     <div class="callback-button">
-                        <a target="_self" href="#">
+                        <a target="_self" href="#" class="callback-opener">
                             <span class="callback-text">
                                 Заказать обратный звонок
                             </span>
@@ -242,7 +273,7 @@
                 </hgroup>
                 <p>
                     После согласования плана работ
-                    Вы вносите предоплату.
+                   Вы вносите предоплату.
                 </p>
             </div>
 
@@ -350,7 +381,7 @@
                 </div>
                 <div>
                     <div class="callback-button">
-                        <a target="_self" href="#">
+                        <a target="_self" href="#" class="callback-opener">
                             <span class="callback-text">
                                 Заказать обратный звонок
                             </span>
@@ -373,6 +404,20 @@
             <figure><img src="img/instagram-logo.svg" alt=""></figure>
         </div>
     </section>
+
+    <div id="callback-popup" title="Укажите свой телефон">
+        <form>
+            <fieldset>
+                <label for="name">Имя</label>
+                <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+                <label for="phone">Телефон</label>
+                <input type="text" name="phone" id="phone" class="text ui-widget-content ui-corner-all">
+            
+                <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+    </div>
     
 </body>
 </html>
