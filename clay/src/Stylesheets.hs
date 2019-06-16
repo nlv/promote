@@ -220,10 +220,10 @@ mainStylesheet debug = do
         fontSize $ em 2
 
         "a" ? do
-            width (pct 60)
+            width (pct 50)
             sym padding (px 15)
 
-            backgroundColor $ rgba 255 102 0 0.7
+            backgroundColor $ rgb 255 102 0 
             sym borderRadius $ px 20
 
             textAlign center
@@ -306,6 +306,7 @@ mainStylesheet debug = do
 
                 fontSize $ rem 1.2
                 textTransform uppercase
+                lineHeight $ unitless 1.5
 
             h2 ? do
 
@@ -327,6 +328,11 @@ mainStylesheet debug = do
 
             ".cards" ? do
                 "grid-template-columns" -: "auto auto auto auto"
+
+            ".phone" ? do
+                fontSize $ em 1.6
+                textAlign center
+                fontSize $ em 4
 
 
         "#p2" ? 
@@ -427,6 +433,7 @@ mainStylesheet debug = do
 
             fontSize $ rem 2
             textTransform uppercase
+            lineHeight $ unitless 1.5
 
             textAlign center
 
@@ -463,6 +470,14 @@ mainStylesheet debug = do
 
     ".page-callback" ? do
         backgroundImage $ url "../img/callback-background.jpg"
+
+        ".phone" ? do
+            fontSize $ em 1.6
+            textAlign center
+            fontSize $ em 4
+            color navbarColor
+            paddingTop $ px 20
+            paddingBottom $ px 20
 
     "#p2" ? do
         backgroundColor $ rgb 237 242 247
@@ -661,56 +676,6 @@ mainStylesheet debug = do
             textAlign justify
             textIndent $ indent $ px 20
             lineHeight $ em 1.2
-
-    ".card2" ? do 
-        width $ px 1180
-        height $ px 400
-
-        display flex
-        flexDirection column
-
-        borderColor transparent
-        -- borderWidth $ px 4
-        -- borderStyle solid
-
-        sym2 margin (px 5) nil
-
-        "div" <? do
-            -- borderStyle solid
-            -- borderColor green
-            -- borderWidth $ px 0.1 
-
-
-            display flex
-            flexDirection row
-            justifyContent center
-            alignItems center
-            height $ pct 100
-
-            paddingTop nil
-
-            "div" <? do
-                -- borderStyle solid
-                -- borderColor blue
-                -- borderWidth $ px 0.1 
-
-                display flex
-                flexDirection column
-
-                width $ pct 100
-                height $ pct 100
-                justifyContent center
-
-                ".text" ? do 
-                    padding (px 20) (px 50) nil (px 50)
-                    fontSize $ em 2.2
-                    lineHeight $ em 1.5
-                    fontWeight $ weight 500
-
-                ".phone" ? do
-                    fontSize $ em 1.6
-                    textAlign center
-                    fontSize $ em 4
 
     ".card3" ? do 
         width $ px 600

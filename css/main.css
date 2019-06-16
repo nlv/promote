@@ -188,9 +188,9 @@ body
 
 .callback-button a
 {
-  width            : 60%;
+  width            : 50%;
   padding          : 15px 15px 15px 15px;
-  background-color : rgba(255,102,0,0.7);
+  background-color : #ff6600;
   border-radius    : 20px 20px 20px 20px;
   text-align       : center;
   color            : #ffffff;
@@ -227,6 +227,7 @@ body
   padding-top    : 15px;
   font-size      : 2rem;
   text-transform : uppercase;
+  line-height    : 1.5;
   text-align     : center;
 }
 
@@ -264,6 +265,16 @@ body
 .page-callback
 {
   background-image : url("../img/callback-background.jpg");
+}
+
+.page-callback .phone
+{
+  font-size      : 1.6em;
+  text-align     : center;
+  font-size      : 4em;
+  color          : #ff6600;
+  padding-top    : 20px;
+  padding-bottom : 20px;
 }
 
 #p2
@@ -475,50 +486,6 @@ body
   line-height : 1.19999em;
 }
 
-.card2
-{
-  width          : 1180px;
-  height         : 400px;
-  display        : flex;
-  flex-direction : column;
-  border-color   : rgba(0,0,0,0.0);
-  margin         : 5px 0 5px 0;
-}
-
-.card2 > div
-{
-  display         : flex;
-  flex-direction  : row;
-  justify-content : center;
-  align-items     : center;
-  height          : 100%;
-  padding-top     : 0;
-}
-
-.card2 > div > div
-{
-  display         : flex;
-  flex-direction  : column;
-  width           : 100%;
-  height          : 100%;
-  justify-content : center;
-}
-
-.card2 > div > div .text
-{
-  padding     : 20px 50px 0 50px;
-  font-size   : 2.2em;
-  line-height : 1.5em;
-  font-weight : 500;
-}
-
-.card2 > div > div .phone
-{
-  font-size  : 1.6em;
-  text-align : center;
-  font-size  : 4em;
-}
-
 .card3
 {
   width           : 600px;
@@ -728,6 +695,7 @@ body
 {
   font-size      : 1.19999rem;
   text-transform : uppercase;
+  line-height    : 1.5;
 }
 
 .page h2
@@ -756,6 +724,13 @@ body
 .page-callback .cards
 {
   grid-template-columns : auto auto auto auto;
+}
+
+.page-callback .phone
+{
+  font-size  : 1.6em;
+  text-align : center;
+  font-size  : 4em;
 }
 
 
