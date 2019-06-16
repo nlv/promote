@@ -712,6 +712,52 @@ mainStylesheet debug = do
                     textAlign center
                     fontSize $ em 4
 
+    ".card3" ? do 
+        width $ px 600
+        height $ px 160
+
+        borderColor navbarColor
+        borderWidth $ px 4
+        borderStyle solid
+
+        sym2 margin (px 5) nil
+
+        display flex
+        flexDirection row
+        justifyContent spaceBetween
+        alignItems center
+
+
+        sym padding $ px 10
+
+        figure ? do
+            -- borderColor green
+            -- borderWidth $ px 0.1
+            -- borderStyle solid
+
+            Flexbox.flex 1 0 auto
+            textAlign center
+
+            -- width $ pct 25
+
+            img ? do
+                height $ px 120
+
+        "div" ? do
+            Flexbox.flex 3 1 auto
+
+        h1 ? do
+            fontSize $ em 1.6
+            fontWeight bold
+            paddingTop $ px 15
+            textAlign center
+
+        p ? do
+            fontSize $ em 1.6
+            sym padding $ px 20
+            -- textAlign center
+            lineHeight $ em 1.2
+
     ".package-card" ? do 
         width $ px 280
         height $ px 680

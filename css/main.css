@@ -519,6 +519,52 @@ body
   font-size  : 4em;
 }
 
+.card3
+{
+  width           : 600px;
+  height          : 160px;
+  border-color    : #ff6600;
+  border-width    : 4px;
+  border-style    : solid;
+  margin          : 5px 0 5px 0;
+  display         : flex;
+  flex-direction  : row;
+  justify-content : space-between;
+  align-items     : center;
+  padding         : 10px 10px 10px 10px;
+}
+
+.card3 figure
+{
+  flex       : 1 0 auto;
+  text-align : center;
+}
+
+.card3 figure img
+{
+  height : 120px;
+}
+
+.card3 div
+{
+  flex : 3 1 auto;
+}
+
+.card3 h1
+{
+  font-size   : 1.6em;
+  font-weight : bold;
+  padding-top : 15px;
+  text-align  : center;
+}
+
+.card3 p
+{
+  font-size   : 1.6em;
+  padding     : 20px 20px 20px 20px;
+  line-height : 1.19999em;
+}
+
 .package-card
 {
   width        : 280px;
