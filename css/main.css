@@ -316,6 +316,11 @@ body
   grid-template-columns : auto auto auto;
 }
 
+#profit
+{
+  background-color : #edf2f7;
+}
+
 #footer
 {
   padding-left   : 10%;
@@ -489,7 +494,6 @@ body
 .card3
 {
   width           : 600px;
-  height          : 160px;
   border-color    : #ff6600;
   border-width    : 4px;
   border-style    : solid;
@@ -530,6 +534,45 @@ body
   font-size   : 1.6em;
   padding     : 20px 20px 20px 20px;
   line-height : 1.19999em;
+}
+
+.card-profit
+{
+  width        : 600px;
+  border-color : #ff6600;
+  border-width : 4px;
+  border-style : solid;
+  margin       : 5px 0 5px 0;
+  padding      : 30px 30px 30px 30px;
+}
+
+.card-profit h1
+{
+  font-size      : 1.6em;
+  font-weight    : bold;
+  padding-top    : 0px;
+  padding-bottom : 15px;
+  text-align     : start;
+}
+
+.card-profit ul
+{
+  font-size   : 1.6em;
+  line-height : 1.5em;
+}
+
+.card-profit ul li
+{
+  padding : 10px 0 10px 0;
+}
+
+.card-profit ul li:before
+{
+  content   : "✔ ";
+  top       : 0px;
+  left      : 0px;
+  color     : #ff6600;
+  font-size : 1.8em;
 }
 
 .package-card

@@ -510,6 +510,9 @@ mainStylesheet debug = do
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto"
 
+    "#profit" ? do
+        backgroundColor $ rgb 237 242 247
+
     "#footer" ? do
         -- borderStyle solid
         -- borderColor green
@@ -679,7 +682,7 @@ mainStylesheet debug = do
 
     ".card3" ? do 
         width $ px 600
-        height $ px 160
+        -- height $ px 160
 
         borderColor navbarColor
         borderWidth $ px 4
@@ -722,6 +725,44 @@ mainStylesheet debug = do
             sym padding $ px 20
             -- textAlign center
             lineHeight $ em 1.2
+
+    ".card-profit" ? do 
+        width $ px 600
+        -- height $ px 160
+
+        borderColor navbarColor
+        borderWidth $ px 4
+        borderStyle solid
+
+        sym2 margin (px 5) nil
+        sym padding $ px 30
+
+
+        h1 ? do
+            fontSize $ em 1.6
+            fontWeight bold
+            paddingTop $ px 0
+            paddingBottom $ px 15
+            textAlign start
+
+        ul ? do
+            fontSize $ em 1.6
+            -- sym padding $ px 20
+            -- textAlign center
+            lineHeight $ em 1.5
+
+            li ? do
+                sym2 padding (px 10) nil
+
+            li # ":before" ? do
+                content $ stringContent "✔ "
+                -- position absolute
+                top $ px 0
+                left $ px 0
+                color navbarColor
+                fontSize $ em 1.8
+                
+
 
     ".package-card" ? do 
         width $ px 280
