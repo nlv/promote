@@ -14,7 +14,7 @@ $( function() {
                     callbackPhone: $('#callback-popup input[name=phone]').val()
                 };
                 
-                fetch("https://localhost:8080/api/callback",
+                fetch("http://localhost:8080/api/callback",
                 {
                     headers: {
                         'Accept': 'application/json',
