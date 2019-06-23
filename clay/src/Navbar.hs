@@ -94,24 +94,27 @@ navbarStylesheet s = do
                 display none
 
             ".navbar-nav" # ".active" ? do
-                display block
-
                 position absolute
                 left $ px 0
                 top $ navbarHeight @-@ (px 1)
-                width $ pct 80
-                paddingTop $ px 10
-                paddingBottom $ px 10
+
+                display flex
+                flexDirection column
+                alignItems flexStart
+                justifyContent spaceAround
+
+                width auto
+                height $ px 250
+                maxHeight $ (vh 100) @-@ navbarHeight @-@ (px 4)
+                paddingLeft $ px 10
+                paddingRight $ px 10
 
                 backgroundColor $ rgba 0 0 0 0.8
 
                 li ? do
-                    width $ pct 100
-                    sym2 padding (px 20) (px 20)
-
+                    -- paddingLeft $ px 5
                     borderStyle none
-
-                    fontSize $ rem 1.2
+                    fontSize $ rem 1
 
         query Media.screen [Media.maxWidth $ px 600] $ do
             paddingLeft $ px 5
