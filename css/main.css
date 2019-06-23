@@ -146,6 +146,16 @@ body
   justify-content : space-between;
 }
 
+#navbar .brand
+{
+  width : 150px;
+}
+
+#navbar .brand img
+{
+  width : 100%;
+}
+
 #navbar .navbar-phone
 {
   font-size : 1rem;

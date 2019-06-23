@@ -122,6 +122,11 @@ navbarStylesheet s = do
             paddingRight $ px 5
             justifyContent spaceBetween
 
+            ".brand" ? do
+                width $ px 150
+                "img" ? do
+                    width $ pct 100
+
             ".navbar-phone" ? do
                 fontSize $ rem 1
 
