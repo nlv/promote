@@ -162,5 +162,15 @@ body
 }
 
 }
+@media screen and (max-width: 300px)
+{
+
+
+#navbar .navbar-phone
+{
+  display : none;
+}
+
+}
 
 /* Generated with Clay, http://fvisser.nl/clay */
