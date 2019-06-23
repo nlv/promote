@@ -17,37 +17,37 @@ navbarStylesheet :: Css
 navbarStylesheet = do
 
     "#navbar" ? do 
+        -- "*" <? do
+        --     borderStyle solid
+        --     borderColor red
+        --     borderWidth $ px 0.1
+
         display flex
         alignItems center
-        justifyContent spaceBetween
+        justifyContent spaceAround
 
         position fixed
         top nil
         right nil
         left nil
 
-        paddingLeft navbarHPadding
-        paddingRight navbarHPadding
-
         color brandColor
         fontWeight $ weight 600
-
-        backgroundColor $ rgba 255 255 255 0.8
-
         fontSize $ em 1.2
         textTransform uppercase
 
+        backgroundColor $ rgba 255 255 255 0.8
         transition "background-color" (sec 1.5) linear (sec 0)
 
         ".no-background" & do
             backgroundColor transparent
 
     ".navbar-nav" ? do
+        width $ pct 40
+
         display flex
         alignItems center
-        justifyContent spaceBetween
-
-        width (pct 40)
+        justifyContent spaceAround
 
         li ? do
             borderColor brandColor
@@ -63,11 +63,12 @@ navbarStylesheet = do
             color red
 
         a ? do
+            -- display block
             textDecoration none
             color brandColor
 
 
-    ".navbar-phone" ? do
+    "#navbar-phone" ? do
         fontSize $ rem 1.8
 
     ".navbar-toggle" ? do
@@ -79,23 +80,18 @@ navbarStylesheet = do
         cursor pointer
 
     query Media.screen [Media.maxWidth $ px 1280] $ do
-        "#navbar" ? do
-            paddingLeft $ px 20
-            paddingRight $ px 20
-
         ".brand" ? do
-            transform $ scale 0.7 0.7
+            width $ px 200
+            "img" ? do
+                width $ pct 100
+
+        "#navbar-phone" ? do
+            fontSize $ rem 1.4
 
     query Media.screen [Media.maxWidth $ px 900] $ do
-        ".navbar-nav" ? do
-            width (pct 80)
-
-        ".navbar-phone" ? do
-            display none
-
-
-    query Media.screen [Media.maxWidth $ px 480] $ do
         "#navbar" ? do
+            ".navbar-toggle" ? do
+                display inlineBlock
 
             ".navbar-nav" ? do
                 display none
@@ -120,5 +116,12 @@ navbarStylesheet = do
 
                     fontSize $ rem 1.2
 
-            ".navbar-toggle" ? do
-                display inlineBlock
+    query Media.screen [Media.maxWidth $ px 600] $ do
+        "#navbar" ? do 
+            paddingLeft $ px 5
+            paddingRight $ px 5
+            justifyContent spaceBetween
+
+        "#navbar-phone" ? do
+            fontSize $ rem 1
+

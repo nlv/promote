@@ -10,18 +10,16 @@ body
 {
   display            : flex;
   align-items        : center;
-  justify-content    : space-between;
+  justify-content    : space-around;
   position           : fixed;
   top                : 0;
   right              : 0;
   left               : 0;
-  padding-left       : 10%;
-  padding-right      : 10%;
   color              : #ff6600;
   font-weight        : 600;
-  background-color   : rgba(255,255,255,0.8);
   font-size          : 1.19999em;
   text-transform     : uppercase;
+  background-color   : rgba(255,255,255,0.8);
   -webkit-transition : background-color 1.5s linear 0.0s;
   -moz-transition    : background-color 1.5s linear 0.0s;
   -ms-transition     : background-color 1.5s linear 0.0s;
@@ -36,10 +34,10 @@ body
 
 .navbar-nav
 {
+  width           : 40%;
   display         : flex;
   align-items     : center;
-  justify-content : space-between;
-  width           : 40%;
+  justify-content : space-around;
 }
 
 .navbar-nav li
@@ -64,80 +62,7 @@ body
   color           : #ff6600;
 }
 
-.navbar-phone
-{
-  font-size : 1.8rem;
-}
-
-.navbar-toggle
-{
-  display          : none;
-  border-style     : none;
-  color            : #ff6600;
-  background-color : rgba(0,0,0,0.0);
-  font-size        : 1.8rem;
-  cursor           : pointer;
-}
-
-#navbar
-{
-  display            : flex;
-  align-items        : center;
-  justify-content    : space-between;
-  position           : fixed;
-  top                : 0;
-  right              : 0;
-  left               : 0;
-  padding-left       : 10%;
-  padding-right      : 10%;
-  color              : #ff6600;
-  font-weight        : 600;
-  background-color   : rgba(255,255,255,0.8);
-  font-size          : 1.19999em;
-  text-transform     : uppercase;
-  -webkit-transition : background-color 1.5s linear 0.0s;
-  -moz-transition    : background-color 1.5s linear 0.0s;
-  -ms-transition     : background-color 1.5s linear 0.0s;
-  -o-transition      : background-color 1.5s linear 0.0s;
-  transition         : background-color 1.5s linear 0.0s;
-}
-
-#navbar.no-background
-{
-  background-color : rgba(0,0,0,0.0);
-}
-
-.navbar-nav
-{
-  display         : flex;
-  align-items     : center;
-  justify-content : space-between;
-  width           : 40%;
-}
-
-.navbar-nav li
-{
-  border-color        : #ff6600;
-  border-bottom-width : 1px;
-  padding-bottom      : 8px;
-  padding-top         : 8px;
-}
-
-.navbar-nav li.active
-{
-  border-color        : #ff6600;
-  border-bottom-width : 1px;
-  border-style        : solid;
-  color               : #ff0000;
-}
-
-.navbar-nav a
-{
-  text-decoration : none;
-  color           : #ff6600;
-}
-
-.navbar-phone
+#navbar-phone
 {
   font-size : 1.8rem;
 }
@@ -155,39 +80,30 @@ body
 @media screen and (max-width: 1280px)
 {
 
-#navbar
-{
-  padding-left  : 20px;
-  padding-right : 20px;
-}
-
 .brand
 {
-  -webkit-transform : scale(0.69999,0.69999);
-  -moz-transform    : scale(0.69999,0.69999);
-  -ms-transform     : scale(0.69999,0.69999);
-  -o-transform      : scale(0.69999,0.69999);
-  transform         : scale(0.69999,0.69999);
+  width : 200px;
+}
+
+.brand img
+{
+  width : 100%;
+}
+
+#navbar-phone
+{
+  font-size : 1.39999rem;
 }
 
 }
 @media screen and (max-width: 900px)
 {
 
-.navbar-nav
-{
-  width : 80%;
-}
 
-.navbar-phone
+#navbar .navbar-toggle
 {
-  display : none;
+  display : inline-block;
 }
-
-}
-@media screen and (max-width: 480px)
-{
-
 
 #navbar .navbar-nav
 {
@@ -218,9 +134,20 @@ body
   font-size    : 1.19999rem;
 }
 
-#navbar .navbar-toggle
+}
+@media screen and (max-width: 600px)
 {
-  display : inline-block;
+
+#navbar
+{
+  padding-left    : 5px;
+  padding-right   : 5px;
+  justify-content : space-between;
+}
+
+#navbar-phone
+{
+  font-size : 1rem;
 }
 
 }
