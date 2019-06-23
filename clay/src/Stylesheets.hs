@@ -11,6 +11,7 @@ import Prelude hiding (rem, (**))
 
 import Common
 import Navbar
+import StartPage
 
 navbarHPadding = pct 10
 
@@ -24,6 +25,8 @@ mainStylesheet debug = do
         fontFamily [rootFontName] [secondaryFontName]
 
     navbarStylesheet "#navbar"
+
+    startPageStylesheet
 
     {-
     "#start-page" ? do

@@ -166,5 +166,107 @@ html
 }
 
 }
+#start-page
+{
+  height          : 100vh;
+  background      : rgba(0,0,0,0.2);
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+}
+
+#start-page header
+{
+  padding : 0 40px 0 40px;
+}
+
+#start-page header h1
+{
+  text-align     : center;
+  font-size      : 4em;
+  font-weight    : 600;
+  padding-bottom : 10px;
+  color          : #d3d3d3;
+}
+
+#start-page header h2
+{
+  text-align  : center;
+  font-size   : 2.6em;
+  font-weight : 600;
+  color       : #ff6600;
+}
+
+#start-page header h2 p
+{
+  margin-left  : auto;
+  margin-right : auto;
+  text-align   : center;
+  width        : 100%;
+  font-size    : 2.5em;
+  display      : inline-block;
+}
+
+#start-page video
+{
+  position   : absolute;
+  left       : 0;
+  top        : 0;
+  width      : 100%;
+  min-height : 100%;
+  z-index    : -1;
+  object-fit : cover;
+}
+
+#start-page .page-start-button
+{
+  display         : flex;
+  width           : 100%;
+  justify-content : center;
+  margin-top      : 2em;
+  font-size       : 1.5em;
+}
+
+#start-page .page-start-button a
+{
+  width            : 38%;
+  padding          : 15px 15px 15px 15px;
+  background-color : rgba(255,102,0,0.7);
+  border-radius    : 20px 20px 20px 20px;
+  text-align       : center;
+  color            : #ffffff;
+  text-transform   : uppercase;
+  text-decoration  : none;
+}
+
+#start-page .page-start-button a:hover
+{
+  background-color : rgba(265,117,0,0.7);
+}
+
+@media screen and (max-width: 1280px)
+{
+#start-page
+{
+  font-size : 0.8rem;
+}
+
+}
+@media screen and (max-width: 900px)
+{
+#start-page
+{
+  font-size : 0.69999rem;
+}
+
+}
+@media screen and (max-width: 780px)
+{
+#start-page
+{
+  font-size : 0.59999rem;
+}
+
+}
 
 /* Generated with Clay, http://fvisser.nl/clay */

@@ -28,22 +28,20 @@ startPageStylesheet = do
             sym2 padding nil (px 40)
 
             h1 ? do
-                width $ pct 100
                 textAlign center
                 fontSize $ em 4
                 fontWeight $ weight 600
                 paddingBottom $ px 10
-                lineHeight $ em 1.5
 
                 color $ lightgray
 
             h2 ? do
-                display flex
-
-                paddingBottom $ px 14
+                textAlign center
+                fontSize $ em 2.6
+                fontWeight $ weight 600
+                -- paddingBottom $ px 14
 
                 color brandColor
-                fontWeight $ weight 600
 
                 p ? do
                     marginLeft auto
@@ -95,12 +93,8 @@ startPageStylesheet = do
             fontSize $ rem 0.7
 
         query Media.screen [Media.maxWidth $ px 780] $ do
-            -- sym2 padding nil (px 10)
             fontSize $ rem 0.6
 
-        query Media.screen [Media.maxWidth $ px 660] $ do
-            fontSize $ rem 0.5
-            -- sym2 padding nil (px 35)
 
         -- query Media.screen [Media.maxWidth $ px 530] $ do
             -- sym2 padding nil (px 35)
