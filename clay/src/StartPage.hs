@@ -17,11 +17,21 @@ startPageStylesheet = do
     "#start-page" ? do
         height $ vh 100
 
-        background $ rgba 0 0 0 0.2
-
         display flex
         justifyContent center
         alignItems center
+
+        background $ rgba 0 0 0 0.2
+
+        query Media.screen [Media.maxWidth $ px 1280] $ do
+            fontSize $ rem 0.8
+
+        query Media.screen [Media.maxWidth $ px 900] $ do
+            fontSize $ rem 0.7
+
+        query Media.screen [Media.maxWidth $ px 780] $ do
+            fontSize $ rem 0.6
+            background $ rgba 0 0 0 0.4
 
         header ? do
 
@@ -37,22 +47,10 @@ startPageStylesheet = do
 
             h2 ? do
                 textAlign center
-                fontSize $ em 2.6
+                fontSize $ em 2.5
                 fontWeight $ weight 600
-                -- paddingBottom $ px 14
 
                 color brandColor
-
-                p ? do
-                    marginLeft auto
-                    marginRight auto
-                    textAlign center
-
-                    width $ pct 100
-
-                    fontSize $ em 2.5
-
-                    display inlineBlock
 
         "video" ? do
             position absolute
@@ -86,14 +84,6 @@ startPageStylesheet = do
             "a" # ":hover" ? do
                     backgroundColor $ rgba 265 117 0 0.7
 
-        query Media.screen [Media.maxWidth $ px 1280] $ do
-            fontSize $ rem 0.8
-
-        query Media.screen [Media.maxWidth $ px 900] $ do
-            fontSize $ rem 0.7
-
-        query Media.screen [Media.maxWidth $ px 780] $ do
-            fontSize $ rem 0.6
 
 
         -- query Media.screen [Media.maxWidth $ px 530] $ do

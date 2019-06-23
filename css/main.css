@@ -169,10 +169,10 @@ html
 #start-page
 {
   height          : 100vh;
-  background      : rgba(0,0,0,0.2);
   display         : flex;
   justify-content : center;
   align-items     : center;
+  background      : rgba(0,0,0,0.2);
 }
 
 #start-page header
@@ -192,19 +192,9 @@ html
 #start-page header h2
 {
   text-align  : center;
-  font-size   : 2.6em;
+  font-size   : 2.5em;
   font-weight : 600;
   color       : #ff6600;
-}
-
-#start-page header h2 p
-{
-  margin-left  : auto;
-  margin-right : auto;
-  text-align   : center;
-  width        : 100%;
-  font-size    : 2.5em;
-  display      : inline-block;
 }
 
 #start-page video
@@ -264,7 +254,8 @@ html
 {
 #start-page
 {
-  font-size : 0.59999rem;
+  font-size  : 0.59999rem;
+  background : rgba(0,0,0,0.4);
 }
 
 }
