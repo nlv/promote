@@ -19,8 +19,7 @@ mainStylesheet debug = do
 
     importUrl "../fonts/raleway/raleway.css"
 
-    -- Для корректной прокрутки разделов (из доки bootstrap scroll-spy) 
-    body ? do
+    html ? do
         fontSize rootFontSize 
         fontFamily [rootFontName] [secondaryFontName]
 
