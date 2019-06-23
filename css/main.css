@@ -1,6 +1,6 @@
 
 @import url(../fonts/raleway/raleway.css);
-body
+html
 {
   font-size   : 12px;
   font-family : "Raleway", sans-serif;
@@ -173,12 +173,11 @@ body
   display         : flex;
   justify-content : center;
   align-items     : center;
-  padding-top     : 0;
 }
 
 #start-page header
 {
-  width : 70%;
+  padding : 0 40px 0 40px;
 }
 
 #start-page header h1
@@ -187,16 +186,15 @@ body
   font-size      : 4em;
   font-weight    : 600;
   padding-bottom : 10px;
-  line-height    : 1.5em;
   color          : #d3d3d3;
 }
 
 #start-page header h2
 {
-  display        : flex;
-  padding-bottom : 14px;
-  color          : #ff6600;
-  font-weight    : 600;
+  text-align  : center;
+  font-size   : 2.6em;
+  font-weight : 600;
+  color       : #ff6600;
 }
 
 #start-page header h2 p
@@ -220,7 +218,7 @@ body
   object-fit : cover;
 }
 
-.page-start-button
+#start-page .page-start-button
 {
   display         : flex;
   width           : 100%;
@@ -229,7 +227,7 @@ body
   font-size       : 1.5em;
 }
 
-.page-start-button a
+#start-page .page-start-button a
 {
   width            : 38%;
   padding          : 15px 15px 15px 15px;
@@ -241,43 +239,32 @@ body
   text-decoration  : none;
 }
 
-.page-start-button a:hover
+#start-page .page-start-button a:hover
 {
   background-color : rgba(265,117,0,0.7);
 }
 
+@media screen and (max-width: 1280px)
+{
+#start-page
+{
+  font-size : 0.8rem;
+}
+
+}
 @media screen and (max-width: 900px)
 {
-
-
-#start-page header
+#start-page
 {
-  display        : flex;
-  flex-direction : column;
-  height         : 100%;
-  text-align     : center;
-  margin-top     : 0;
-  padding-top    : -webkit-calc(95px + 60px);
-  padding-top    : -moz-calc(95px + 60px);
-  padding-top    : -ms-calc(95px + 60px);
-  padding-top    : -o-calc(95px + 60px);
-  padding-top    : calc(95px + 60px);
+  font-size : 0.69999rem;
 }
 
-#start-page header h1
-{
-  font-size : 2.39999em;
-  color     : #fafad2;
-  color     : #d3d3d3;
 }
-
-#start-page header p
+@media screen and (max-width: 780px)
 {
-  margin-left  : auto;
-  margin-right : auto;
-  text-align   : center;
-  width        : 100%;
-  font-size    : 2.5em;
+#start-page
+{
+  font-size : 0.59999rem;
 }
 
 }
