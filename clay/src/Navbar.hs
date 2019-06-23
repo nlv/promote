@@ -13,10 +13,10 @@ import Common
 
 navbarHPadding = pct 10
 
-navbarStylesheet :: Css
-navbarStylesheet = do
+navbarStylesheet :: Selector -> Css
+navbarStylesheet s = do
 
-    "#navbar" ? do 
+    s ? do 
         -- "*" <? do
         --     borderStyle solid
         --     borderColor red
@@ -79,7 +79,7 @@ navbarStylesheet = do
             cursor pointer
 
     query Media.screen [Media.maxWidth $ px 1280] $ do
-        "#navbar" ? do 
+        s ? do 
             ".brand" ? do
                 width $ px 200
                 "img" ? do
@@ -89,7 +89,7 @@ navbarStylesheet = do
                 fontSize $ rem 1.4
 
     query Media.screen [Media.maxWidth $ px 900] $ do
-        "#navbar" ? do
+        s ? do
             ".navbar-toggle" ? do
                 display inlineBlock
 
@@ -117,7 +117,7 @@ navbarStylesheet = do
                     fontSize $ rem 1.2
 
     query Media.screen [Media.maxWidth $ px 600] $ do
-        "#navbar" ? do 
+        s ? do 
             paddingLeft $ px 5
             paddingRight $ px 5
             justifyContent spaceBetween

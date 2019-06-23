@@ -24,7 +24,7 @@ mainStylesheet debug = do
         fontSize rootFontSize 
         fontFamily [rootFontName] [secondaryFontName]
 
-    navbarStylesheet
+    navbarStylesheet "#navbar"
 
     {-
     "#start-page" ? do
