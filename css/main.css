@@ -140,11 +140,6 @@ body
   font-size    : 1rem;
 }
 
-#navbar .active.navbar-nav li a
-{
-  color : #0000ff;
-}
-
 }
 @media screen and (max-width: 600px)
 {

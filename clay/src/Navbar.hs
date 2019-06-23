@@ -115,9 +115,6 @@ navbarStylesheet s = do
                     borderStyle none
                     fontSize $ rem 1
 
-                    a ? do
-                        color blue
-
         query Media.screen [Media.maxWidth $ px 600] $ do
             paddingLeft $ px 5
             paddingRight $ px 5
