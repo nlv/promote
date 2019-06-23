@@ -42,51 +42,51 @@ navbarStylesheet = do
         ".no-background" & do
             backgroundColor transparent
 
-    ".navbar-nav" ? do
-        width $ pct 40
+        ".navbar-nav" ? do
+            width $ pct 40
 
-        display flex
-        alignItems center
-        justifyContent spaceAround
+            display flex
+            alignItems center
+            justifyContent spaceAround
 
-        li ? do
-            borderColor brandColor
-            borderBottomWidth $ px 1
+            li ? do
+                borderColor brandColor
+                borderBottomWidth $ px 1
 
-            paddingBottom $ px 8
-            paddingTop $ px 8
+                paddingBottom $ px 8
+                paddingTop $ px 8
 
-        li # ".active" ? do
-            borderColor brandColor
-            borderBottomWidth $ px 1
-            borderStyle solid
-            color red
+            li # ".active" ? do
+                borderColor brandColor
+                borderBottomWidth $ px 1
+                borderStyle solid
+                color red
 
-        a ? do
-            -- display block
-            textDecoration none
+            a ? do
+                -- display block
+                textDecoration none
+                color brandColor
+
+        ".navbar-phone" ? do
+            fontSize $ rem 1.8
+
+        ".navbar-toggle" ? do
+            display none
+            borderStyle none
             color brandColor
-
-
-    "#navbar-phone" ? do
-        fontSize $ rem 1.8
-
-    ".navbar-toggle" ? do
-        display none
-        borderStyle none
-        color brandColor
-        backgroundColor transparent
-        fontSize $ rem 1.8
-        cursor pointer
+            backgroundColor transparent
+            fontSize $ rem 1.8
+            cursor pointer
 
     query Media.screen [Media.maxWidth $ px 1280] $ do
-        ".brand" ? do
-            width $ px 200
-            "img" ? do
-                width $ pct 100
+        "#navbar" ? do 
+            ".brand" ? do
+                width $ px 200
+                "img" ? do
+                    width $ pct 100
 
-        "#navbar-phone" ? do
-            fontSize $ rem 1.4
+            "#navbar-phone" ? do
+                fontSize $ rem 1.4
 
     query Media.screen [Media.maxWidth $ px 900] $ do
         "#navbar" ? do
@@ -122,6 +122,6 @@ navbarStylesheet = do
             paddingRight $ px 5
             justifyContent spaceBetween
 
-        "#navbar-phone" ? do
-            fontSize $ rem 1
+            ".navbar-phone" ? do
+                fontSize $ rem 1
 
