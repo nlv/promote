@@ -15,7 +15,6 @@ navbarHPadding = pct 10
 
 navbarStylesheet :: Selector -> Css
 navbarStylesheet s = do
-
     s ? do 
         -- "*" <? do
         --     borderStyle solid
@@ -78,8 +77,7 @@ navbarStylesheet s = do
             fontSize $ rem 1.8
             cursor pointer
 
-    query Media.screen [Media.maxWidth $ px 1280] $ do
-        s ? do 
+        query Media.screen [Media.maxWidth $ px 1280] $ do
             ".brand" ? do
                 width $ px 200
                 "img" ? do
@@ -88,8 +86,7 @@ navbarStylesheet s = do
             "#navbar-phone" ? do
                 fontSize $ rem 1.4
 
-    query Media.screen [Media.maxWidth $ px 900] $ do
-        s ? do
+        query Media.screen [Media.maxWidth $ px 900] $ do
             ".navbar-toggle" ? do
                 display inlineBlock
 
@@ -116,8 +113,7 @@ navbarStylesheet s = do
 
                     fontSize $ rem 1.2
 
-    query Media.screen [Media.maxWidth $ px 600] $ do
-        s ? do 
+        query Media.screen [Media.maxWidth $ px 600] $ do
             paddingLeft $ px 5
             paddingRight $ px 5
             justifyContent spaceBetween
@@ -130,8 +126,7 @@ navbarStylesheet s = do
             ".navbar-phone" ? do
                 fontSize $ rem 1
 
-    query Media.screen [Media.maxWidth $ px 300] $ do
-        s ? do 
+        query Media.screen [Media.maxWidth $ px 400] $ do
             ".navbar-phone" ? do
                 display none
 
