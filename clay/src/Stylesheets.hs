@@ -9,29 +9,14 @@ import qualified Clay.Flexbox as Flexbox (flex, wrap)
 import qualified Clay.Media as Media
 import Prelude hiding (rem, (**))
 
-rootFontSize = px 12
-rootFontName = "Raleway"
--- fontName = "Amatic SC"
+import Common
+import Navbar
 
-secondaryFontName = sansSerif
-
--- FIXME: дожна коррелировать с высотой навигационной панели 
-navbarHeight = px 95
 navbarHPadding = pct 10
--- navbarColor = rgb 251 166 40
-navbarColor = rgb 255 102 0
 
 mainStylesheet :: Bool -> Css
 mainStylesheet debug = do
-    let debugIt borderC backgroundC = 
-            if debug 
-                then border solid (px 1) borderC >> backgroundColor backgroundC
-                else border inherit inherit inherit >> backgroundColor inherit
-        debugBorder = flip debugIt $ inherit
-        debugBack = debugIt inherit
 
-    -- let debugBack c = 
-    --     if debug then backgroundColor c else backgroundColor inherit
     importUrl "../fonts/raleway/raleway.css"
 
     -- Для корректной прокрутки разделов (из доки bootstrap scroll-spy) 
@@ -39,13 +24,10 @@ mainStylesheet debug = do
         fontSize rootFontSize 
         fontFamily [rootFontName] [secondaryFontName]
 
-    "#p2" ? debugBack green
-    "#p3" ? debugBack blue
-    "#p4" ? debugBack yellow
+    navbarStylesheet
 
+    {-
     "#start-page" ? do
-        -- debugBorder blue 
-
         height $ vh 100
 
         background $ rgba 0 0 0 0.3
@@ -56,38 +38,28 @@ mainStylesheet debug = do
 
         paddingTop nil
 
-
         header ? do
 
-            -- marginTop $ pct (-10)
             width (pct 70)
 
             h1 ? do
-                -- debugBorder gray
-
                 textAlign center
                 fontSize $ em 4
                 fontWeight $ weight 600
                 paddingBottom $ px 10
                 lineHeight $ em 1.5
 
-                -- color $ lightgoldenrodyellow
                 color $ lightgray
 
             h2 ? do
-                -- debugBorder blue
-
                 display flex
 
                 paddingBottom $ px 14
 
-                -- color $ setA 0.7 navbarColor
                 color navbarColor
                 fontWeight $ weight 600
 
                 p ? do
-                    -- debugBorder green
-
                     marginLeft auto
                     marginRight auto
                     textAlign center
@@ -96,36 +68,19 @@ mainStylesheet debug = do
 
                     fontSize $ em 2.5
 
-            -- h2 ** ul ? do
-            --     -- debugBorder green
-
-            --     marginLeft auto
-            --     marginRight auto
-
-            --     display flex
-            --     width $ pct 100
-            --     justifyContent center
-
-            --     fontSize $ em 2
-
-            --     li ? do
-            --         paddingLeft $ px 15
-            --         paddingRight $ px 15
-
                     display inlineBlock
+
         "video" ? do
             position absolute
             left nil
             top nil
             width $ pct 100
-            -- maxHeight $ pct 100
             minHeight $ pct 100
             zIndex (-1)
             "object-fit" -: "cover"
+    -}
 
     "#navbar" ? do 
-        -- debugBorder green
-
         display flex
         alignItems center
         justifyContent spaceBetween
@@ -138,13 +93,12 @@ mainStylesheet debug = do
         paddingLeft navbarHPadding
         paddingRight navbarHPadding
 
-        color navbarColor
+        color brandColor
         fontWeight $ weight 600
 
         backgroundColor $ rgba 255 255 255 0.8
 
         fontSize $ em 1.2
-        -- fontWeight bold
         textTransform uppercase
 
         transition "background-color" (sec 1.5) linear (sec 0)
@@ -160,21 +114,21 @@ mainStylesheet debug = do
         width (pct 40)
 
         li ? do
-            borderColor navbarColor
+            borderColor brandColor
             borderBottomWidth $ px 1
 
             paddingBottom $ px 8
             paddingTop $ px 8
 
         li # ".active" ? do
-            borderColor navbarColor
+            borderColor brandColor
             borderBottomWidth $ px 1
             borderStyle solid
             color red
 
         a ? do
             textDecoration none
-            color navbarColor
+            color brandColor
 
 
     ".navbar-phone" ? do
@@ -183,11 +137,12 @@ mainStylesheet debug = do
     ".navbar-toggle" ? do
         display none
         borderStyle none
-        color navbarColor
+        color brandColor
         backgroundColor transparent
         fontSize $ rem 1.8
         cursor pointer
 
+    {-
     ".page-start-button" ? do
         display flex
         width (pct 100)
@@ -210,7 +165,9 @@ mainStylesheet debug = do
 
         "a" # ":hover" ? do
                 backgroundColor $ rgba 265 117 0 0.7
+    -}
 
+    {-
     ".callback-button" ? do
         display flex
         width (pct 100)
@@ -233,8 +190,10 @@ mainStylesheet debug = do
 
         "a" # ":hover" ? do
                 backgroundColor $ rgba 265 117 0 0.7
+        -- fontWeight bold
+    -}
 
-
+    {-
     query Media.screen [Media.maxWidth $ px 1280] $ do
         "#navbar" ? do
             paddingLeft $ px 20
@@ -242,8 +201,9 @@ mainStylesheet debug = do
 
         ".brand" ? do
             transform $ scale 0.7 0.7
+    -}
 
-    -- query Media.screen [Media.maxWidth $ px 835] $ do
+    {-
     query Media.screen [Media.maxWidth $ px 900] $ do
         ".navbar-nav" ? do
             width (pct 80)
@@ -253,7 +213,6 @@ mainStylesheet debug = do
 
         "#start-page" ? do
             display block
-
 
             header ? do
                 display flex
@@ -273,8 +232,6 @@ mainStylesheet debug = do
                     color $ lightgray
 
                 p ? do
-                    -- debugBorder green
-
                     marginLeft auto
                     marginRight auto
                     textAlign center
@@ -283,41 +240,19 @@ mainStylesheet debug = do
 
                     fontSize $ em 2.5
 
-
-                -- h2 ** ul ? do
-                --     -- debugBorder green
-
-                --     marginLeft auto
-                --     marginRight auto
-
-                --     display flex
-                --     flexDirection column
-                --     width $ pct 100
-
-                --     li ? do
-
-                --         display inlineBlock
-                --         textAlign center
-                --         sym2 padding (px 20) nil 
-
         ".page" ? do
-
             h1 ? do
-
                 fontSize $ rem 1.2
                 textTransform uppercase
                 lineHeight $ unitless 1.5
 
             h2 ? do
-
                 fontSize $ rem 1
 
         ".cards" ? do
             display grid
             "grid-template-columns" -: "auto auto"
             "grid-template-rows" -: "auto auto"
-            -- flexWrap Flexbox.wrap
-            -- justifyContent spaceAround
 
         "#p1" ?
             ".cards" ? do
@@ -334,11 +269,12 @@ mainStylesheet debug = do
                 textAlign center
                 fontSize $ em 4
 
-
         "#p2" ? 
             ".cards" ? do
                 "grid-template-columns" -: "auto auto auto"
+    -}
 
+    {-
     query Media.screen [Media.maxWidth $ px 480] $ do
 
         "#navbar" ? do
@@ -409,9 +345,9 @@ mainStylesheet debug = do
             p ? do
                 paddingLeft $ px 10
                 paddingRight $ px 10
+    -}
 
-
-
+    {-
     ".page" ? do
         -- debugBack yellow
 
@@ -448,7 +384,9 @@ mainStylesheet debug = do
             color $ rgba 0 0 0 0.5
 
             textAlign center
+    -}
 
+    {-
     ".cards" ? do
         display grid
         -- flexWrap Flexbox.wrap
@@ -461,13 +399,17 @@ mainStylesheet debug = do
         -- maxWidth $ px 1000
         paddingTop $ px 5
         paddingBottom $ px 15
+    -}
 
+    {-
     "#p1" ? do
         backgroundColor $ rgb 237 242 247
 
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto auto"
+    -}
 
+    {-
     ".page-callback" ? do
         backgroundImage $ url "../img/callback-background.jpg"
 
@@ -863,6 +805,7 @@ mainStylesheet debug = do
     ".ui-widget-header" ? do
         background navbarColor
         color white
+    -}
 
     
 
