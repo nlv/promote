@@ -16,11 +16,6 @@ navbarHPadding = pct 10
 navbarStylesheet :: Selector -> Css
 navbarStylesheet s = do
     s ? do 
-        -- "*" <? do
-        --     borderStyle solid
-        --     borderColor red
-        --     borderWidth $ px 0.1
-
         display flex
         alignItems center
         justifyContent spaceAround
@@ -127,8 +122,3 @@ navbarStylesheet s = do
 
             ".navbar-phone" ? do
                 fontSize $ rem 1
-
-        -- query Media.screen [Media.maxWidth $ px 150] $ do
-        --     ".navbar-phone" ? do
-        --         display none
-
