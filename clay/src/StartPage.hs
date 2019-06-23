@@ -31,7 +31,7 @@ startPageStylesheet = do
 
         query Media.screen [Media.maxWidth $ px 780] $ do
             fontSize $ rem 0.6
-            background $ rgba 0 0 0 0.4
+            -- background $ rgba 0 0 0 0.4
 
         header ? do
 
