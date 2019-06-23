@@ -126,7 +126,7 @@ navbarStylesheet s = do
             ".navbar-phone" ? do
                 fontSize $ rem 1
 
-        query Media.screen [Media.maxWidth $ px 200] $ do
+        query Media.screen [Media.maxWidth $ px 150] $ do
             ".navbar-phone" ? do
                 display none
 
