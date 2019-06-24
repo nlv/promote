@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Stylesheets
-    ( mainStylesheet
+module Page
+    ( pageStylesheet
     ) where
 
 import Clay
@@ -10,51 +10,89 @@ import qualified Clay.Media as Media
 import Prelude hiding (rem, (**))
 
 import Common
-import Navbar
-import StartPage
-import Page
 
-navbarHPadding = pct 10
-
-mainStylesheet :: Bool -> Css
-mainStylesheet debug = do
-
-    importUrl "../fonts/raleway/raleway.css"
-
-    html ? do
-        fontSize rootFontSize 
-        fontFamily [rootFontName] [secondaryFontName]
-
-    navbarStylesheet "#navbar"
-    startPageStylesheet
-    pageStylesheet
-
-
-    {-
-    ".callback-button" ? do
+pageStylesheet :: Css
+pageStylesheet = do
+    ".page" ? do
         display flex
-        width (pct 100)
-        justifyContent center
+        flexDirection column
         alignItems center
 
-        fontSize $ em 2
+        paddingTop (navbarHeight @+@ (px 5))
+        paddingBottom (navbarHeight @+@ (px 5))
 
-        "a" ? do
-            width (pct 50)
-            sym padding (px 15)
-
-            backgroundColor $ rgb 255 102 0 
-            sym borderRadius $ px 20
-
-            textAlign center
-            color white
+        h1 ? do
             textTransform uppercase
-            textDecoration none
+            textAlign center
 
-        "a" # ":hover" ? do
-                backgroundColor $ rgba 265 117 0 0.7
-        -- fontWeight bold
-    -}
+        h2 ? do 
+            textTransform uppercase
+            textAlign center
+
+        header <? do
+            h1 ? do
+                sym2 padding inherit (px 15)
+                paddingTop $ px 15
+
+                fontSize $ rem 3
+                lineHeight $ unitless 1.5
+
+            h2 ? do
+                paddingBottom $ px 20
+
+                fontSize $ rem 2.4
+                color $ rgba 0 0 0 0.5
+
+    ".cards" ? do
+        display grid
+        justifyContent center
+        "grid-column-gap" -: "20px"
+        "grid-row-gap" -: "20px"
+
+    ".card" ? do 
+        display flex
+        flexDirection column
+        alignItems center
+
+        width $ px 280
+        sym padding $ px 10
+
+        borderColor brandColor
+        borderWidth $ px 4
+        borderStyle solid
+
+        hgroup ? do
+            figure ? do
+                textAlign center
+                img ? do
+                    width $ pct 70
+
+            h1 ? do
+                lineHeight $ em 1.2
+                fontSize $ em 1.6
+                fontWeight bold
+                paddingTop $ px 15
+
+        p # ":first-of-type" ? do
+            paddingTop $ px 15
+
+        p ? do
+            fontSize $ em 1.6
+            paddingTop $ px 10
+            textAlign justify
+            lineHeight $ em 1.2
+
+    "#sec-target" ? do
+        backgroundColor $ rgb 237 242 247
+
+        ".cards" ? do
+            "grid-template-columns" -: "auto auto auto auto"
+
+            query Media.screen [Media.maxWidth $ px 1280] $ do
+                "grid-template-columns" -: "auto auto"
+
+            query Media.screen [Media.maxWidth $ px 700] $ do
+                "grid-template-columns" -: "auto"
 
     {-
     query Media.screen [Media.maxWidth $ px 900] $ do
@@ -125,7 +163,7 @@ mainStylesheet debug = do
             -- height $ px 400
             height auto
 
-            borderColor navbarColor
+            borderColor brandColor
             borderWidth $ px 4
             borderStyle solid
 
@@ -136,67 +174,8 @@ mainStylesheet debug = do
                 paddingRight $ px 10
     -}
 
-    {-
-    ".page" ? do
-        -- debugBack yellow
 
-        paddingTop (navbarHeight @+@ (px 5))
-        paddingBottom (navbarHeight @+@ (px 5))
 
-        width $ pct 100
-        -- height $ vh 100
-
-        display flex
-        flexDirection column
-        alignItems center
-
-        h1 ? do
-            -- debugBorder
-
-            sym2 padding inherit (px 15)
-            paddingTop $ px 15
-
-            fontSize $ rem 2
-            textTransform uppercase
-            lineHeight $ unitless 1.5
-
-            textAlign center
-
-        h2 ? do
-            -- debugBorder
-
-            sym padding $ px 15
-
-            fontSize $ rem 1.6
-            textTransform uppercase
-
-            color $ rgba 0 0 0 0.5
-
-            textAlign center
-    -}
-
-    {-
-    ".cards" ? do
-        display grid
-        -- flexWrap Flexbox.wrap
-        justifyContent center
-        "grid-template-columns" -: "auto auto"
-        "grid-column-gap" -: "20px"
-        "grid-row-gap" -: "20px"
-
-        width $ pct 100
-        -- maxWidth $ px 1000
-        paddingTop $ px 5
-        paddingBottom $ px 15
-    -}
-
-    {-
-    "#p1" ? do
-        backgroundColor $ rgb 237 242 247
-
-        ".cards" ? do
-            "grid-template-columns" -: "auto auto auto auto"
-    -}
 
     {-
     ".page-callback" ? do
@@ -206,7 +185,7 @@ mainStylesheet debug = do
             fontSize $ em 1.6
             textAlign center
             fontSize $ em 4
-            color navbarColor
+            color brandColor
             paddingTop $ px 20
             paddingBottom $ px 20
 
@@ -221,7 +200,7 @@ mainStylesheet debug = do
 
         header ? do
             h2 ? do
-                color navbarColor
+                color brandColor
                 fontSize $ em 2
 
         ".cards" ? do
@@ -365,57 +344,12 @@ mainStylesheet debug = do
             textAlign center
 
 
-    ".card" ? do 
-        width $ px 280
-        height $ px 400
-
-        borderColor navbarColor
-        borderWidth $ px 4
-        borderStyle solid
-
-        sym2 margin (px 5) nil
-
-        display flex
-        flexDirection column
-        alignItems center
-
-
-        sym padding $ px 10
-
-        hgroup ? do
-
-            -- FIXME пересекается с правилом выше надо делать a > b
-            paddingTop $ px 0
-            paddingBottom $ px 0
-
-            figure ? do
-                textAlign center
-                img ? do
-                    width $ pct 70
-
-            h1 ? do
-                fontSize $ em 1.6
-                fontWeight bold
-                paddingTop $ px 15
-                textAlign center
-
-        p # ":first-of-type" ? do
-            debugBorder green
-            paddingTop $ px 15
-
-        p ? do
-            fontSize $ em 1.6
-            paddingTop $ px 10
-            -- textAlign center
-            textAlign justify
-            textIndent $ indent $ px 20
-            lineHeight $ em 1.2
 
     ".card3" ? do 
         width $ px 600
         -- height $ px 160
 
-        borderColor navbarColor
+        borderColor brandColor
         borderWidth $ px 4
         borderStyle solid
 
@@ -461,7 +395,7 @@ mainStylesheet debug = do
         width $ px 600
         -- height $ px 160
 
-        borderColor navbarColor
+        borderColor brandColor
         borderWidth $ px 4
         borderStyle solid
 
@@ -490,7 +424,7 @@ mainStylesheet debug = do
                 -- position absolute
                 top $ px 0
                 left $ px 0
-                color navbarColor
+                color brandColor
                 fontSize $ em 1.8
                 
 
@@ -502,12 +436,12 @@ mainStylesheet debug = do
 
         alignItems center
 
-        borderColor navbarColor
+        borderColor brandColor
         borderWidth $ px 4
         borderStyle solid
 
         h1 ? do
-            backgroundColor navbarColor
+            backgroundColor brandColor
             color white
 
             sym2 padding (px 30) (px 20)
@@ -551,7 +485,7 @@ mainStylesheet debug = do
                 paddingTop (rem 1)
                 paddingBottom (rem 1)
 
-                backgroundColor navbarColor
+                backgroundColor brandColor
                 color white
 
                 textAlign center
@@ -560,7 +494,6 @@ mainStylesheet debug = do
 
 
         -- p # ":first-of-type" ? do
-        --     debugBorder green
         --     paddingTop $ px 15
 
         -- p ? do
@@ -592,7 +525,7 @@ mainStylesheet debug = do
         fontSize $ rem 1
     
     ".ui-widget-header" ? do
-        background navbarColor
+        background brandColor
         color white
     -}
 

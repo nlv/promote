@@ -284,5 +284,128 @@ html
 }
 
 }
+.page
+{
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  padding-top    : -webkit-calc(95px + 5px);
+  padding-top    : -moz-calc(95px + 5px);
+  padding-top    : -ms-calc(95px + 5px);
+  padding-top    : -o-calc(95px + 5px);
+  padding-top    : calc(95px + 5px);
+  padding-bottom : -webkit-calc(95px + 5px);
+  padding-bottom : -moz-calc(95px + 5px);
+  padding-bottom : -ms-calc(95px + 5px);
+  padding-bottom : -o-calc(95px + 5px);
+  padding-bottom : calc(95px + 5px);
+}
+
+.page h1
+{
+  text-transform : uppercase;
+  text-align     : center;
+}
+
+.page h2
+{
+  text-transform : uppercase;
+  text-align     : center;
+}
+
+
+.page > header h1
+{
+  padding     : inherit 15px inherit 15px;
+  padding-top : 15px;
+  font-size   : 3rem;
+  line-height : 1.5;
+}
+
+.page > header h2
+{
+  padding-bottom : 20px;
+  font-size      : 2.39999rem;
+  color          : rgba(0,0,0,0.5);
+}
+
+.cards
+{
+  display         : grid;
+  justify-content : center;
+  grid-column-gap : 20px;
+  grid-row-gap    : 20px;
+}
+
+.card
+{
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  width          : 280px;
+  padding        : 10px 10px 10px 10px;
+  border-color   : #ff6600;
+  border-width   : 4px;
+  border-style   : solid;
+}
+
+
+.card hgroup figure
+{
+  text-align : center;
+}
+
+.card hgroup figure img
+{
+  width : 70%;
+}
+
+.card hgroup h1
+{
+  line-height : 1.19999em;
+  font-size   : 1.6em;
+  font-weight : bold;
+  padding-top : 15px;
+}
+
+.card p:first-of-type
+{
+  padding-top : 15px;
+}
+
+.card p
+{
+  font-size   : 1.6em;
+  padding-top : 10px;
+  text-align  : justify;
+  line-height : 1.19999em;
+}
+
+#sec-target
+{
+  background-color : #edf2f7;
+}
+
+#sec-target .cards
+{
+  grid-template-columns : auto auto auto auto;
+}
+
+@media screen and (max-width: 1280px)
+{
+#sec-target .cards
+{
+  grid-template-columns : auto auto;
+}
+
+}
+@media screen and (max-width: 700px)
+{
+#sec-target .cards
+{
+  grid-template-columns : auto;
+}
+
+}
 
 /* Generated with Clay, http://fvisser.nl/clay */
