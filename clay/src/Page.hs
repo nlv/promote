@@ -21,6 +21,18 @@ pageStylesheet = do
         paddingTop (navbarHeight @+@ (px 5))
         paddingBottom (navbarHeight @+@ (px 5))
 
+        query Media.screen [Media.maxWidth $ px 1280] $ do
+            fontSize $ rem 0.8
+
+        query Media.screen [Media.maxWidth $ px 900] $ do
+            fontSize $ rem 0.7
+
+            ".newline-mobile" ? do
+                display block
+
+        query Media.screen [Media.maxWidth $ px 780] $ do
+            fontSize $ rem 0.6
+
         h1 ? do
             textTransform uppercase
             textAlign center
@@ -34,13 +46,14 @@ pageStylesheet = do
                 sym2 padding inherit (px 15)
                 paddingTop $ px 15
 
-                fontSize $ rem 3
-                lineHeight $ unitless 1.5
+                fontSize $ em 3
+                lineHeight $ unitless 1.2
 
             h2 ? do
+                paddingTop $ px 10
                 paddingBottom $ px 20
 
-                fontSize $ rem 2.4
+                fontSize $ em 2.4
                 color $ rgba 0 0 0 0.5
 
     ".cards" ? do
@@ -61,6 +74,11 @@ pageStylesheet = do
         borderWidth $ px 4
         borderStyle solid
 
+        fontSize $ rem 1.6
+
+        query Media.screen [Media.maxWidth $ px 1280] $ do
+            fontSize $ rem 1.4
+
         hgroup ? do
             figure ? do
                 textAlign center
@@ -69,7 +87,6 @@ pageStylesheet = do
 
             h1 ? do
                 lineHeight $ em 1.2
-                fontSize $ em 1.6
                 fontWeight bold
                 paddingTop $ px 15
 
@@ -77,7 +94,7 @@ pageStylesheet = do
             paddingTop $ px 15
 
         p ? do
-            fontSize $ em 1.6
+            -- fontSize $ em 1.6
             paddingTop $ px 10
             textAlign justify
             lineHeight $ em 1.2
@@ -96,24 +113,6 @@ pageStylesheet = do
 
     {-
     query Media.screen [Media.maxWidth $ px 900] $ do
-        ".page" ? do
-            h1 ? do
-                fontSize $ rem 1.2
-                textTransform uppercase
-                lineHeight $ unitless 1.5
-
-            h2 ? do
-                fontSize $ rem 1
-
-        ".cards" ? do
-            display grid
-            "grid-template-columns" -: "auto auto"
-            "grid-template-rows" -: "auto auto"
-
-        "#p1" ?
-            ".cards" ? do
-                "grid-template-columns" -: "auto auto auto auto"
-
         ".page-callback" ? do
             backgroundImage $ url "../img/callback-background.jpg"
 
@@ -129,53 +128,6 @@ pageStylesheet = do
             ".cards" ? do
                 "grid-template-columns" -: "auto auto auto"
     -}
-
-    {-
-    query Media.screen [Media.maxWidth $ px 480] $ do
-        ".page" ? do
-
-            h1 ? do
-                paddingLeft $ px 60
-                paddingRight $ px 60
-                paddingBottom nil
-
-                fontSize $ rem 1
-                lineHeight $ unitless 1.5
-
-            h2 ? do
-                fontSize $ rem 1
-
-        ".cards" ? do
-
-            display flex
-            flexDirection column
-            justifyContent spaceAround
-            alignItems center
-
-            width $ pct 100
-            -- maxWidth $ px 1400
-            paddingTop $ px 5
-            paddingBottom $ px 15
-
-        ".card" ? do 
-            width $ pct 90
-            maxWidth $ px 360
-            -- height $ px 400
-            height auto
-
-            borderColor brandColor
-            borderWidth $ px 4
-            borderStyle solid
-
-            sym2 margin (px 10) (px 5) 
-
-            p ? do
-                paddingLeft $ px 10
-                paddingRight $ px 10
-    -}
-
-
-
 
     {-
     ".page-callback" ? do
@@ -528,9 +480,3 @@ pageStylesheet = do
         background brandColor
         color white
     -}
-
-    
-
-
-            
-

@@ -318,17 +318,47 @@ html
 {
   padding     : inherit 15px inherit 15px;
   padding-top : 15px;
-  font-size   : 3rem;
-  line-height : 1.5;
+  font-size   : 3em;
+  line-height : 1.19999;
 }
 
 .page > header h2
 {
+  padding-top    : 10px;
   padding-bottom : 20px;
-  font-size      : 2.39999rem;
+  font-size      : 2.39999em;
   color          : rgba(0,0,0,0.5);
 }
 
+@media screen and (max-width: 1280px)
+{
+.page
+{
+  font-size : 0.8rem;
+}
+
+}
+@media screen and (max-width: 900px)
+{
+.page
+{
+  font-size : 0.69999rem;
+}
+
+.page .newline-mobile
+{
+  display : block;
+}
+
+}
+@media screen and (max-width: 780px)
+{
+.page
+{
+  font-size : 0.59999rem;
+}
+
+}
 .cards
 {
   display         : grid;
@@ -347,6 +377,7 @@ html
   border-color   : #ff6600;
   border-width   : 4px;
   border-style   : solid;
+  font-size      : 1.6rem;
 }
 
 
@@ -363,7 +394,6 @@ html
 .card hgroup h1
 {
   line-height : 1.19999em;
-  font-size   : 1.6em;
   font-weight : bold;
   padding-top : 15px;
 }
@@ -375,12 +405,19 @@ html
 
 .card p
 {
-  font-size   : 1.6em;
   padding-top : 10px;
   text-align  : justify;
   line-height : 1.19999em;
 }
 
+@media screen and (max-width: 1280px)
+{
+.card
+{
+  font-size : 1.39999rem;
+}
+
+}
 #sec-target
 {
   background-color : #edf2f7;
