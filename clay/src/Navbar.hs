@@ -91,7 +91,7 @@ navbarStylesheet s = do
             ".navbar-nav" # ".active" ? do
                 position absolute
                 left $ px 0
-                top $ navbarHeight @-@ (px 1)
+                top $ pct 100 @+@ (px 5)
 
                 display flex
                 flexDirection column
