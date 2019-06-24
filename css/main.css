@@ -192,7 +192,7 @@ html
   text-align     : center;
   font-size      : 4em;
   font-weight    : 600;
-  padding-bottom : 10px;
+  padding-bottom : 25px;
   color          : #d3d3d3;
 }
 
@@ -201,11 +201,11 @@ html
   text-align     : center;
   font-size      : 2.5em;
   font-weight    : 600;
-  padding-bottom : -webkit-calc(10px + 5px);
-  padding-bottom : -moz-calc(10px + 5px);
-  padding-bottom : -ms-calc(10px + 5px);
-  padding-bottom : -o-calc(10px + 5px);
-  padding-bottom : calc(10px + 5px);
+  padding-bottom : -webkit-calc(25px + 5px);
+  padding-bottom : -moz-calc(25px + 5px);
+  padding-bottom : -ms-calc(25px + 5px);
+  padding-bottom : -o-calc(25px + 5px);
+  padding-bottom : calc(25px + 5px);
   color          : #ff6600;
 }
 
@@ -233,7 +233,7 @@ html
   width            : 90vw;
   max-width        : 540px;
   padding          : 15px 15px 15px 15px;
-  background-color : rgba(255,102,0,0.7);
+  background-color : #ff6600;
   border-radius    : 20px 20px 20px 20px;
   text-align       : center;
   font-size        : 1.5em;

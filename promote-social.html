@@ -7,13 +7,13 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css"> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/jquery-ui/jquery-ui.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/callback_popup.js"></script>
+    <!-- <script src="js/jquery-ui/jquery-ui.min.js"></script> -->
+    <script src="js/navbar.js"></script>
+    <!-- <script src="js/callback_popup.js"></script> -->
     <title>Document</title>
 </head>
 
@@ -22,24 +22,22 @@
 
         <div class="brand">
             <a href="index.html"><img src="img/logo.png"></a>
-            <!-- <a href="#start-page"><img src="img/logo2.jpg"></a> -->
         </div>
 
-        <button type="button" class="navbar-toggle">
-            <i class="fa fa-bars"></i>
-        </button>
-        
         <ul class="navbar-nav">
             <li class="active"><a href="#start-page">Начало</a></li>
-            <!-- <li><a href="#p1">Проекты</a></li> -->
             <li><a href="#p2">Порядок работ</a></li>
             <li><a href="#services">Услуги</a></li>
             <li><a href="#footer">Контакты</a></li>
         </ul> 
 
-        <span class="navbar-phone">
+        <div class="navbar-phone">
             +7 (000) 000-00-00
-        </span>            
+        </div>            
+
+        <button class="navbar-toggle">
+            <i class="fa fa-bars"></i>
+        </button>
     </nav>
 
     <section id="start-page">
@@ -47,36 +45,36 @@
             <source src="video/omsk.mp4" type="video/mp4">
         </video>
         
-
-
         <header>
             <hgroup>
-                <h1>Приведем от 20 до 50 заявок<br/> 
-                    за месяц с бюджетом<br/> на рекламу 6000 рублей</h1>
+                <h1>Приведем от 20 до 50 заявок
+                    <br/> 
+                    за месяц с бюджетом
+                    <br/>
+                     на рекламу 6000 рублей
+                </h1>
                 <h2>
                     <p>
                         Работаем без посредников - у нас дешевле!
                     </p>
                 </h2>
-                <div class="page-start-button">
-                    <a target="_self" href="#" class="callback-opener">
-                        <span class="page-start-text">
-                            Заказать обратный звонок
-                        </span>
-                    </a>
-                </div>
             </hgroup>
         </header>
-
+        <div class="callback-button">
+            <a target="_self" href="#" class="callback-opener">
+                <span class="page-start-text">
+                    Заказать обратный звонок
+                </span>
+            </a>
+        </div>
     </section>
 
-    <section id="p1" class="page">
+    <section id="sec-target" class="page">
         <header>
             <hgroup>
                 <h1>
                     <span class="newline-mobile">Наша главная цель &mdash;</span> 
                     <span class="newline-mobile">увеличить вашу прибыль</span>
-                    <!-- Наша главная цель &mdash; увеличить вашу прибыль -->
                 </h1>
                 <h2>Почему стоит заказать у нас</h2>
             </hgroup>
@@ -134,7 +132,6 @@
                 </p>
             </div>
         </div>
-
     </section>
 
     <section id="warranty" class="page">

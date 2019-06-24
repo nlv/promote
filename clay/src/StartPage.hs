@@ -14,7 +14,7 @@ import Common
 startPageStylesheet :: Css
 startPageStylesheet = do
 
-    let h1pb = px 10
+    let h1pb = px 25
         h2pb = h1pb @+@ px 5
 
     "#start-page" ? do
@@ -72,7 +72,8 @@ startPageStylesheet = do
             maxWidth $ px 540
             sym padding (px 15)
 
-            backgroundColor $ rgba 255 102 0 0.7
+            -- backgroundColor $ rgba 255 102 0 0.7
+            backgroundColor $ rgb 255 102 0
             sym borderRadius $ px 20
 
             textAlign center

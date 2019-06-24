@@ -94,7 +94,6 @@ pageStylesheet = do
             paddingTop $ px 15
 
         p ? do
-            -- fontSize $ em 1.6
             paddingTop $ px 10
             textAlign justify
             lineHeight $ em 1.2
