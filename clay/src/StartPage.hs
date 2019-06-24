@@ -89,11 +89,3 @@ startPageStylesheet = do
                 color white
                 textTransform uppercase
                 textDecoration none
-
-
-
-    
-
-
-            
-
