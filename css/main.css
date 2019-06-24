@@ -129,6 +129,7 @@ html
   max-height       : -ms-calc((100vh - 95px) - 4px);
   max-height       : -o-calc((100vh - 95px) - 4px);
   max-height       : calc((100vh - 95px) - 4px);
+  min-height       : 400px;
   padding-left     : 10px;
   padding-right    : 10px;
   background-color : rgba(0,0,0,0.8);

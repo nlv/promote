@@ -101,6 +101,7 @@ navbarStylesheet s = do
                 width auto
                 height $ px 250
                 maxHeight $ (vh 100) @-@ navbarHeight @-@ (px 4)
+                minHeight $ px 400
                 paddingLeft $ px 10
                 paddingRight $ px 10
 
