@@ -14,10 +14,14 @@ import Common
 startPageStylesheet :: Css
 startPageStylesheet = do
 
+    let h1pb = px 10
+        h2pb = h1pb @+@ px 5
+
     "#start-page" ? do
         height $ vh 100
 
         display flex
+        flexDirection column
         justifyContent center
         alignItems center
 
@@ -31,17 +35,18 @@ startPageStylesheet = do
 
         query Media.screen [Media.maxWidth $ px 780] $ do
             fontSize $ rem 0.6
-            -- background $ rgba 0 0 0 0.4
 
         header ? do
-
             sym2 padding nil (px 40)
+
+            query Media.screen [Media.maxWidth $ px 640] $ do
+                sym2 padding nil (px 10)
 
             h1 ? do
                 textAlign center
                 fontSize $ em 4
                 fontWeight $ weight 600
-                paddingBottom $ px 10
+                paddingBottom h1pb
 
                 color $ lightgray
 
@@ -49,6 +54,7 @@ startPageStylesheet = do
                 textAlign center
                 fontSize $ em 2.5
                 fontWeight $ weight 600
+                paddingBottom h2pb
 
                 color brandColor
 
@@ -61,63 +67,28 @@ startPageStylesheet = do
             zIndex (-1)
             "object-fit" -: "cover"
 
-        ".page-start-button" ? do
-            display flex
-            width (pct 100)
-            justifyContent center
-            marginTop (em 2)
+        ".callback-button" ? do
+            width $ vw 90
+            maxWidth $ px 540
+            sym padding (px 15)
 
+            backgroundColor $ rgba 255 102 0 0.7
+            sym borderRadius $ px 20
+
+            textAlign center
             fontSize $ em 1.5
 
+            query Media.screen [Media.maxWidth $ px 900] $ do
+                maxWidth $ px 400
+                fontSize $ em 1.8
+
+            ":hover" & do
+                backgroundColor $ rgba 265 117 0 0.7
+
             "a" ? do
-                width (pct 38)
-                sym padding (px 15)
-
-                backgroundColor $ rgba 255 102 0 0.7
-                sym borderRadius $ px 20
-
-                textAlign center
                 color white
                 textTransform uppercase
                 textDecoration none
-
-            "a" # ":hover" ? do
-                    backgroundColor $ rgba 265 117 0 0.7
-
-
-
-        -- query Media.screen [Media.maxWidth $ px 530] $ do
-            -- sym2 padding nil (px 35)
-
-    -- query Media.screen [Media.maxWidth $ px 900] $ do
-    --     "#start-page" ? do
-    --         -- display block
-
-    --         header ? do
-    --             display flex
-    --             flexDirection column
-    --             height $ pct 100
-    --             textAlign center
-
-    --             -- backgroundColor $ rgba 0 0 0 0.4
-
-
-    --             marginTop nil
-    --             paddingTop (navbarHeight @+@ (px 60))
-
-    --             h1 ? do
-    --                 fontSize $ em 2.4
-    --                 color $ lightgoldenrodyellow
-    --                 color $ lightgray
-
-    --             p ? do
-    --                 marginLeft auto
-    --                 marginRight auto
-    --                 textAlign center
-
-    --                 width $ pct 100
-
-    --                 fontSize $ em 2.5
 
 
 

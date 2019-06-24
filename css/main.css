@@ -175,6 +175,7 @@ html
 {
   height          : 100vh;
   display         : flex;
+  flex-direction  : column;
   justify-content : center;
   align-items     : center;
   background      : rgba(0,0,0,0.2);
@@ -196,12 +197,25 @@ html
 
 #start-page header h2
 {
-  text-align  : center;
-  font-size   : 2.5em;
-  font-weight : 600;
-  color       : #ff6600;
+  text-align     : center;
+  font-size      : 2.5em;
+  font-weight    : 600;
+  padding-bottom : -webkit-calc(10px + 5px);
+  padding-bottom : -moz-calc(10px + 5px);
+  padding-bottom : -ms-calc(10px + 5px);
+  padding-bottom : -o-calc(10px + 5px);
+  padding-bottom : calc(10px + 5px);
+  color          : #ff6600;
 }
 
+@media screen and (max-width: 640px)
+{
+#start-page header
+{
+  padding : 0 10px 0 10px;
+}
+
+}
 #start-page video
 {
   position   : absolute;
@@ -213,32 +227,38 @@ html
   object-fit : cover;
 }
 
-#start-page .page-start-button
+#start-page .callback-button
 {
-  display         : flex;
-  width           : 100%;
-  justify-content : center;
-  margin-top      : 2em;
-  font-size       : 1.5em;
-}
-
-#start-page .page-start-button a
-{
-  width            : 38%;
+  width            : 90vw;
+  max-width        : 540px;
   padding          : 15px 15px 15px 15px;
   background-color : rgba(255,102,0,0.7);
   border-radius    : 20px 20px 20px 20px;
   text-align       : center;
-  color            : #ffffff;
-  text-transform   : uppercase;
-  text-decoration  : none;
+  font-size        : 1.5em;
 }
 
-#start-page .page-start-button a:hover
+#start-page .callback-button:hover
 {
   background-color : rgba(265,117,0,0.7);
 }
 
+#start-page .callback-button a
+{
+  color           : #ffffff;
+  text-transform  : uppercase;
+  text-decoration : none;
+}
+
+@media screen and (max-width: 900px)
+{
+#start-page .callback-button
+{
+  max-width : 400px;
+  font-size : 1.8em;
+}
+
+}
 @media screen and (max-width: 1280px)
 {
 #start-page
