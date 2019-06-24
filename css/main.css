@@ -445,4 +445,26 @@ html
 
 }
 
+#warranty .cards
+{
+  grid-template-columns : auto auto auto;
+}
+
+@media screen and (max-width: 1280px)
+{
+#warranty .cards
+{
+  grid-template-columns : auto auto;
+}
+
+}
+@media screen and (max-width: 700px)
+{
+#warranty .cards
+{
+  grid-template-columns : auto;
+}
+
+}
+
 /* Generated with Clay, http://fvisser.nl/clay */
