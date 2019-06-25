@@ -112,14 +112,13 @@ pageStylesheet = do
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto auto"
             cardsNarrowGrid
-            -- query Media.screen [Media.maxWidth $ px 1280] $ do
-            --     "grid-template-columns" -: "auto auto"
-
-            -- query Media.screen [Media.maxWidth $ px 700] $ do
-            --     "grid-template-columns" -: "auto"
-
 
     "#warranty" ? do
+        ".cards" ? do
+            "grid-template-columns" -: "auto auto auto"
+            cardsNarrowGrid
+
+    "#workflow" ? do
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto"
             cardsNarrowGrid
@@ -137,9 +136,6 @@ pageStylesheet = do
                 textAlign center
                 fontSize $ em 4
 
-        "#p2" ? 
-            ".cards" ? do
-                "grid-template-columns" -: "auto auto auto"
     -}
 
     {-
@@ -154,10 +150,6 @@ pageStylesheet = do
             paddingTop $ px 20
             paddingBottom $ px 20
 
-    "#p2" ? do
-        backgroundColor $ rgb 237 242 247
-        ".cards" ? do
-            "grid-template-columns" -: "auto auto auto"
 
     "#services" ? do
         -- backgroundColor $ rgb 237 242 247

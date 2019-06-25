@@ -72,7 +72,6 @@ startPageStylesheet = do
             maxWidth $ px 540
             sym padding (px 15)
 
-            -- backgroundColor $ rgba 255 102 0 0.7
             backgroundColor $ rgb 255 102 0
             sym borderRadius $ px 20
 
@@ -84,7 +83,7 @@ startPageStylesheet = do
                 fontSize $ em 1.8
 
             ":hover" & do
-                backgroundColor $ rgba 265 117 0 0.7
+                backgroundColor $ rgb 265 117 0 
 
             "a" ? do
                 color white

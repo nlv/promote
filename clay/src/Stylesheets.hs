@@ -87,9 +87,6 @@ mainStylesheet debug = do
                 textAlign center
                 fontSize $ em 4
 
-        "#p2" ? 
-            ".cards" ? do
-                "grid-template-columns" -: "auto auto auto"
     -}
 
     {-
@@ -209,11 +206,6 @@ mainStylesheet debug = do
             color navbarColor
             paddingTop $ px 20
             paddingBottom $ px 20
-
-    "#p2" ? do
-        backgroundColor $ rgb 237 242 247
-        ".cards" ? do
-            "grid-template-columns" -: "auto auto auto"
 
     "#services" ? do
         -- backgroundColor $ rgb 237 242 247
