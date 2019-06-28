@@ -9,63 +9,83 @@ import qualified Clay.Flexbox as Flexbox (flex, wrap)
 import qualified Clay.Media as Media
 import Prelude hiding (rem, (**))
 
+import Common
+
 testPageStylesheet :: Css
 testPageStylesheet = do
 
     "#test" ? do
-        display flex
-        justifyContent center
-        alignItems center
+        -- borderStyle solid
+        -- borderWidth $ px 0.1
+        -- borderColor green
 
-        -- width $ vw 100
+        display block
+        width $ vw 100
         -- height $ vh 100
-
-        backgroundImage $ url "../img/callback-background.jpg"
-        backgroundSize $ by (pct 100) (pct 100)
-
-    "#test-div" ? do
-        width $ px 540
-        height $ px 636
-
-        -- display flex
-        -- justifyContent center
-        -- alignItems center
+        height $ px 636 @+@ (navbarHeight @+@ (px 5)) @* 2
+        paddingBottom (navbarHeight @+@ (px 5))
 
         position relative
 
-        fontSize $ rem 2
+        backgroundImage $ url "../img/map_omsk.png"
+        backgroundSize $ by (pct 100) (pct 100)
+
+        header <? do
+            marginBottom $ px 20
+
+    "#test-div" ? do
+        position absolute
+        testDivSizing 1 (pct 10) (rem 2)
 
         backgroundImage $ url "../img/smartphone_in_hand_3.png"
         backgroundSize $ by (pct 100) (pct 100)
 
         "p" ? do
             position relative
-            left $ px 93
-            top $ px 0 
 
-            -- sym margin $ px 10
-            marginTop $ px 18
-            marginLeft $ px 11
-            marginRight $ px 11
-            marginBottom $ px 18
-            sym borderRadius $ px 20
+            borderStyle solid
+            borderWidth $ px 0.1
+            borderColor green
 
-            height $ px 546
-            width $ px 257
+        query Media.screen [Media.maxWidth $ px 1280] $ do
+            testDivSizing 0.8 (px 5) (rem 2)
 
-            -- background white
+        query Media.screen [Media.maxWidth $ px 900] $ do
+            testDivSizing 0.6 (px 5) (rem 1.6)
 
-            sym padding $ px 20
+            
+-- testDivSizing :: Double -> Css 
+testDivSizing scale rightPos fontS = do
+    let 
+        outerWidth = px 540
+        outerHeight = px 636
 
-        -- "p" ? do
-        --     position relative
-        --     left $ px 120
-        --     top $ px 50 
+        -- outerHeight = pct 100
+        -- outerWidth = outerHeight @* (540 / 636)
 
-        --     sym margin $ px 10
+        innerWidth = px 257
+        innerHeight = px 528
+        -- innerHeight = pct 100
+        -- innerWidth = innerHeight @* (257 / 528)
 
-        --     height $ px 500
-        --     width $ px 230
+        innerLeft = px 105
+        innerTop =  px 37
 
-        --     background white
+    right rightPos
+    bottom nil
 
+    width $ (outerWidth @* scale)
+    height $ (outerHeight @* scale)
+
+    fontSize fontS
+
+    "p" ? do
+        position relative
+        left $ (innerLeft @* scale)
+        top $ (innerTop @* scale) 
+
+        height $ (innerHeight @* scale)
+        width $ (innerWidth @* scale)
+
+
+        sym padding $ px 5

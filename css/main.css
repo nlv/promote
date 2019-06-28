@@ -490,18 +490,43 @@ html
 }
 #test
 {
-  display          : flex;
-  justify-content  : center;
-  align-items      : center;
-  background-image : url("../img/callback-background.jpg");
+  display          : block;
+  width            : 100vw;
+  height           : -webkit-calc(636px + (2 * (95px + 5px)));
+  height           : -moz-calc(636px + (2 * (95px + 5px)));
+  height           : -ms-calc(636px + (2 * (95px + 5px)));
+  height           : -o-calc(636px + (2 * (95px + 5px)));
+  height           : calc(636px + (2 * (95px + 5px)));
+  padding-bottom   : -webkit-calc(95px + 5px);
+  padding-bottom   : -moz-calc(95px + 5px);
+  padding-bottom   : -ms-calc(95px + 5px);
+  padding-bottom   : -o-calc(95px + 5px);
+  padding-bottom   : calc(95px + 5px);
+  position         : relative;
+  background-image : url("../img/map_omsk.png");
   background-size  : 100% 100%;
+}
+
+#test > header
+{
+  margin-bottom : 20px;
 }
 
 #test-div
 {
-  width            : 540px;
-  height           : 636px;
-  position         : relative;
+  position         : absolute;
+  right            : 10%;
+  bottom           : 0;
+  width            : -webkit-calc(1 * 540px);
+  width            : -moz-calc(1 * 540px);
+  width            : -ms-calc(1 * 540px);
+  width            : -o-calc(1 * 540px);
+  width            : calc(1 * 540px);
+  height           : -webkit-calc(1 * 636px);
+  height           : -moz-calc(1 * 636px);
+  height           : -ms-calc(1 * 636px);
+  height           : -o-calc(1 * 636px);
+  height           : calc(1 * 636px);
   font-size        : 2rem;
   background-image : url("../img/smartphone_in_hand_3.png");
   background-size  : 100% 100%;
@@ -509,18 +534,129 @@ html
 
 #test-div p
 {
-  position      : relative;
-  left          : 93px;
-  top           : 0px;
-  margin-top    : 18px;
-  margin-left   : 11px;
-  margin-right  : 11px;
-  margin-bottom : 18px;
-  border-radius : 20px 20px 20px 20px;
-  height        : 546px;
-  width         : 257px;
-  padding       : 20px 20px 20px 20px;
+  position : relative;
+  left     : -webkit-calc(1 * 105px);
+  left     : -moz-calc(1 * 105px);
+  left     : -ms-calc(1 * 105px);
+  left     : -o-calc(1 * 105px);
+  left     : calc(1 * 105px);
+  top      : -webkit-calc(1 * 37px);
+  top      : -moz-calc(1 * 37px);
+  top      : -ms-calc(1 * 37px);
+  top      : -o-calc(1 * 37px);
+  top      : calc(1 * 37px);
+  height   : -webkit-calc(1 * 528px);
+  height   : -moz-calc(1 * 528px);
+  height   : -ms-calc(1 * 528px);
+  height   : -o-calc(1 * 528px);
+  height   : calc(1 * 528px);
+  width    : -webkit-calc(1 * 257px);
+  width    : -moz-calc(1 * 257px);
+  width    : -ms-calc(1 * 257px);
+  width    : -o-calc(1 * 257px);
+  width    : calc(1 * 257px);
+  padding  : 5px 5px 5px 5px;
 }
 
+#test-div p
+{
+  position     : relative;
+  border-style : solid;
+  border-width : 0.1px;
+  border-color : #008000;
+}
+
+@media screen and (max-width: 1280px)
+{
+#test-div
+{
+  right     : 5px;
+  bottom    : 0;
+  width     : -webkit-calc(0.8 * 540px);
+  width     : -moz-calc(0.8 * 540px);
+  width     : -ms-calc(0.8 * 540px);
+  width     : -o-calc(0.8 * 540px);
+  width     : calc(0.8 * 540px);
+  height    : -webkit-calc(0.8 * 636px);
+  height    : -moz-calc(0.8 * 636px);
+  height    : -ms-calc(0.8 * 636px);
+  height    : -o-calc(0.8 * 636px);
+  height    : calc(0.8 * 636px);
+  font-size : 2rem;
+}
+
+#test-div p
+{
+  position : relative;
+  left     : -webkit-calc(0.8 * 105px);
+  left     : -moz-calc(0.8 * 105px);
+  left     : -ms-calc(0.8 * 105px);
+  left     : -o-calc(0.8 * 105px);
+  left     : calc(0.8 * 105px);
+  top      : -webkit-calc(0.8 * 37px);
+  top      : -moz-calc(0.8 * 37px);
+  top      : -ms-calc(0.8 * 37px);
+  top      : -o-calc(0.8 * 37px);
+  top      : calc(0.8 * 37px);
+  height   : -webkit-calc(0.8 * 528px);
+  height   : -moz-calc(0.8 * 528px);
+  height   : -ms-calc(0.8 * 528px);
+  height   : -o-calc(0.8 * 528px);
+  height   : calc(0.8 * 528px);
+  width    : -webkit-calc(0.8 * 257px);
+  width    : -moz-calc(0.8 * 257px);
+  width    : -ms-calc(0.8 * 257px);
+  width    : -o-calc(0.8 * 257px);
+  width    : calc(0.8 * 257px);
+  padding  : 5px 5px 5px 5px;
+}
+
+}
+@media screen and (max-width: 900px)
+{
+#test-div
+{
+  right     : 5px;
+  bottom    : 0;
+  width     : -webkit-calc(0.59999 * 540px);
+  width     : -moz-calc(0.59999 * 540px);
+  width     : -ms-calc(0.59999 * 540px);
+  width     : -o-calc(0.59999 * 540px);
+  width     : calc(0.59999 * 540px);
+  height    : -webkit-calc(0.59999 * 636px);
+  height    : -moz-calc(0.59999 * 636px);
+  height    : -ms-calc(0.59999 * 636px);
+  height    : -o-calc(0.59999 * 636px);
+  height    : calc(0.59999 * 636px);
+  font-size : 1.6rem;
+}
+
+#test-div p
+{
+  position : relative;
+  left     : -webkit-calc(0.59999 * 105px);
+  left     : -moz-calc(0.59999 * 105px);
+  left     : -ms-calc(0.59999 * 105px);
+  left     : -o-calc(0.59999 * 105px);
+  left     : calc(0.59999 * 105px);
+  top      : -webkit-calc(0.59999 * 37px);
+  top      : -moz-calc(0.59999 * 37px);
+  top      : -ms-calc(0.59999 * 37px);
+  top      : -o-calc(0.59999 * 37px);
+  top      : calc(0.59999 * 37px);
+  height   : -webkit-calc(0.59999 * 528px);
+  height   : -moz-calc(0.59999 * 528px);
+  height   : -ms-calc(0.59999 * 528px);
+  height   : -o-calc(0.59999 * 528px);
+  height   : calc(0.59999 * 528px);
+  width    : -webkit-calc(0.59999 * 257px);
+  width    : -moz-calc(0.59999 * 257px);
+  width    : -ms-calc(0.59999 * 257px);
+  width    : -o-calc(0.59999 * 257px);
+  width    : calc(0.59999 * 257px);
+  padding  : 5px 5px 5px 5px;
+}
+
+}
 
 /* Generated with Clay, http://fvisser.nl/clay */
