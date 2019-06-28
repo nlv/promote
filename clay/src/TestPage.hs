@@ -57,19 +57,19 @@ testPageStylesheet = do
 -- testDivSizing :: Double -> Css 
 testDivSizing scale rightPos fontS = do
     let 
-        outerWidth = px 540
         outerHeight = px 636
+        outerWidth = px 540
 
         -- outerHeight = pct 100
         -- outerWidth = outerHeight @* (540 / 636)
 
-        innerWidth = px 257
-        innerHeight = px 528
+        innerHeight = outerHeight @* (528 / 636)
+        -- innerHeight = px 528
         -- innerHeight = pct 100
-        -- innerWidth = innerHeight @* (257 / 528)
+        innerWidth = innerHeight @* (257 / 528)
 
-        innerLeft = px 105
-        innerTop =  px 37
+        innerLeft = outerWidth @* (105 / 540)
+        innerTop =  outerHeight @* (37 / 636)
 
     right rightPos
     bottom nil
@@ -86,6 +86,5 @@ testDivSizing scale rightPos fontS = do
 
         height $ (innerHeight @* scale)
         width $ (innerWidth @* scale)
-
 
         sym padding $ px 5

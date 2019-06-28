@@ -535,26 +535,26 @@ html
 #test-div p
 {
   position : relative;
-  left     : -webkit-calc(1 * 105px);
-  left     : -moz-calc(1 * 105px);
-  left     : -ms-calc(1 * 105px);
-  left     : -o-calc(1 * 105px);
-  left     : calc(1 * 105px);
-  top      : -webkit-calc(1 * 37px);
-  top      : -moz-calc(1 * 37px);
-  top      : -ms-calc(1 * 37px);
-  top      : -o-calc(1 * 37px);
-  top      : calc(1 * 37px);
-  height   : -webkit-calc(1 * 528px);
-  height   : -moz-calc(1 * 528px);
-  height   : -ms-calc(1 * 528px);
-  height   : -o-calc(1 * 528px);
-  height   : calc(1 * 528px);
-  width    : -webkit-calc(1 * 257px);
-  width    : -moz-calc(1 * 257px);
-  width    : -ms-calc(1 * 257px);
-  width    : -o-calc(1 * 257px);
-  width    : calc(1 * 257px);
+  left     : -webkit-calc(1 * (0.19444 * 540px));
+  left     : -moz-calc(1 * (0.19444 * 540px));
+  left     : -ms-calc(1 * (0.19444 * 540px));
+  left     : -o-calc(1 * (0.19444 * 540px));
+  left     : calc(1 * (0.19444 * 540px));
+  top      : -webkit-calc(1 * (0.05817 * 636px));
+  top      : -moz-calc(1 * (0.05817 * 636px));
+  top      : -ms-calc(1 * (0.05817 * 636px));
+  top      : -o-calc(1 * (0.05817 * 636px));
+  top      : calc(1 * (0.05817 * 636px));
+  height   : -webkit-calc(1 * (0.83018 * 636px));
+  height   : -moz-calc(1 * (0.83018 * 636px));
+  height   : -ms-calc(1 * (0.83018 * 636px));
+  height   : -o-calc(1 * (0.83018 * 636px));
+  height   : calc(1 * (0.83018 * 636px));
+  width    : -webkit-calc(1 * (0.48674 * (0.83018 * 636px)));
+  width    : -moz-calc(1 * (0.48674 * (0.83018 * 636px)));
+  width    : -ms-calc(1 * (0.48674 * (0.83018 * 636px)));
+  width    : -o-calc(1 * (0.48674 * (0.83018 * 636px)));
+  width    : calc(1 * (0.48674 * (0.83018 * 636px)));
   padding  : 5px 5px 5px 5px;
 }
 
@@ -588,26 +588,26 @@ html
 #test-div p
 {
   position : relative;
-  left     : -webkit-calc(0.8 * 105px);
-  left     : -moz-calc(0.8 * 105px);
-  left     : -ms-calc(0.8 * 105px);
-  left     : -o-calc(0.8 * 105px);
-  left     : calc(0.8 * 105px);
-  top      : -webkit-calc(0.8 * 37px);
-  top      : -moz-calc(0.8 * 37px);
-  top      : -ms-calc(0.8 * 37px);
-  top      : -o-calc(0.8 * 37px);
-  top      : calc(0.8 * 37px);
-  height   : -webkit-calc(0.8 * 528px);
-  height   : -moz-calc(0.8 * 528px);
-  height   : -ms-calc(0.8 * 528px);
-  height   : -o-calc(0.8 * 528px);
-  height   : calc(0.8 * 528px);
-  width    : -webkit-calc(0.8 * 257px);
-  width    : -moz-calc(0.8 * 257px);
-  width    : -ms-calc(0.8 * 257px);
-  width    : -o-calc(0.8 * 257px);
-  width    : calc(0.8 * 257px);
+  left     : -webkit-calc(0.8 * (0.19444 * 540px));
+  left     : -moz-calc(0.8 * (0.19444 * 540px));
+  left     : -ms-calc(0.8 * (0.19444 * 540px));
+  left     : -o-calc(0.8 * (0.19444 * 540px));
+  left     : calc(0.8 * (0.19444 * 540px));
+  top      : -webkit-calc(0.8 * (0.05817 * 636px));
+  top      : -moz-calc(0.8 * (0.05817 * 636px));
+  top      : -ms-calc(0.8 * (0.05817 * 636px));
+  top      : -o-calc(0.8 * (0.05817 * 636px));
+  top      : calc(0.8 * (0.05817 * 636px));
+  height   : -webkit-calc(0.8 * (0.83018 * 636px));
+  height   : -moz-calc(0.8 * (0.83018 * 636px));
+  height   : -ms-calc(0.8 * (0.83018 * 636px));
+  height   : -o-calc(0.8 * (0.83018 * 636px));
+  height   : calc(0.8 * (0.83018 * 636px));
+  width    : -webkit-calc(0.8 * (0.48674 * (0.83018 * 636px)));
+  width    : -moz-calc(0.8 * (0.48674 * (0.83018 * 636px)));
+  width    : -ms-calc(0.8 * (0.48674 * (0.83018 * 636px)));
+  width    : -o-calc(0.8 * (0.48674 * (0.83018 * 636px)));
+  width    : calc(0.8 * (0.48674 * (0.83018 * 636px)));
   padding  : 5px 5px 5px 5px;
 }
 
@@ -634,26 +634,26 @@ html
 #test-div p
 {
   position : relative;
-  left     : -webkit-calc(0.59999 * 105px);
-  left     : -moz-calc(0.59999 * 105px);
-  left     : -ms-calc(0.59999 * 105px);
-  left     : -o-calc(0.59999 * 105px);
-  left     : calc(0.59999 * 105px);
-  top      : -webkit-calc(0.59999 * 37px);
-  top      : -moz-calc(0.59999 * 37px);
-  top      : -ms-calc(0.59999 * 37px);
-  top      : -o-calc(0.59999 * 37px);
-  top      : calc(0.59999 * 37px);
-  height   : -webkit-calc(0.59999 * 528px);
-  height   : -moz-calc(0.59999 * 528px);
-  height   : -ms-calc(0.59999 * 528px);
-  height   : -o-calc(0.59999 * 528px);
-  height   : calc(0.59999 * 528px);
-  width    : -webkit-calc(0.59999 * 257px);
-  width    : -moz-calc(0.59999 * 257px);
-  width    : -ms-calc(0.59999 * 257px);
-  width    : -o-calc(0.59999 * 257px);
-  width    : calc(0.59999 * 257px);
+  left     : -webkit-calc(0.59999 * (0.19444 * 540px));
+  left     : -moz-calc(0.59999 * (0.19444 * 540px));
+  left     : -ms-calc(0.59999 * (0.19444 * 540px));
+  left     : -o-calc(0.59999 * (0.19444 * 540px));
+  left     : calc(0.59999 * (0.19444 * 540px));
+  top      : -webkit-calc(0.59999 * (0.05817 * 636px));
+  top      : -moz-calc(0.59999 * (0.05817 * 636px));
+  top      : -ms-calc(0.59999 * (0.05817 * 636px));
+  top      : -o-calc(0.59999 * (0.05817 * 636px));
+  top      : calc(0.59999 * (0.05817 * 636px));
+  height   : -webkit-calc(0.59999 * (0.83018 * 636px));
+  height   : -moz-calc(0.59999 * (0.83018 * 636px));
+  height   : -ms-calc(0.59999 * (0.83018 * 636px));
+  height   : -o-calc(0.59999 * (0.83018 * 636px));
+  height   : calc(0.59999 * (0.83018 * 636px));
+  width    : -webkit-calc(0.59999 * (0.48674 * (0.83018 * 636px)));
+  width    : -moz-calc(0.59999 * (0.48674 * (0.83018 * 636px)));
+  width    : -ms-calc(0.59999 * (0.48674 * (0.83018 * 636px)));
+  width    : -o-calc(0.59999 * (0.48674 * (0.83018 * 636px)));
+  width    : calc(0.59999 * (0.48674 * (0.83018 * 636px)));
   padding  : 5px 5px 5px 5px;
 }
 
