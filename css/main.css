@@ -490,38 +490,60 @@ html
 }
 #test
 {
+  border-style     : solid;
+  border-width     : 0.1px;
+  border-color     : #008000;
   display          : block;
   width            : 100vw;
-  height           : -webkit-calc(636px + (2 * (95px + 5px)));
-  height           : -moz-calc(636px + (2 * (95px + 5px)));
-  height           : -ms-calc(636px + (2 * (95px + 5px)));
-  height           : -o-calc(636px + (2 * (95px + 5px)));
-  height           : calc(636px + (2 * (95px + 5px)));
-  padding-bottom   : -webkit-calc(95px + 5px);
-  padding-bottom   : -moz-calc(95px + 5px);
-  padding-bottom   : -ms-calc(95px + 5px);
-  padding-bottom   : -o-calc(95px + 5px);
-  padding-bottom   : calc(95px + 5px);
+  padding-bottom   : 0;
   position         : relative;
   background-image : url("../img/map_omsk.png");
   background-size  : 100% 100%;
 }
 
-#test > header
+
+#test > header h2
 {
-  margin-bottom : 20px;
+  padding-bottom : 0;
+}
+
+#test-content
+{
+  display : flex;
+}
+
+#test-desc
+{
+  display      : flex;
+  align-items  : center;
+  padding      : 0 10% 0 10%;
+  border-style : solid;
+  border-width : 0.1px;
+  border-color : #ff0000;
+  width        : 50%;
+  font-size    : 3.5rem;
+  line-height  : 1.5em;
+  font-weight  : bold;
+  color        : #ffffff;
+}
+
+#test-form
+{
+  border-style : solid;
+  border-width : 0.1px;
+  border-color : #ff0000;
+  margin-top   : 20px;
 }
 
 #test-div
 {
-  position         : absolute;
   right            : 10%;
   bottom           : 0;
-  width            : -webkit-calc(1 * 540px);
-  width            : -moz-calc(1 * 540px);
-  width            : -ms-calc(1 * 540px);
-  width            : -o-calc(1 * 540px);
-  width            : calc(1 * 540px);
+  width            : -webkit-calc(1 * (0.84905 * 636px));
+  width            : -moz-calc(1 * (0.84905 * 636px));
+  width            : -ms-calc(1 * (0.84905 * 636px));
+  width            : -o-calc(1 * (0.84905 * 636px));
+  width            : calc(1 * (0.84905 * 636px));
   height           : -webkit-calc(1 * 636px);
   height           : -moz-calc(1 * 636px);
   height           : -ms-calc(1 * 636px);
@@ -535,11 +557,11 @@ html
 #test-div p
 {
   position : relative;
-  left     : -webkit-calc(1 * (0.19444 * 540px));
-  left     : -moz-calc(1 * (0.19444 * 540px));
-  left     : -ms-calc(1 * (0.19444 * 540px));
-  left     : -o-calc(1 * (0.19444 * 540px));
-  left     : calc(1 * (0.19444 * 540px));
+  left     : -webkit-calc(1 * (0.19444 * (0.84905 * 636px)));
+  left     : -moz-calc(1 * (0.19444 * (0.84905 * 636px)));
+  left     : -ms-calc(1 * (0.19444 * (0.84905 * 636px)));
+  left     : -o-calc(1 * (0.19444 * (0.84905 * 636px)));
+  left     : calc(1 * (0.19444 * (0.84905 * 636px)));
   top      : -webkit-calc(1 * (0.05817 * 636px));
   top      : -moz-calc(1 * (0.05817 * 636px));
   top      : -ms-calc(1 * (0.05817 * 636px));
@@ -572,11 +594,11 @@ html
 {
   right     : 5px;
   bottom    : 0;
-  width     : -webkit-calc(0.8 * 540px);
-  width     : -moz-calc(0.8 * 540px);
-  width     : -ms-calc(0.8 * 540px);
-  width     : -o-calc(0.8 * 540px);
-  width     : calc(0.8 * 540px);
+  width     : -webkit-calc(0.8 * (0.84905 * 636px));
+  width     : -moz-calc(0.8 * (0.84905 * 636px));
+  width     : -ms-calc(0.8 * (0.84905 * 636px));
+  width     : -o-calc(0.8 * (0.84905 * 636px));
+  width     : calc(0.8 * (0.84905 * 636px));
   height    : -webkit-calc(0.8 * 636px);
   height    : -moz-calc(0.8 * 636px);
   height    : -ms-calc(0.8 * 636px);
@@ -588,11 +610,11 @@ html
 #test-div p
 {
   position : relative;
-  left     : -webkit-calc(0.8 * (0.19444 * 540px));
-  left     : -moz-calc(0.8 * (0.19444 * 540px));
-  left     : -ms-calc(0.8 * (0.19444 * 540px));
-  left     : -o-calc(0.8 * (0.19444 * 540px));
-  left     : calc(0.8 * (0.19444 * 540px));
+  left     : -webkit-calc(0.8 * (0.19444 * (0.84905 * 636px)));
+  left     : -moz-calc(0.8 * (0.19444 * (0.84905 * 636px)));
+  left     : -ms-calc(0.8 * (0.19444 * (0.84905 * 636px)));
+  left     : -o-calc(0.8 * (0.19444 * (0.84905 * 636px)));
+  left     : calc(0.8 * (0.19444 * (0.84905 * 636px)));
   top      : -webkit-calc(0.8 * (0.05817 * 636px));
   top      : -moz-calc(0.8 * (0.05817 * 636px));
   top      : -ms-calc(0.8 * (0.05817 * 636px));
@@ -618,11 +640,11 @@ html
 {
   right     : 5px;
   bottom    : 0;
-  width     : -webkit-calc(0.59999 * 540px);
-  width     : -moz-calc(0.59999 * 540px);
-  width     : -ms-calc(0.59999 * 540px);
-  width     : -o-calc(0.59999 * 540px);
-  width     : calc(0.59999 * 540px);
+  width     : -webkit-calc(0.59999 * (0.84905 * 636px));
+  width     : -moz-calc(0.59999 * (0.84905 * 636px));
+  width     : -ms-calc(0.59999 * (0.84905 * 636px));
+  width     : -o-calc(0.59999 * (0.84905 * 636px));
+  width     : calc(0.59999 * (0.84905 * 636px));
   height    : -webkit-calc(0.59999 * 636px);
   height    : -moz-calc(0.59999 * 636px);
   height    : -ms-calc(0.59999 * 636px);
@@ -634,11 +656,11 @@ html
 #test-div p
 {
   position : relative;
-  left     : -webkit-calc(0.59999 * (0.19444 * 540px));
-  left     : -moz-calc(0.59999 * (0.19444 * 540px));
-  left     : -ms-calc(0.59999 * (0.19444 * 540px));
-  left     : -o-calc(0.59999 * (0.19444 * 540px));
-  left     : calc(0.59999 * (0.19444 * 540px));
+  left     : -webkit-calc(0.59999 * (0.19444 * (0.84905 * 636px)));
+  left     : -moz-calc(0.59999 * (0.19444 * (0.84905 * 636px)));
+  left     : -ms-calc(0.59999 * (0.19444 * (0.84905 * 636px)));
+  left     : -o-calc(0.59999 * (0.19444 * (0.84905 * 636px)));
+  left     : calc(0.59999 * (0.19444 * (0.84905 * 636px)));
   top      : -webkit-calc(0.59999 * (0.05817 * 636px));
   top      : -moz-calc(0.59999 * (0.05817 * 636px));
   top      : -ms-calc(0.59999 * (0.05817 * 636px));

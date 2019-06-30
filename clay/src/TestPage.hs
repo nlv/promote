@@ -15,26 +15,63 @@ testPageStylesheet :: Css
 testPageStylesheet = do
 
     "#test" ? do
-        -- borderStyle solid
-        -- borderWidth $ px 0.1
-        -- borderColor green
+        borderStyle solid
+        borderWidth $ px 0.1
+        borderColor green
 
         display block
         width $ vw 100
         -- height $ vh 100
-        height $ px 636 @+@ (navbarHeight @+@ (px 5)) @* 2
-        paddingBottom (navbarHeight @+@ (px 5))
+        -- height $ px 636 @+@ (navbarHeight @+@ (px 5)) @* 2
+        -- paddingBottom (navbarHeight @+@ (px 5))
+        paddingBottom nil
 
         position relative
 
         backgroundImage $ url "../img/map_omsk.png"
         backgroundSize $ by (pct 100) (pct 100)
 
+
         header <? do
-            marginBottom $ px 20
+        --     marginBottom $ px 20
+            h2 ? do
+                paddingBottom nil
+
+    "#test-content" ? do
+        display flex
+
+    "#test-desc" ? do
+        display flex
+        alignItems center
+        sym2 padding nil (pct 10)
+        -- paddingTop $ px 20
+        -- flexGrow 1
+        borderStyle solid
+        borderWidth $ px 0.1
+        borderColor red
+        width $ pct 50
+
+        fontSize $ rem 3.5
+        lineHeight $ em 1.5
+        -- fontWeight bold
+        color white
+
+
+    "#test-form" ? do
+        -- sym margin auto
+        -- flexGrow 1
+        -- flexShrink 1
+        borderStyle solid
+        borderWidth $ px 0.1
+        borderColor red
+
+        marginTop $ px 20
 
     "#test-div" ? do
-        position absolute
+        -- borderStyle solid
+        -- borderWidth $ px 0.1
+        -- borderColor green
+        -- position absolute
         testDivSizing 1 (pct 10) (rem 2)
 
         backgroundImage $ url "../img/smartphone_in_hand_3.png"
@@ -58,7 +95,7 @@ testPageStylesheet = do
 testDivSizing scale rightPos fontS = do
     let 
         outerHeight = px 636
-        outerWidth = px 540
+        outerWidth = outerHeight @* (540 / 636)
 
         -- outerHeight = pct 100
         -- outerWidth = outerHeight @* (540 / 636)
