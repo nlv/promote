@@ -512,9 +512,27 @@ html
 #test > header h2
 {
   padding-bottom : 0;
+  padding-left   : 10px;
+  padding-right  : 10px;
   color          : #ffffff;
 }
 
+@media screen and (max-width: 1420px)
+{
+#test
+{
+  font-size : 1rem;
+}
+
+}
+@media screen and (max-width: 1080px)
+{
+#test
+{
+  font-size : 0.8rem;
+}
+
+}
 #test-content
 {
   display : flex;
@@ -524,10 +542,10 @@ html
 {
   display     : flex;
   align-items : center;
-  padding     : 0 10% 0 10%;
+  padding     : 0 0 0 10%;
   width       : 50%;
   font-size   : 3.5em;
-  line-height : 1.5em;
+  line-height : 1.19999em;
   color       : #ffffff;
 }
 
@@ -550,7 +568,7 @@ html
   height           : -ms-calc(1 * 636px);
   height           : -o-calc(1 * 636px);
   height           : calc(1 * 636px);
-  font-size        : 2rem;
+  font-size        : 1.6em;
   background-image : url("../img/smartphone_in_hand_3.png");
   background-size  : 100% 100%;
 }
@@ -586,7 +604,7 @@ html
   position : relative;
 }
 
-@media screen and (max-width: 1280px)
+@media screen and (max-width: 1420px)
 {
 #test-div
 {
@@ -602,7 +620,7 @@ html
   height    : -ms-calc(0.8 * 636px);
   height    : -o-calc(0.8 * 636px);
   height    : calc(0.8 * 636px);
-  font-size : 2rem;
+  font-size : 1.6em;
 }
 
 #test-div p
@@ -628,52 +646,6 @@ html
   width    : -ms-calc(0.8 * (0.48674 * (0.83018 * 636px)));
   width    : -o-calc(0.8 * (0.48674 * (0.83018 * 636px)));
   width    : calc(0.8 * (0.48674 * (0.83018 * 636px)));
-  padding  : 5px 5px 5px 5px;
-}
-
-}
-@media screen and (max-width: 900px)
-{
-#test-div
-{
-  right     : 5px;
-  bottom    : 0;
-  width     : -webkit-calc(0.59999 * (0.84905 * 636px));
-  width     : -moz-calc(0.59999 * (0.84905 * 636px));
-  width     : -ms-calc(0.59999 * (0.84905 * 636px));
-  width     : -o-calc(0.59999 * (0.84905 * 636px));
-  width     : calc(0.59999 * (0.84905 * 636px));
-  height    : -webkit-calc(0.59999 * 636px);
-  height    : -moz-calc(0.59999 * 636px);
-  height    : -ms-calc(0.59999 * 636px);
-  height    : -o-calc(0.59999 * 636px);
-  height    : calc(0.59999 * 636px);
-  font-size : 1.6rem;
-}
-
-#test-div p
-{
-  position : relative;
-  left     : -webkit-calc(0.59999 * (0.19444 * (0.84905 * 636px)));
-  left     : -moz-calc(0.59999 * (0.19444 * (0.84905 * 636px)));
-  left     : -ms-calc(0.59999 * (0.19444 * (0.84905 * 636px)));
-  left     : -o-calc(0.59999 * (0.19444 * (0.84905 * 636px)));
-  left     : calc(0.59999 * (0.19444 * (0.84905 * 636px)));
-  top      : -webkit-calc(0.59999 * (0.05817 * 636px));
-  top      : -moz-calc(0.59999 * (0.05817 * 636px));
-  top      : -ms-calc(0.59999 * (0.05817 * 636px));
-  top      : -o-calc(0.59999 * (0.05817 * 636px));
-  top      : calc(0.59999 * (0.05817 * 636px));
-  height   : -webkit-calc(0.59999 * (0.83018 * 636px));
-  height   : -moz-calc(0.59999 * (0.83018 * 636px));
-  height   : -ms-calc(0.59999 * (0.83018 * 636px));
-  height   : -o-calc(0.59999 * (0.83018 * 636px));
-  height   : calc(0.59999 * (0.83018 * 636px));
-  width    : -webkit-calc(0.59999 * (0.48674 * (0.83018 * 636px)));
-  width    : -moz-calc(0.59999 * (0.48674 * (0.83018 * 636px)));
-  width    : -ms-calc(0.59999 * (0.48674 * (0.83018 * 636px)));
-  width    : -o-calc(0.59999 * (0.48674 * (0.83018 * 636px)));
-  width    : calc(0.59999 * (0.48674 * (0.83018 * 636px)));
   padding  : 5px 5px 5px 5px;
 }
 
