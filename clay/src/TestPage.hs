@@ -14,12 +14,32 @@ import Common
 testPageStylesheet :: Css
 testPageStylesheet = do
 
-    "#test" ? do
-        display block
-        width $ vw 100
-        paddingBottom nil
+    query Media.screen [Media.minWidth $ px 900] $ do
+        "#test" ? do
+            display block
+            paddingBottom nil
 
+            ".callback-button" ? do
+                display none
+
+        "#test-content" ? do
+            display flex
+
+    query Media.screen [Media.maxWidth $ px 900] $ do
+        "#test" ? do
+            display flex
+            alignItems center
+
+            ".callback-button" ? do
+                display block
+                sym2 margin (px 20) nil
+
+        "#test-content" ? do
+            display none
+
+    "#test" ? do
         position relative
+        width $ vw 100
 
         backgroundImages [hGradient (rgba 0 0 0 0.5) (rgba 0 0 0 0.5), url "../img/map_omsk.png"]
         backgroundSize $ by (pct 100) (pct 100)
@@ -35,14 +55,14 @@ testPageStylesheet = do
         header <? do
             h1 ? do
                 color white
+                lineHeight $ em 1.2
             h2 ? do
                 paddingBottom nil
                 paddingLeft $ px 10
                 paddingRight $ px 10
-                color white
 
-    "#test-content" ? do
-        display flex
+                color white
+                lineHeight $ em 1.2
 
     "#test-desc" ? do
         display flex
@@ -66,10 +86,6 @@ testPageStylesheet = do
         marginTop $ px 20
 
     "#test-div" ? do
-        -- borderStyle solid
-        -- borderWidth $ px 0.1
-        -- borderColor green
-        -- position absolute
         testDivSizing 1 (pct 10) (em 1.6)
 
         query Media.screen [Media.maxWidth $ px 1420] $ do

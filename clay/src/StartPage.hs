@@ -67,25 +67,25 @@ startPageStylesheet = do
             zIndex (-1)
             "object-fit" -: "cover"
 
-        ".callback-button" ? do
-            width $ vw 90
-            maxWidth $ px 540
-            sym padding (px 15)
+    ".callback-button" ? do
+        width $ vw 90
+        maxWidth $ px 540
+        sym padding (px 15)
 
-            backgroundColor $ rgb 255 102 0
-            sym borderRadius $ px 20
+        backgroundColor $ rgb 255 102 0
+        sym borderRadius $ px 20
 
-            textAlign center
-            fontSize $ em 1.5
+        textAlign center
+        fontSize $ em 1.5
 
-            query Media.screen [Media.maxWidth $ px 900] $ do
-                maxWidth $ px 400
-                fontSize $ em 1.8
+        query Media.screen [Media.maxWidth $ px 900] $ do
+            maxWidth $ px 400
+            fontSize $ em 1.8
 
-            ":hover" & do
-                backgroundColor $ rgb 265 117 0 
+        ":hover" & do
+            backgroundColor $ rgb 265 117 0 
 
-            "a" ? do
-                color white
-                textTransform uppercase
-                textDecoration none
+        "a" ? do
+            color white
+            textTransform uppercase
+            textDecoration none

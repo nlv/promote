@@ -228,38 +228,6 @@ html
   object-fit : cover;
 }
 
-#start-page .callback-button
-{
-  width            : 90vw;
-  max-width        : 540px;
-  padding          : 15px 15px 15px 15px;
-  background-color : #ff6600;
-  border-radius    : 20px 20px 20px 20px;
-  text-align       : center;
-  font-size        : 1.5em;
-}
-
-#start-page .callback-button:hover
-{
-  background-color : #1097500;
-}
-
-#start-page .callback-button a
-{
-  color           : #ffffff;
-  text-transform  : uppercase;
-  text-decoration : none;
-}
-
-@media screen and (max-width: 900px)
-{
-#start-page .callback-button
-{
-  max-width : 400px;
-  font-size : 1.8em;
-}
-
-}
 @media screen and (max-width: 1280px)
 {
 #start-page
@@ -281,6 +249,38 @@ html
 #start-page
 {
   font-size : 0.59999rem;
+}
+
+}
+.callback-button
+{
+  width            : 90vw;
+  max-width        : 540px;
+  padding          : 15px 15px 15px 15px;
+  background-color : #ff6600;
+  border-radius    : 20px 20px 20px 20px;
+  text-align       : center;
+  font-size        : 1.5em;
+}
+
+.callback-button:hover
+{
+  background-color : #1097500;
+}
+
+.callback-button a
+{
+  color           : #ffffff;
+  text-transform  : uppercase;
+  text-decoration : none;
+}
+
+@media screen and (max-width: 900px)
+{
+.callback-button
+{
+  max-width : 400px;
+  font-size : 1.8em;
 }
 
 }
@@ -490,10 +490,8 @@ html
 }
 #test
 {
-  display          : block;
-  width            : 100vw;
-  padding-bottom   : 0;
   position         : relative;
+  width            : 100vw;
   background-image : -webkit-linear-gradient(left,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url("../img/map_omsk.png");
   background-image : -moz-linear-gradient(left,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url("../img/map_omsk.png");
   background-image : -ms-linear-gradient(left,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url("../img/map_omsk.png");
@@ -506,7 +504,8 @@ html
 
 #test > header h1
 {
-  color : #ffffff;
+  color       : #ffffff;
+  line-height : 1.19999em;
 }
 
 #test > header h2
@@ -515,6 +514,7 @@ html
   padding-left   : 10px;
   padding-right  : 10px;
   color          : #ffffff;
+  line-height    : 1.19999em;
 }
 
 @media screen and (max-width: 1420px)
@@ -533,11 +533,6 @@ html
 }
 
 }
-#test-content
-{
-  display : flex;
-}
-
 #test-desc
 {
   display     : flex;
@@ -647,6 +642,47 @@ html
   width    : -o-calc(0.8 * (0.48674 * (0.83018 * 636px)));
   width    : calc(0.8 * (0.48674 * (0.83018 * 636px)));
   padding  : 5px 5px 5px 5px;
+}
+
+}
+@media screen and (min-width: 900px)
+{
+
+#test
+{
+  display        : block;
+  padding-bottom : 0;
+}
+
+#test .callback-button
+{
+  display : none;
+}
+
+#test-content
+{
+  display : flex;
+}
+
+}
+@media screen and (max-width: 900px)
+{
+
+#test
+{
+  display     : flex;
+  align-items : center;
+}
+
+#test .callback-button
+{
+  display : block;
+  margin  : 20px 0 20px 0;
+}
+
+#test-content
+{
+  display : none;
 }
 
 }
