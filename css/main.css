@@ -490,21 +490,29 @@ html
 }
 #test
 {
-  border-style     : solid;
-  border-width     : 0.1px;
-  border-color     : #008000;
   display          : block;
   width            : 100vw;
   padding-bottom   : 0;
   position         : relative;
-  background-image : url("../img/map_omsk.png");
+  background-image : -webkit-linear-gradient(left,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url("../img/map_omsk.png");
+  background-image : -moz-linear-gradient(left,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url("../img/map_omsk.png");
+  background-image : -ms-linear-gradient(left,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url("../img/map_omsk.png");
+  background-image : -o-linear-gradient(left,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url("../img/map_omsk.png");
+  background-image : linear-gradient(left,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url("../img/map_omsk.png");
   background-size  : 100% 100%;
+  font-size        : 1.3rem;
 }
 
+
+#test > header h1
+{
+  color : #ffffff;
+}
 
 #test > header h2
 {
   padding-bottom : 0;
+  color          : #ffffff;
 }
 
 #test-content
@@ -514,25 +522,18 @@ html
 
 #test-desc
 {
-  display      : flex;
-  align-items  : center;
-  padding      : 0 10% 0 10%;
-  border-style : solid;
-  border-width : 0.1px;
-  border-color : #ff0000;
-  width        : 50%;
-  font-size    : 3.5rem;
-  line-height  : 1.5em;
-  font-weight  : bold;
-  color        : #ffffff;
+  display     : flex;
+  align-items : center;
+  padding     : 0 10% 0 10%;
+  width       : 50%;
+  font-size   : 3.5em;
+  line-height : 1.5em;
+  color       : #ffffff;
 }
 
 #test-form
 {
-  border-style : solid;
-  border-width : 0.1px;
-  border-color : #ff0000;
-  margin-top   : 20px;
+  margin-top : 20px;
 }
 
 #test-div
@@ -582,10 +583,7 @@ html
 
 #test-div p
 {
-  position     : relative;
-  border-style : solid;
-  border-width : 0.1px;
-  border-color : #008000;
+  position : relative;
 }
 
 @media screen and (max-width: 1280px)

@@ -15,27 +15,23 @@ testPageStylesheet :: Css
 testPageStylesheet = do
 
     "#test" ? do
-        borderStyle solid
-        borderWidth $ px 0.1
-        borderColor green
-
         display block
         width $ vw 100
-        -- height $ vh 100
-        -- height $ px 636 @+@ (navbarHeight @+@ (px 5)) @* 2
-        -- paddingBottom (navbarHeight @+@ (px 5))
         paddingBottom nil
 
         position relative
 
-        backgroundImage $ url "../img/map_omsk.png"
+        backgroundImages [hGradient (rgba 0 0 0 0.5) (rgba 0 0 0 0.5), url "../img/map_omsk.png"]
         backgroundSize $ by (pct 100) (pct 100)
 
+        fontSize $ rem 1.3
 
         header <? do
-        --     marginBottom $ px 20
+            h1 ? do
+                color white
             h2 ? do
                 paddingBottom nil
+                color white
 
     "#test-content" ? do
         display flex
@@ -44,16 +40,10 @@ testPageStylesheet = do
         display flex
         alignItems center
         sym2 padding nil (pct 10)
-        -- paddingTop $ px 20
-        -- flexGrow 1
-        borderStyle solid
-        borderWidth $ px 0.1
-        borderColor red
         width $ pct 50
 
-        fontSize $ rem 3.5
+        fontSize $ em 3.5
         lineHeight $ em 1.5
-        -- fontWeight bold
         color white
 
 
@@ -61,9 +51,9 @@ testPageStylesheet = do
         -- sym margin auto
         -- flexGrow 1
         -- flexShrink 1
-        borderStyle solid
-        borderWidth $ px 0.1
-        borderColor red
+        -- borderStyle solid
+        -- borderWidth $ px 0.1
+        -- borderColor red
 
         marginTop $ px 20
 
@@ -77,12 +67,9 @@ testPageStylesheet = do
         backgroundImage $ url "../img/smartphone_in_hand_3.png"
         backgroundSize $ by (pct 100) (pct 100)
 
+
         "p" ? do
             position relative
-
-            borderStyle solid
-            borderWidth $ px 0.1
-            borderColor green
 
         query Media.screen [Media.maxWidth $ px 1280] $ do
             testDivSizing 0.8 (px 5) (rem 2)
@@ -97,12 +84,7 @@ testDivSizing scale rightPos fontS = do
         outerHeight = px 636
         outerWidth = outerHeight @* (540 / 636)
 
-        -- outerHeight = pct 100
-        -- outerWidth = outerHeight @* (540 / 636)
-
         innerHeight = outerHeight @* (528 / 636)
-        -- innerHeight = px 528
-        -- innerHeight = pct 100
         innerWidth = innerHeight @* (257 / 528)
 
         innerLeft = outerWidth @* (105 / 540)
