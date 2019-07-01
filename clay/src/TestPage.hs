@@ -26,11 +26,19 @@ testPageStylesheet = do
 
         fontSize $ rem 1.3
 
+        query Media.screen [Media.maxWidth $ px 1420] $ do
+            fontSize $ rem 1
+
+        query Media.screen [Media.maxWidth $ px 1080] $ do
+            fontSize $ rem 0.8
+
         header <? do
             h1 ? do
                 color white
             h2 ? do
                 paddingBottom nil
+                paddingLeft $ px 10
+                paddingRight $ px 10
                 color white
 
     "#test-content" ? do
@@ -39,11 +47,11 @@ testPageStylesheet = do
     "#test-desc" ? do
         display flex
         alignItems center
-        sym2 padding nil (pct 10)
+        padding nil nil nil (pct 10) 
         width $ pct 50
 
         fontSize $ em 3.5
-        lineHeight $ em 1.5
+        lineHeight $ em 1.2
         color white
 
 
@@ -62,23 +70,17 @@ testPageStylesheet = do
         -- borderWidth $ px 0.1
         -- borderColor green
         -- position absolute
-        testDivSizing 1 (pct 10) (rem 2)
+        testDivSizing 1 (pct 10) (em 1.6)
+
+        query Media.screen [Media.maxWidth $ px 1420] $ do
+            testDivSizing 0.8 (px 5) (em 1.6)
 
         backgroundImage $ url "../img/smartphone_in_hand_3.png"
         backgroundSize $ by (pct 100) (pct 100)
 
-
         "p" ? do
             position relative
 
-        query Media.screen [Media.maxWidth $ px 1280] $ do
-            testDivSizing 0.8 (px 5) (rem 2)
-
-        query Media.screen [Media.maxWidth $ px 900] $ do
-            testDivSizing 0.6 (px 5) (rem 1.6)
-
-            
--- testDivSizing :: Double -> Css 
 testDivSizing scale rightPos fontS = do
     let 
         outerHeight = px 636
