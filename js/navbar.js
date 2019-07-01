@@ -15,7 +15,7 @@ $(document).ready(function(){
     });
 
     var lastId,
-    topMenu = $("#navbar"),
+    topMenu = $("#navbar-nav"),
     // topMenuHeight = topMenu.outerHeight()+15,
     topMenuHeight = topMenu.outerHeight(),
     menuItems = topMenu.find("a"),

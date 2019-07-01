@@ -24,6 +24,7 @@ navbarStylesheet s = do
         top nil
         right nil
         left nil
+        zIndex 1000
 
         color brandColor
         fontWeight $ weight 600
