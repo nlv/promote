@@ -360,65 +360,6 @@ html
 }
 
 }
-.cards
-{
-  display         : grid;
-  justify-content : center;
-  grid-column-gap : 20px;
-  grid-row-gap    : 20px;
-}
-
-.card
-{
-  display        : flex;
-  flex-direction : column;
-  align-items    : center;
-  width          : 280px;
-  padding        : 10px 10px 10px 10px;
-  border-color   : #ff6600;
-  border-width   : 4px;
-  border-style   : solid;
-  font-size      : 1.6rem;
-}
-
-
-.card hgroup figure
-{
-  text-align : center;
-}
-
-.card hgroup figure img
-{
-  width : 70%;
-}
-
-.card hgroup h1
-{
-  line-height : 1.19999em;
-  font-weight : bold;
-  padding-top : 15px;
-}
-
-.card p:first-of-type
-{
-  padding-top : 15px;
-}
-
-.card p
-{
-  padding-top : 10px;
-  text-align  : justify;
-  line-height : 1.19999em;
-}
-
-@media screen and (max-width: 1280px)
-{
-.card
-{
-  font-size : 1.39999rem;
-}
-
-}
 #sec-target
 {
   background-color : #edf2f7;
@@ -489,6 +430,162 @@ html
 }
 
 }
+
+#services .cards
+{
+  grid-template-columns : auto auto auto;
+}
+
+@media screen and (max-width: 1280px)
+{
+#services .cards
+{
+  grid-template-columns : auto auto;
+}
+
+}
+@media screen and (max-width: 700px)
+{
+#services .cards
+{
+  grid-template-columns : auto;
+}
+
+}
+
+#services header h2
+{
+  color     : #ff6600;
+  font-size : 2em;
+}
+
+.cards
+{
+  display         : grid;
+  justify-content : center;
+  grid-column-gap : 20px;
+  grid-row-gap    : 20px;
+}
+
+.card
+{
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  width          : 280px;
+  padding        : 10px 10px 10px 10px;
+  border-color   : #ff6600;
+  border-width   : 4px;
+  border-style   : solid;
+  font-size      : 1.6rem;
+}
+
+
+.card hgroup figure
+{
+  text-align : center;
+}
+
+.card hgroup figure img
+{
+  width : 70%;
+}
+
+.card hgroup h1
+{
+  line-height : 1.19999em;
+  font-weight : bold;
+  padding-top : 15px;
+}
+
+.card p:first-of-type
+{
+  padding-top : 15px;
+}
+
+.card p
+{
+  padding-top : 10px;
+  text-align  : justify;
+  line-height : 1.19999em;
+}
+
+@media screen and (max-width: 1280px)
+{
+.card
+{
+  font-size : 1.39999rem;
+}
+
+}
+.package-card
+{
+  width        : 280px;
+  height       : 580px;
+  position     : relative;
+  align-items  : center;
+  border-color : #ff6600;
+  border-width : 4px;
+  border-style : solid;
+  font-size    : 1.39999rem;
+}
+
+.package-card h1
+{
+  background-color : #ff6600;
+  color            : #ffffff;
+  padding          : 30px 20px 30px 20px;
+}
+
+.package-card ul
+{
+  padding : 0 20px 0 20px;
+}
+
+.package-card ul li
+{
+  display             : block;
+  line-height         : 1.19999em;
+  border-bottom-style : solid;
+  border-bottom-color : #808080;
+  border-bottom-width : 0.1px;
+  padding-top         : 1em;
+  padding-bottom      : 1em;
+}
+
+.package-card ul li:last-child
+{
+  border-bottom-width : 0;
+}
+
+.package-card .callback-simple
+{
+  position : absolute;
+  bottom   : 20px;
+  left     : 0px;
+  width    : 100%;
+}
+
+.package-card .callback-simple a
+{
+  display          : block;
+  margin-left      : 40px;
+  margin-right     : 40px;
+  padding-top      : 1rem;
+  padding-bottom   : 1rem;
+  background-color : #ff6600;
+  color            : #ffffff;
+  text-align       : center;
+  text-decoration  : none;
+}
+
+.service-item
+{
+  display         : flex;
+  justify-content : space-around;
+  height          : 100%;
+}
+
 .page-callback
 {
   background-image : url("../img/callback-background.jpg");

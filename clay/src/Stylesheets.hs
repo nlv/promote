@@ -13,6 +13,7 @@ import Common
 import Navbar
 import StartPage
 import Page
+import Card
 import CallbackPage
 
 navbarHPadding = pct 10
@@ -29,6 +30,7 @@ mainStylesheet debug = do
     navbarStylesheet "#navbar"
     startPageStylesheet
     pageStylesheet
+    cardStylesheet
     callbackPageStylesheet
     callback2PageStylesheet
 
