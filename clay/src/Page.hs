@@ -82,6 +82,7 @@ pageStylesheet = do
             cardsNarrowGrid
 
     "#services" ? do
+        backgroundColor $ rgb 237 242 247
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto"
             cardsNarrowGrid
