@@ -124,32 +124,6 @@ pageStylesheet = do
             cardsNarrowGrid
 
     {-
-    query Media.screen [Media.maxWidth $ px 900] $ do
-        ".page-callback" ? do
-            backgroundImage $ url "../img/callback-background.jpg"
-
-            ".cards" ? do
-                "grid-template-columns" -: "auto auto auto auto"
-
-            ".phone" ? do
-                fontSize $ em 1.6
-                textAlign center
-                fontSize $ em 4
-
-    -}
-
-    {-
-    ".page-callback" ? do
-        backgroundImage $ url "../img/callback-background.jpg"
-
-        ".phone" ? do
-            fontSize $ em 1.6
-            textAlign center
-            fontSize $ em 4
-            color brandColor
-            paddingTop $ px 20
-            paddingBottom $ px 20
-
 
     "#services" ? do
         -- backgroundColor $ rgb 237 242 247

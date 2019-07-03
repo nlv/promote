@@ -1,7 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module CallbackPhonePage
-    ( callbackPhonePageStylesheet
+module CallbackPage
+    ( callbackPageStylesheet
+    , callback2PageStylesheet
     ) where
 
 import Clay
@@ -11,22 +12,22 @@ import Prelude hiding (rem, (**))
 
 import Common
 
-callbackPhonePageStylesheet :: Css
-callbackPhonePageStylesheet = do
+callback2PageStylesheet :: Css
+callback2PageStylesheet = do
 
     query Media.screen [Media.minWidth $ px 900] $ do
-        "#callback-phone" ? do
+        "#page-callback2" ? do
             display block
             paddingBottom nil
 
             ".callback-button" ? do
                 display none
 
-        "#callback-phone-content" ? do
+        "#page-callback2-content" ? do
             display flex
 
     query Media.screen [Media.maxWidth $ px 900] $ do
-        "#callback-phone" ? do
+        "#page-callback2" ? do
             display flex
             alignItems center
 
@@ -34,10 +35,10 @@ callbackPhonePageStylesheet = do
                 display block
                 sym2 margin (px 20) nil
 
-        "#callback-phone-content" ? do
+        "#page-callback2-content" ? do
             display none
 
-    "#callback-phone" ? do
+    "#page-callback2" ? do
         position relative
         width $ vw 100
 
@@ -64,7 +65,7 @@ callbackPhonePageStylesheet = do
                 color white
                 lineHeight $ em 1.2
 
-    "#callback-phone-desc" ? do
+    "#page-callback2-desc" ? do
         display flex
         alignItems center
         padding nil nil nil (pct 10) 
@@ -74,11 +75,11 @@ callbackPhonePageStylesheet = do
         lineHeight $ em 1.2
         color white
 
-    "#callback-phone-phone" ? do
-        sizing 1 (pct 10) (em 1.6)
+    "#page-callback2-phone" ? do
+        callback2Sizing 1 (pct 10) (em 1.6)
 
         query Media.screen [Media.maxWidth $ px 1420] $ do
-            sizing 0.8 (px 5) (em 1.6)
+            callback2Sizing 0.8 (px 5) (em 1.6)
 
         backgroundImage $ url "../img/smartphone_in_hand.png"
         backgroundSize $ by (pct 100) (pct 100)
@@ -107,7 +108,21 @@ callbackPhonePageStylesheet = do
                         color white
                         fontSize $ rem 1.6
 
-sizing scale rightPos fontS = do
+
+callbackPageStylesheet :: Css
+callbackPageStylesheet = do
+    ".page-callback" ? do
+        backgroundImage $ url "../img/callback-background.jpg"
+
+        ".phone" ? do
+            fontSize $ em 1.6
+            textAlign center
+            fontSize $ em 4
+            color brandColor
+            paddingTop $ px 20
+            paddingBottom $ px 20
+
+callback2Sizing scale rightPos fontS = do
     let 
         outerHeight = px 636
         outerWidth = outerHeight @* (540 / 636)

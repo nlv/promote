@@ -13,7 +13,7 @@ import Common
 import Navbar
 import StartPage
 import Page
-import CallbackPhonePage
+import CallbackPage
 
 navbarHPadding = pct 10
 
@@ -29,34 +29,9 @@ mainStylesheet debug = do
     navbarStylesheet "#navbar"
     startPageStylesheet
     pageStylesheet
-    callbackPhonePageStylesheet
+    callbackPageStylesheet
+    callback2PageStylesheet
 
-
-    {-
-    ".callback-button" ? do
-        display flex
-        width (pct 100)
-        justifyContent center
-        alignItems center
-
-        fontSize $ em 2
-
-        "a" ? do
-            width (pct 50)
-            sym padding (px 15)
-
-            backgroundColor $ rgb 255 102 0 
-            sym borderRadius $ px 20
-
-            textAlign center
-            color white
-            textTransform uppercase
-            textDecoration none
-
-        "a" # ":hover" ? do
-                backgroundColor $ rgba 265 117 0 0.7
-        -- fontWeight bold
-    -}
 
     {-
     query Media.screen [Media.maxWidth $ px 900] $ do
@@ -77,17 +52,6 @@ mainStylesheet debug = do
         "#p1" ?
             ".cards" ? do
                 "grid-template-columns" -: "auto auto auto auto"
-
-        ".page-callback" ? do
-            backgroundImage $ url "../img/callback-background.jpg"
-
-            ".cards" ? do
-                "grid-template-columns" -: "auto auto auto auto"
-
-            ".phone" ? do
-                fontSize $ em 1.6
-                textAlign center
-                fontSize $ em 4
 
     -}
 
@@ -198,16 +162,6 @@ mainStylesheet debug = do
     -}
 
     {-
-    ".page-callback" ? do
-        backgroundImage $ url "../img/callback-background.jpg"
-
-        ".phone" ? do
-            fontSize $ em 1.6
-            textAlign center
-            fontSize $ em 4
-            color navbarColor
-            paddingTop $ px 20
-            paddingBottom $ px 20
 
     "#services" ? do
         -- backgroundColor $ rgb 237 242 247

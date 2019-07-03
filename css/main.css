@@ -489,7 +489,22 @@ html
 }
 
 }
-#callback-phone
+.page-callback
+{
+  background-image : url("../img/callback-background.jpg");
+}
+
+.page-callback .phone
+{
+  font-size      : 1.6em;
+  text-align     : center;
+  font-size      : 4em;
+  color          : #ff6600;
+  padding-top    : 20px;
+  padding-bottom : 20px;
+}
+
+#page-callback2
 {
   position         : relative;
   width            : 100vw;
@@ -503,13 +518,13 @@ html
 }
 
 
-#callback-phone > header h1
+#page-callback2 > header h1
 {
   color       : #ffffff;
   line-height : 1.19999em;
 }
 
-#callback-phone > header h2
+#page-callback2 > header h2
 {
   padding-bottom : 0;
   padding-left   : 10px;
@@ -520,7 +535,7 @@ html
 
 @media screen and (max-width: 1420px)
 {
-#callback-phone
+#page-callback2
 {
   font-size : 1rem;
 }
@@ -528,13 +543,13 @@ html
 }
 @media screen and (max-width: 1080px)
 {
-#callback-phone
+#page-callback2
 {
   font-size : 0.8rem;
 }
 
 }
-#callback-phone-desc
+#page-callback2-desc
 {
   display     : flex;
   align-items : center;
@@ -545,7 +560,7 @@ html
   color       : #ffffff;
 }
 
-#callback-phone-phone
+#page-callback2-phone
 {
   right            : 10%;
   bottom           : 0;
@@ -564,7 +579,7 @@ html
   background-size  : 100% 100%;
 }
 
-#callback-phone-phone form
+#page-callback2-phone form
 {
   position : relative;
   left     : -webkit-calc(1 * (0.19444 * (0.84905 * 636px)));
@@ -585,7 +600,7 @@ html
   padding  : 15px 15px 15px 15px;
 }
 
-#callback-phone-phone form fieldset
+#page-callback2-phone form fieldset
 {
   width : -webkit-calc(((1 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
   width : -moz-calc(((1 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
@@ -595,7 +610,7 @@ html
 }
 
 
-#callback-phone-phone form fieldset
+#page-callback2-phone form fieldset
 {
   display         : flex;
   flex-direction  : column;
@@ -603,7 +618,7 @@ html
   height          : 100%;
 }
 
-#callback-phone-phone form fieldset input
+#page-callback2-phone form fieldset input
 {
   width         : -webkit-calc(100% - 30px);
   width         : -moz-calc(100% - 30px);
@@ -617,7 +632,7 @@ html
   line-height   : 2;
 }
 
-#callback-phone-phone form fieldset input[type=submit]
+#page-callback2-phone form fieldset input[type=submit]
 {
   width            : 100%;
   background-color : #ff6600;
@@ -627,7 +642,7 @@ html
 
 @media screen and (max-width: 1420px)
 {
-#callback-phone-phone
+#page-callback2-phone
 {
   right     : 5px;
   bottom    : 0;
@@ -644,7 +659,7 @@ html
   font-size : 1.6em;
 }
 
-#callback-phone-phone form
+#page-callback2-phone form
 {
   position : relative;
   left     : -webkit-calc(0.8 * (0.19444 * (0.84905 * 636px)));
@@ -665,7 +680,7 @@ html
   padding  : 15px 15px 15px 15px;
 }
 
-#callback-phone-phone form fieldset
+#page-callback2-phone form fieldset
 {
   width : -webkit-calc(((0.8 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
   width : -moz-calc(((0.8 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
@@ -678,18 +693,18 @@ html
 @media screen and (min-width: 900px)
 {
 
-#callback-phone
+#page-callback2
 {
   display        : block;
   padding-bottom : 0;
 }
 
-#callback-phone .callback-button
+#page-callback2 .callback-button
 {
   display : none;
 }
 
-#callback-phone-content
+#page-callback2-content
 {
   display : flex;
 }
@@ -698,19 +713,19 @@ html
 @media screen and (max-width: 900px)
 {
 
-#callback-phone
+#page-callback2
 {
   display     : flex;
   align-items : center;
 }
 
-#callback-phone .callback-button
+#page-callback2 .callback-button
 {
   display : block;
   margin  : 20px 0 20px 0;
 }
 
-#callback-phone-content
+#page-callback2-content
 {
   display : none;
 }
