@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module TestPage
-    ( testPageStylesheet
+module CallbackPhonePage
+    ( callbackPhonePageStylesheet
     ) where
 
 import Clay
@@ -11,22 +11,22 @@ import Prelude hiding (rem, (**))
 
 import Common
 
-testPageStylesheet :: Css
-testPageStylesheet = do
+callbackPhonePageStylesheet :: Css
+callbackPhonePageStylesheet = do
 
     query Media.screen [Media.minWidth $ px 900] $ do
-        "#test" ? do
+        "#callback-phone" ? do
             display block
             paddingBottom nil
 
             ".callback-button" ? do
                 display none
 
-        "#test-content" ? do
+        "#callback-phone-content" ? do
             display flex
 
     query Media.screen [Media.maxWidth $ px 900] $ do
-        "#test" ? do
+        "#callback-phone" ? do
             display flex
             alignItems center
 
@@ -34,10 +34,10 @@ testPageStylesheet = do
                 display block
                 sym2 margin (px 20) nil
 
-        "#test-content" ? do
+        "#callback-phone-content" ? do
             display none
 
-    "#test" ? do
+    "#callback-phone" ? do
         position relative
         width $ vw 100
 
@@ -64,7 +64,7 @@ testPageStylesheet = do
                 color white
                 lineHeight $ em 1.2
 
-    "#test-desc" ? do
+    "#callback-phone-desc" ? do
         display flex
         alignItems center
         padding nil nil nil (pct 10) 
@@ -74,24 +74,13 @@ testPageStylesheet = do
         lineHeight $ em 1.2
         color white
 
-
-    -- "#test-form" ? do
-        -- sym margin auto
-        -- flexGrow 1
-        -- flexShrink 1
-        -- borderStyle solid
-        -- borderWidth $ px 0.1
-        -- borderColor red
-
-        -- marginTop $ px 20
-
-    "#test-div" ? do
-        testDivSizing 1 (pct 10) (em 1.6)
+    "#callback-phone-phone" ? do
+        sizing 1 (pct 10) (em 1.6)
 
         query Media.screen [Media.maxWidth $ px 1420] $ do
-            testDivSizing 0.8 (px 5) (em 1.6)
+            sizing 0.8 (px 5) (em 1.6)
 
-        backgroundImage $ url "../img/smartphone_in_hand_3.png"
+        backgroundImage $ url "../img/smartphone_in_hand.png"
         backgroundSize $ by (pct 100) (pct 100)
 
         form ? do
@@ -118,7 +107,7 @@ testPageStylesheet = do
                         color white
                         fontSize $ rem 1.6
 
-testDivSizing scale rightPos fontS = do
+sizing scale rightPos fontS = do
     let 
         outerHeight = px 636
         outerWidth = outerHeight @* (540 / 636)

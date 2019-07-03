@@ -13,7 +13,7 @@ import Common
 import Navbar
 import StartPage
 import Page
-import TestPage
+import CallbackPhonePage
 
 navbarHPadding = pct 10
 
@@ -29,7 +29,7 @@ mainStylesheet debug = do
     navbarStylesheet "#navbar"
     startPageStylesheet
     pageStylesheet
-    testPageStylesheet
+    callbackPhonePageStylesheet
 
 
     {-

@@ -489,7 +489,7 @@ html
 }
 
 }
-#test
+#callback-phone
 {
   position         : relative;
   width            : 100vw;
@@ -503,13 +503,13 @@ html
 }
 
 
-#test > header h1
+#callback-phone > header h1
 {
   color       : #ffffff;
   line-height : 1.19999em;
 }
 
-#test > header h2
+#callback-phone > header h2
 {
   padding-bottom : 0;
   padding-left   : 10px;
@@ -520,7 +520,7 @@ html
 
 @media screen and (max-width: 1420px)
 {
-#test
+#callback-phone
 {
   font-size : 1rem;
 }
@@ -528,13 +528,13 @@ html
 }
 @media screen and (max-width: 1080px)
 {
-#test
+#callback-phone
 {
   font-size : 0.8rem;
 }
 
 }
-#test-desc
+#callback-phone-desc
 {
   display     : flex;
   align-items : center;
@@ -545,7 +545,7 @@ html
   color       : #ffffff;
 }
 
-#test-div
+#callback-phone-phone
 {
   right            : 10%;
   bottom           : 0;
@@ -560,11 +560,11 @@ html
   height           : -o-calc(1 * 636px);
   height           : calc(1 * 636px);
   font-size        : 1.6em;
-  background-image : url("../img/smartphone_in_hand_3.png");
+  background-image : url("../img/smartphone_in_hand.png");
   background-size  : 100% 100%;
 }
 
-#test-div form
+#callback-phone-phone form
 {
   position : relative;
   left     : -webkit-calc(1 * (0.19444 * (0.84905 * 636px)));
@@ -585,7 +585,7 @@ html
   padding  : 15px 15px 15px 15px;
 }
 
-#test-div form fieldset
+#callback-phone-phone form fieldset
 {
   width : -webkit-calc(((1 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
   width : -moz-calc(((1 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
@@ -595,7 +595,7 @@ html
 }
 
 
-#test-div form fieldset
+#callback-phone-phone form fieldset
 {
   display         : flex;
   flex-direction  : column;
@@ -603,7 +603,7 @@ html
   height          : 100%;
 }
 
-#test-div form fieldset input
+#callback-phone-phone form fieldset input
 {
   width         : -webkit-calc(100% - 30px);
   width         : -moz-calc(100% - 30px);
@@ -617,7 +617,7 @@ html
   line-height   : 2;
 }
 
-#test-div form fieldset input[type=submit]
+#callback-phone-phone form fieldset input[type=submit]
 {
   width            : 100%;
   background-color : #ff6600;
@@ -627,7 +627,7 @@ html
 
 @media screen and (max-width: 1420px)
 {
-#test-div
+#callback-phone-phone
 {
   right     : 5px;
   bottom    : 0;
@@ -644,7 +644,7 @@ html
   font-size : 1.6em;
 }
 
-#test-div form
+#callback-phone-phone form
 {
   position : relative;
   left     : -webkit-calc(0.8 * (0.19444 * (0.84905 * 636px)));
@@ -665,7 +665,7 @@ html
   padding  : 15px 15px 15px 15px;
 }
 
-#test-div form fieldset
+#callback-phone-phone form fieldset
 {
   width : -webkit-calc(((0.8 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
   width : -moz-calc(((0.8 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
@@ -678,18 +678,18 @@ html
 @media screen and (min-width: 900px)
 {
 
-#test
+#callback-phone
 {
   display        : block;
   padding-bottom : 0;
 }
 
-#test .callback-button
+#callback-phone .callback-button
 {
   display : none;
 }
 
-#test-content
+#callback-phone-content
 {
   display : flex;
 }
@@ -698,19 +698,19 @@ html
 @media screen and (max-width: 900px)
 {
 
-#test
+#callback-phone
 {
   display     : flex;
   align-items : center;
 }
 
-#test .callback-button
+#callback-phone .callback-button
 {
   display : block;
   margin  : 20px 0 20px 0;
 }
 
-#test-content
+#callback-phone-content
 {
   display : none;
 }
