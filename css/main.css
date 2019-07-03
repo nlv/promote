@@ -545,11 +545,6 @@ html
   color       : #ffffff;
 }
 
-#test-form
-{
-  margin-top : 20px;
-}
-
 #test-div
 {
   right            : 10%;
@@ -569,7 +564,7 @@ html
   background-size  : 100% 100%;
 }
 
-#test-div p
+#test-div form
 {
   position : relative;
   left     : -webkit-calc(1 * (0.19444 * (0.84905 * 636px)));
@@ -587,17 +582,47 @@ html
   height   : -ms-calc(1 * (0.83018 * 636px));
   height   : -o-calc(1 * (0.83018 * 636px));
   height   : calc(1 * (0.83018 * 636px));
-  width    : -webkit-calc(1 * (0.48674 * (0.83018 * 636px)));
-  width    : -moz-calc(1 * (0.48674 * (0.83018 * 636px)));
-  width    : -ms-calc(1 * (0.48674 * (0.83018 * 636px)));
-  width    : -o-calc(1 * (0.48674 * (0.83018 * 636px)));
-  width    : calc(1 * (0.48674 * (0.83018 * 636px)));
-  padding  : 5px 5px 5px 5px;
+  padding  : 15px 15px 15px 15px;
 }
 
-#test-div p
+#test-div form fieldset
 {
-  position : relative;
+  width : -webkit-calc(((1 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
+  width : -moz-calc(((1 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
+  width : -ms-calc(((1 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
+  width : -o-calc(((1 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
+  width : calc(((1 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
+}
+
+
+#test-div form fieldset
+{
+  display         : flex;
+  flex-direction  : column;
+  justify-content : center;
+  height          : 100%;
+}
+
+#test-div form fieldset input
+{
+  width         : -webkit-calc(100% - 30px);
+  width         : -moz-calc(100% - 30px);
+  width         : -ms-calc(100% - 30px);
+  width         : -o-calc(100% - 30px);
+  width         : calc(100% - 30px);
+  padding       : 5px 15px 5px 15px;
+  margin        : 20px 0 20px 0;
+  border-width  : 0;
+  border-radius : 20px 20px 20px 20px;
+  line-height   : 2;
+}
+
+#test-div form fieldset input[type=submit]
+{
+  width            : 100%;
+  background-color : #ff6600;
+  color            : #ffffff;
+  font-size        : 1.6rem;
 }
 
 @media screen and (max-width: 1420px)
@@ -619,7 +644,7 @@ html
   font-size : 1.6em;
 }
 
-#test-div p
+#test-div form
 {
   position : relative;
   left     : -webkit-calc(0.8 * (0.19444 * (0.84905 * 636px)));
@@ -637,12 +662,16 @@ html
   height   : -ms-calc(0.8 * (0.83018 * 636px));
   height   : -o-calc(0.8 * (0.83018 * 636px));
   height   : calc(0.8 * (0.83018 * 636px));
-  width    : -webkit-calc(0.8 * (0.48674 * (0.83018 * 636px)));
-  width    : -moz-calc(0.8 * (0.48674 * (0.83018 * 636px)));
-  width    : -ms-calc(0.8 * (0.48674 * (0.83018 * 636px)));
-  width    : -o-calc(0.8 * (0.48674 * (0.83018 * 636px)));
-  width    : calc(0.8 * (0.48674 * (0.83018 * 636px)));
-  padding  : 5px 5px 5px 5px;
+  padding  : 15px 15px 15px 15px;
+}
+
+#test-div form fieldset
+{
+  width : -webkit-calc(((0.8 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
+  width : -moz-calc(((0.8 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
+  width : -ms-calc(((0.8 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
+  width : -o-calc(((0.8 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
+  width : calc(((0.8 * (0.48674 * (0.83018 * 636px))) - 10px) - 18px);
 }
 
 }

@@ -75,7 +75,7 @@ testPageStylesheet = do
         color white
 
 
-    "#test-form" ? do
+    -- "#test-form" ? do
         -- sym margin auto
         -- flexGrow 1
         -- flexShrink 1
@@ -83,7 +83,7 @@ testPageStylesheet = do
         -- borderWidth $ px 0.1
         -- borderColor red
 
-        marginTop $ px 20
+        -- marginTop $ px 20
 
     "#test-div" ? do
         testDivSizing 1 (pct 10) (em 1.6)
@@ -94,8 +94,29 @@ testPageStylesheet = do
         backgroundImage $ url "../img/smartphone_in_hand_3.png"
         backgroundSize $ by (pct 100) (pct 100)
 
-        "p" ? do
-            position relative
+        form ? do
+            fieldset ? do
+                display flex
+                flexDirection column
+                justifyContent center
+
+                height $ pct 100
+
+                input ? do
+                    width $ (pct 100 @-@ (px 30))
+                    sym2 padding (px 5) (px 15)
+                    sym2 margin (px 20) nil
+
+                    borderWidth nil
+                    sym borderRadius $ px 20
+
+                    lineHeight $ unitless 2
+
+                    "type=submit" & do
+                        width $ pct 100
+                        backgroundColor brandColor
+                        color white
+                        fontSize $ rem 1.6
 
 testDivSizing scale rightPos fontS = do
     let 
@@ -116,12 +137,14 @@ testDivSizing scale rightPos fontS = do
 
     fontSize fontS
 
-    "p" ? do
+    form ? do
         position relative
         left $ (innerLeft @* scale)
         top $ (innerTop @* scale) 
 
         height $ (innerHeight @* scale)
-        width $ (innerWidth @* scale)
 
-        sym padding $ px 5
+        sym padding $ px 15
+
+        fieldset ? do
+            width $ (innerWidth @* scale) @-@ (px 10) @-@ (px 18)

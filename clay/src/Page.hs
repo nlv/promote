@@ -421,19 +421,4 @@ pageStylesheet = do
         justifyContent spaceAround
         height $ pct 100
 
-    "#callback-popup" ? do
-        fieldset ? do
-            display grid
-            "grid-template-columns" -: "auto auto"
-            -- "grid-template-rows" -: "2rem"
-            "grid-row-gap" -: "15px"
-
-
-    ".ui-dialog" ? do
-        sym padding nil
-        fontSize $ rem 1
-    
-    ".ui-widget-header" ? do
-        background brandColor
-        color white
     -}
