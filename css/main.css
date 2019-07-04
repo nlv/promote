@@ -613,7 +613,6 @@ html
   margin       : 5px 0 5px 0;
   padding      : 30px 30px 30px 30px;
   font-size    : 1.6rem;
-  width        : 420px;
 }
 
 .card-profit h1
@@ -622,6 +621,7 @@ html
   padding-top    : 0px;
   padding-bottom : 15px;
   text-align     : start;
+  line-height    : 1.19999em;
 }
 
 .card-profit ul
@@ -647,6 +647,7 @@ html
 .card-profit
 {
   font-size : 1.39999rem;
+  width     : 360px;
 }
 
 }
