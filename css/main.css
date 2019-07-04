@@ -646,8 +646,10 @@ html
 {
 .card-profit
 {
-  font-size : 1.39999rem;
-  width     : 360px;
+  font-size    : 1.39999rem;
+  width        : auto;
+  margin-left  : 20px;
+  margin-right : 20px;
 }
 
 }

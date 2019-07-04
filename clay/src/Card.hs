@@ -141,7 +141,10 @@ cardStylesheet = do
 
         query Media.screen [Media.maxWidth $ px 1280] $ do
             fontSize $ rem 1.4
-            width $ px 360
+            -- width $ px 360
+            width auto
+            marginLeft $ px 20
+            marginRight $ px 20
 
 
         h1 ? do
