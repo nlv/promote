@@ -126,6 +126,45 @@ cardStylesheet = do
         justifyContent spaceAround
         height $ pct 100
 
+    ".card-profit" ? do 
+        width $ px 470
+        -- height $ px 160
+
+        borderColor brandColor
+        borderWidth $ px 4
+        borderStyle solid
+
+        sym2 margin (px 5) nil
+        sym padding $ px 30
+
+        fontSize $ rem 1.6
+
+        query Media.screen [Media.maxWidth $ px 1280] $ do
+            fontSize $ rem 1.4
+        width $ px 420
+
+
+        h1 ? do
+            -- fontSize $ em 1.6
+            fontWeight bold
+            paddingTop $ px 0
+            paddingBottom $ px 15
+            textAlign start
+
+        ul ? do
+            -- fontSize $ em 1.6
+            lineHeight $ em 1.2
+
+            li ? do
+                sym2 padding (px 10) nil
+
+            li # ":before" ? do
+                content $ stringContent "✔ "
+                top $ px 0
+                left $ px 0
+                color brandColor
+                -- fontSize $ em 1.8
+
     {-
 
 
@@ -177,41 +216,6 @@ cardStylesheet = do
             sym2 padding (px 10) nil
             textAlign center
 
-    ".card-profit" ? do 
-        width $ px 600
-        -- height $ px 160
-
-        borderColor brandColor
-        borderWidth $ px 4
-        borderStyle solid
-
-        sym2 margin (px 5) nil
-        sym padding $ px 30
-
-
-        h1 ? do
-            fontSize $ em 1.6
-            fontWeight bold
-            paddingTop $ px 0
-            paddingBottom $ px 15
-            textAlign start
-
-        ul ? do
-            fontSize $ em 1.6
-            -- sym padding $ px 20
-            -- textAlign center
-            lineHeight $ em 1.5
-
-            li ? do
-                sym2 padding (px 10) nil
-
-            li # ":before" ? do
-                content $ stringContent "✔ "
-                -- position absolute
-                top $ px 0
-                left $ px 0
-                color brandColor
-                fontSize $ em 1.8
                 
 
 

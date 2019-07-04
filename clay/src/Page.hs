@@ -92,6 +92,14 @@ pageStylesheet = do
                 color brandColor
                 fontSize $ em 2
 
+    "#profit" ? do
+        ".cards" ? do
+            "grid-template-columns" -: "auto auto"
+
+            query Media.screen [Media.maxWidth $ px 1280] $ do
+                "grid-template-columns" -: "auto"
+
+
 
     {-
 
