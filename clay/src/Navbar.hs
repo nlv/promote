@@ -80,7 +80,7 @@ navbarStylesheet s = do
                     width $ pct 100
 
             "#navbar-phone" ? do
-                fontSize $ rem 1.4
+                fontSize $ rem 1.8
 
         query Media.screen [Media.maxWidth $ px 900] $ do
             ".navbar-toggle" ? do
@@ -123,7 +123,7 @@ navbarStylesheet s = do
                     width $ pct 100
 
             ".navbar-phone" ? do
-                fontSize $ rem 1.8
+                fontSize $ rem 1.6
 
             ".no-background" & do
                 backgroundColor $ rgba 255 255 255 0.6
