@@ -859,6 +859,35 @@ html
 }
 
 }
+#callback-popup
+{
+  font-size : 1.6rem;
+}
+
+#callback-popup fieldset
+{
+  display               : grid;
+  grid-template-columns : auto auto;
+  grid-row-gap          : 15px;
+}
+
+.ui-dialog
+{
+  padding : 0 0 0 0;
+}
+
+.ui-dialog .ui-widget-header
+{
+  font-size  : 1.6rem;
+  background : #ff6600;
+  color      : #ffffff;
+}
+
+.ui-dialog .ui-dialog-buttonset
+{
+  font-size : 1.6rem;
+}
+
 @media screen and (min-width: 900px)
 {
 

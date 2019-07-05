@@ -15,6 +15,7 @@ import StartPage
 import Page
 import Card
 import CallbackPage
+import CallbackPopup
 
 navbarHPadding = pct 10
 
@@ -36,135 +37,10 @@ mainStylesheet debug = do
     cardStylesheet
     callbackPageStylesheet
     callback2PageStylesheet
+    callbackPopupStylesheet
 
 
-    {-
-    query Media.screen [Media.maxWidth $ px 900] $ do
-        ".page" ? do
-            h1 ? do
-                fontSize $ rem 1.2
-                textTransform uppercase
-                lineHeight $ unitless 1.5
 
-            h2 ? do
-                fontSize $ rem 1
-
-        ".cards" ? do
-            display grid
-            "grid-template-columns" -: "auto auto"
-            "grid-template-rows" -: "auto auto"
-
-        "#p1" ?
-            ".cards" ? do
-                "grid-template-columns" -: "auto auto auto auto"
-
-    -}
-
-    {-
-    query Media.screen [Media.maxWidth $ px 480] $ do
-        ".page" ? do
-
-            h1 ? do
-                paddingLeft $ px 60
-                paddingRight $ px 60
-                paddingBottom nil
-
-                fontSize $ rem 1
-                lineHeight $ unitless 1.5
-
-            h2 ? do
-                fontSize $ rem 1
-
-        ".cards" ? do
-
-            display flex
-            flexDirection column
-            justifyContent spaceAround
-            alignItems center
-
-            width $ pct 100
-            -- maxWidth $ px 1400
-            paddingTop $ px 5
-            paddingBottom $ px 15
-
-        ".card" ? do 
-            width $ pct 90
-            maxWidth $ px 360
-            -- height $ px 400
-            height auto
-
-            borderColor navbarColor
-            borderWidth $ px 4
-            borderStyle solid
-
-            sym2 margin (px 10) (px 5) 
-
-            p ? do
-                paddingLeft $ px 10
-                paddingRight $ px 10
-    -}
-
-    {-
-    ".page" ? do
-        -- debugBack yellow
-
-        paddingTop (navbarHeight @+@ (px 5))
-        paddingBottom (navbarHeight @+@ (px 5))
-
-        width $ pct 100
-        -- height $ vh 100
-
-        display flex
-        flexDirection column
-        alignItems center
-
-        h1 ? do
-            -- debugBorder
-
-            sym2 padding inherit (px 15)
-            paddingTop $ px 15
-
-            fontSize $ rem 2
-            textTransform uppercase
-            lineHeight $ unitless 1.5
-
-            textAlign center
-
-        h2 ? do
-            -- debugBorder
-
-            sym padding $ px 15
-
-            fontSize $ rem 1.6
-            textTransform uppercase
-
-            color $ rgba 0 0 0 0.5
-
-            textAlign center
-    -}
-
-    {-
-    ".cards" ? do
-        display grid
-        -- flexWrap Flexbox.wrap
-        justifyContent center
-        "grid-template-columns" -: "auto auto"
-        "grid-column-gap" -: "20px"
-        "grid-row-gap" -: "20px"
-
-        width $ pct 100
-        -- maxWidth $ px 1000
-        paddingTop $ px 5
-        paddingBottom $ px 15
-    -}
-
-    {-
-    "#p1" ? do
-        backgroundColor $ rgb 237 242 247
-
-        ".cards" ? do
-            "grid-template-columns" -: "auto auto auto auto"
-    -}
 
     {-
 
@@ -194,8 +70,6 @@ mainStylesheet debug = do
         ".cards" ? do
             "grid-template-columns" -: "auto auto auto"
 
-    "#profit" ? do
-        backgroundColor $ rgb 237 242 247
 
     "#footer" ? do
         -- borderStyle solid
@@ -318,53 +192,6 @@ mainStylesheet debug = do
             textAlign center
 
 
-    ".card" ? do 
-        width $ px 280
-        height $ px 400
-
-        borderColor navbarColor
-        borderWidth $ px 4
-        borderStyle solid
-
-        sym2 margin (px 5) nil
-
-        display flex
-        flexDirection column
-        alignItems center
-
-
-        sym padding $ px 10
-
-        hgroup ? do
-
-            -- FIXME пересекается с правилом выше надо делать a > b
-            paddingTop $ px 0
-            paddingBottom $ px 0
-
-            figure ? do
-                textAlign center
-                img ? do
-                    width $ pct 70
-
-            h1 ? do
-                fontSize $ em 1.6
-                fontWeight bold
-                paddingTop $ px 15
-                textAlign center
-
-        p # ":first-of-type" ? do
-            debugBorder green
-            paddingTop $ px 15
-
-        p ? do
-            fontSize $ em 1.6
-            paddingTop $ px 10
-            -- textAlign center
-            textAlign justify
-            textIndent $ indent $ px 20
-            lineHeight $ em 1.2
-
-
     ".card-profit" ? do 
         width $ px 600
         -- height $ px 160
@@ -401,86 +228,6 @@ mainStylesheet debug = do
                 color navbarColor
                 fontSize $ em 1.8
                 
-
-
-    ".package-card" ? do 
-        width $ px 280
-        height $ px 680
-        position relative
-
-        alignItems center
-
-        borderColor navbarColor
-        borderWidth $ px 4
-        borderStyle solid
-
-        h1 ? do
-            backgroundColor navbarColor
-            color white
-
-            sym2 padding (px 30) (px 20)
-
-            fontSize $ rem 1
-
-        ul ? do
-            sym2 padding nil $ px 20
-
-            -- listStyleImage $ imageUrl "../img/shevron.jpg"
-
-            li ? do
-                display block
-                fontSize $ rem 1
-                lineHeight $ em 1.5
-                borderBottomStyle solid
-                borderBottomColor gray
-                borderBottomWidth $ px 0.1
-
-                paddingTop $ em 1
-                paddingBottom $ em 1
-
-            li # lastChild ? do
-                borderBottomWidth nil 
-
-        ".callback-simple"  ? do
-            -- borderStyle solid
-            -- borderColor blue
-            -- borderWidth $ px 0.1 
-
-            position absolute
-            bottom $ px 20
-            left $ px 0
-
-            width $ pct 100
-
-            a ? do
-                display block           
-                marginLeft (px 40)
-                marginRight (px 40)
-                paddingTop (rem 1)
-                paddingBottom (rem 1)
-
-                backgroundColor navbarColor
-                color white
-
-                textAlign center
-                fontSize $ rem 1
-                textDecoration none
-
-
-        -- p # ":first-of-type" ? do
-        --     debugBorder green
-        --     paddingTop $ px 15
-
-        -- p ? do
-        --     fontSize $ em 1.6
-        --     paddingTop $ px 10
-        --     -- textAlign center
-        --     textAlign justify
-        --     textIndent $ indent $ px 20
-        --     lineHeight $ em 1.2
-
-            
-
 
     ".service-item" ? do
         display flex
