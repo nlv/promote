@@ -5,7 +5,7 @@ module Common
     , rootFontName
     , secondaryFontName
     , brandColor
-    ,navbarHeight
+    , navbarHeight
     ) where
 
 import Clay

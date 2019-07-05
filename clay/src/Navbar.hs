@@ -63,7 +63,7 @@ navbarStylesheet s = do
                 color brandColor
 
         ".navbar-phone" ? do
-            fontSize $ rem 1.8
+            fontSize $ rem 2.2
 
         ".navbar-toggle" ? do
             display none
@@ -123,7 +123,7 @@ navbarStylesheet s = do
                     width $ pct 100
 
             ".navbar-phone" ? do
-                fontSize $ rem 1
+                fontSize $ rem 1.3
 
             ".no-background" & do
                 backgroundColor $ rgba 255 255 255 0.6

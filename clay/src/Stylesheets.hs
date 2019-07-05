@@ -27,6 +27,9 @@ mainStylesheet debug = do
         fontSize rootFontSize 
         fontFamily [rootFontName] [secondaryFontName]
 
+    ".brand-phone" ? do
+        fontFamily ["sans-serif"] [secondaryFontName]
+
     navbarStylesheet "#navbar"
     startPageStylesheet
     pageStylesheet
