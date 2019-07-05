@@ -51,9 +51,9 @@ cardStylesheet = do
                     width $ pct 70
 
             h1 ? do
+                paddingTop $ px 15
                 lineHeight $ em 1.2
                 fontWeight bold
-                paddingTop $ px 15
 
         p # ":first-of-type" ? do
             paddingTop $ px 15
@@ -77,12 +77,10 @@ cardStylesheet = do
         fontSize $ rem 1.4
 
         h1 ? do
-            backgroundColor brandColor
-            color white
-
             sym2 padding (px 30) (px 20)
 
-            -- fontSize $ rem 1
+            backgroundColor brandColor
+            color white
 
         ul ? do
             sym2 padding nil $ px 20
@@ -101,7 +99,6 @@ cardStylesheet = do
                 borderBottomWidth nil 
 
         ".callback-simple"  ? do
-
             position absolute
             bottom $ px 20
             left $ px 0
@@ -128,7 +125,6 @@ cardStylesheet = do
 
     ".card-profit" ? do 
         width $ px 470
-        -- height $ px 160
 
         borderColor brandColor
         borderWidth $ px 4
@@ -141,14 +137,11 @@ cardStylesheet = do
 
         query Media.screen [Media.maxWidth $ px 1280] $ do
             fontSize $ rem 1.4
-            -- width $ px 360
             width auto
             marginLeft $ px 20
             marginRight $ px 20
 
-
         h1 ? do
-            -- fontSize $ em 1.6
             fontWeight bold
             paddingTop $ px 0
             paddingBottom $ px 15
@@ -157,7 +150,6 @@ cardStylesheet = do
             lineHeight $ em 1.2
 
         ul ? do
-            -- fontSize $ em 1.6
             lineHeight $ em 1.2
 
             li ? do
@@ -168,11 +160,8 @@ cardStylesheet = do
                 top $ px 0
                 left $ px 0
                 color brandColor
-                -- fontSize $ em 1.8
 
     {-
-
-
     ".social-card" ? do
         backgroundColor $ rgb 237 242 247
         -- width $ px 370
