@@ -123,7 +123,7 @@ navbarStylesheet s = do
                     width $ pct 100
 
             ".navbar-phone" ? do
-                fontSize $ rem 1.3
+                fontSize $ rem 1.5
 
             ".no-background" & do
                 backgroundColor $ rgba 255 255 255 0.6
