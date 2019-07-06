@@ -18,10 +18,15 @@ callbackPopupStylesheet = do
         fontSize $ rem 1.6
 
         fieldset ? do
-            display grid
-            "grid-template-columns" -: "auto"
-            -- "grid-template-rows" -: "2rem"
-            "grid-row-gap" -: "15px"
+            display flex
+            flexDirection column
+            justifyContent center
+
+            input ? do
+                display block
+                sym2 margin (px 10) auto
+                sym padding (px 5)
+                
 
 
     ".ui-dialog" ? do
@@ -34,12 +39,13 @@ callbackPopupStylesheet = do
             fontSize $ rem 1.6
 
         ".ui-dialog-buttonset" ? do
-            fontSize $ rem 1.6
+            marginLeft auto
+            fontSize $ rem 1.2
 
         query Media.screen [Media.maxWidth $ px 640] $ do
             ".ui-widget-header" ? do
-                fontSize $ rem 1.2
+                fontSize $ rem 1.3
 
-            ".ui-dialog-buttonset" ? do
-                fontSize $ rem 1.2
+            -- ".ui-dialog-buttonset" ? do
+            --     fontSize $ rem 1.1
         
