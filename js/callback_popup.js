@@ -4,7 +4,7 @@ $( function() {
             autoOpen: false,
             resizable: false,
             height: "auto",
-            width: 400,
+            width: 300,
             modal: true,
             buttons: {
             "Отправить заявку": function() {

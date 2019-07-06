@@ -5,8 +5,7 @@ module CallbackPopup
     ) where
 
 import Clay
--- import qualified Clay.Flexbox as Flexbox (flex, wrap)
--- import qualified Clay.Media as Media
+import qualified Clay.Media as Media
 import Prelude hiding (rem)
 
 import Common
@@ -20,7 +19,7 @@ callbackPopupStylesheet = do
 
         fieldset ? do
             display grid
-            "grid-template-columns" -: "auto auto"
+            "grid-template-columns" -: "auto"
             -- "grid-template-rows" -: "2rem"
             "grid-row-gap" -: "15px"
 
@@ -29,9 +28,18 @@ callbackPopupStylesheet = do
         sym padding nil
     
         ".ui-widget-header" ? do
-            fontSize $ rem 1.6
             background brandColor
             color white
 
+            fontSize $ rem 1.6
+
         ".ui-dialog-buttonset" ? do
             fontSize $ rem 1.6
+
+        query Media.screen [Media.maxWidth $ px 640] $ do
+            ".ui-widget-header" ? do
+                fontSize $ rem 1.2
+
+            ".ui-dialog-buttonset" ? do
+                fontSize $ rem 1.2
+        

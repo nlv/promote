@@ -525,14 +525,19 @@
 
     <div id="callback-popup" title="Укажите свой телефон">
         <form>
-            <fieldset>
-                <label for="name">Имя</label>
-                <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
-                <label for="phone">Телефон</label>
-                <input type="text" name="phone" id="phone" class="text ui-widget-content ui-corner-all">
+            <fieldset class="fieldset-wide">
+                <!-- <label for="name">Имя</label> -->
+                <input type="text" name="name" id="name" 
+                       placeholder="Имя"
+                       class="text ui-widget-content ui-corner-all">
+                <!-- <label for="phone">Телефон</label> -->
+                <input type="text" name="phone" id="phone"
+                       placeholder="Телефон"
+                       class="text ui-widget-content ui-corner-all">
             
                 <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
             </fieldset>
+
         </form>
     </div>
 

@@ -867,7 +867,7 @@ html
 #callback-popup fieldset
 {
   display               : grid;
-  grid-template-columns : auto auto;
+  grid-template-columns : auto;
   grid-row-gap          : 15px;
 }
 
@@ -878,9 +878,9 @@ html
 
 .ui-dialog .ui-widget-header
 {
-  font-size  : 1.6rem;
   background : #ff6600;
   color      : #ffffff;
+  font-size  : 1.6rem;
 }
 
 .ui-dialog .ui-dialog-buttonset
@@ -888,6 +888,20 @@ html
   font-size : 1.6rem;
 }
 
+@media screen and (max-width: 640px)
+{
+
+.ui-dialog .ui-widget-header
+{
+  font-size : 1.19999rem;
+}
+
+.ui-dialog .ui-dialog-buttonset
+{
+  font-size : 1.19999rem;
+}
+
+}
 @media screen and (min-width: 900px)
 {
 
