@@ -24,6 +24,7 @@ callbackPopupStylesheet = do
 
             input ? do
                 display block
+                width $ pct 90
                 sym2 margin (px 10) auto
                 sym padding (px 5)
                 
