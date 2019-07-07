@@ -32,6 +32,7 @@ callbackPopupStylesheet = do
 
     ".ui-dialog" ? do
         sym padding nil
+        maxWidth $ pct 80
     
         ".ui-widget-header" ? do
             background brandColor

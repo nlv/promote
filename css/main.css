@@ -881,7 +881,8 @@ html
 
 .ui-dialog
 {
-  padding : 0 0 0 0;
+  padding   : 0 0 0 0;
+  max-width : 80%;
 }
 
 .ui-dialog .ui-widget-header
