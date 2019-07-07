@@ -118,12 +118,12 @@ navbarStylesheet s = do
             justifyContent spaceBetween
 
             ".brand" ? do
-                width $ px 150
+                width $ px 120
                 "img" ? do
                     width $ pct 100
 
             ".navbar-phone" ? do
-                fontSize $ rem 1.2
+                fontSize $ rem 1.4
 
             ".no-background" & do
                 backgroundColor $ rgba 255 255 255 0.6
