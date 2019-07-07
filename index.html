@@ -7,13 +7,13 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
 
-    <script src="js/jquery.min.js"></script>
-    <!-- <script src="js/jquery-ui/jquery-ui.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui/jquery-ui.min.js"></script>
     <script src="js/navbar.js"></script>
-    <!-- <script src="js/callback_popup.js"></script> -->
+    <script src="js/callback_popup.js"></script>
     <script type="text/javascript" src="https://vk.com/js/api/openapi.js?161"></script> 
 
     <title>Document</title>
@@ -345,23 +345,46 @@
     </section> -->
 
 
-    <!-- <div id="callback-popup" title="Укажите свой телефон">
+    <div id="callback-popup" title="Укажите свой телефон">
         <form>
-            <fieldset>
-                <label for="name">Имя</label>
-                <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
-                <label for="phone">Телефон</label>
-                <input type="text" name="phone" id="phone" class="text ui-widget-content ui-corner-all">
+            <fieldset class="fieldset-wide">
+                <input type="text" name="name" id="name" 
+                       placeholder="Имя"
+                       class="text ui-widget-content ui-corner-all">
+                <input type="text" name="phone" id="phone"
+                       placeholder="Телефон"
+                       class="text ui-widget-content ui-corner-all">
             
                 <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
             </fieldset>
+
         </form>
-    </div> -->
+    </div>
 
     <div id="vk_community_messages"></div>
     <script type="text/javascript">
     VK.Widgets.CommunityMessages("vk_community_messages", 178881765, {expanded: "0",tooltipButtonText: "Есть вопрос?"});
     </script>
+
+    <script type="text/javascript">
+      !function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?161",t.onload=function(){VK.Retargeting.Init("VK-RTRG-383321-b9jCS"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script>
+      <noscript><img src="https://vk.com/rtrg?p=VK-RTRG-383321-b9jCS" style="position:fixed; left:-999px;" alt=""/></noscript>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+    ym(54338143, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true,
+    webvisor:true
+    });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/54338143" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     
 </body>
 </html>
