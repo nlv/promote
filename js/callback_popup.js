@@ -14,7 +14,7 @@ $( function() {
                     callbackPhone: $('#callback-popup input[name=phone]').val()
                 };
                 
-                fetch("http://51.68.173.144:8080/api/callback",
+                fetch("http://robin-bol.ru:4321/api/callback",
                 {
                     headers: {
                         'Accept': 'application/json',
