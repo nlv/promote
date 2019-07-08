@@ -26,10 +26,11 @@ $( function() {
         callbackPopup.dialog('open')
     })
 
-    $('#page-callback2-phone-submit').change(function() {
-        var name  = $('#page-callback2-popup input[name=name]').val();
-        var phone = $('#page-callback2-popup input[name=phone]').val();
+    $('#page-callback2-phone-submit').click(function() {
+        var name  = $('#page-callback2-phone input[name=name]').val();
+        var phone = $('#page-callback2-phone input[name=phone]').val();
         sendCallback(name, phone);
+        return false;
 
     })
 });
